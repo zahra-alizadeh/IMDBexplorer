@@ -1,13 +1,12 @@
 <?php
 
-
 namespace application\controller;
-
 
 class Home extends Controller
 {
     public function home()
     {
-        echo "hi";
+        $p ="hello";
+        return $this->view('main-page',compact('p'));
     }
 }

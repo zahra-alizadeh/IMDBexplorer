@@ -10,8 +10,7 @@ class Routing
 
     public function __construct()
     {
-        global $CURRENT_ROUTE;
-        $this->currentRoute = explode('/', $CURRENT_ROUTE);
+        $this->currentRoute = explode('/', CURRENT_ROUTE);
     }
 
     // get name of class and check if this class exit or not
@@ -20,7 +19,7 @@ class Routing
         // make path of the class
         $path = realpath(dirname(__FILE__) . "/../../application/controller/" . $this->currentRoute[0] . ".php");
         if (!file_exists($path)) {
-            echo "404 - File not exists!!";
+            echo "404 - File not exists!!hi";
 //            header("HTTP/1.0 404 Not Found");
 //            header("location:test.php?wrong=10");
             exit;
@@ -31,17 +30,15 @@ class Routing
         $class = new $classPath();
 
         // if method exit get id
-        if (method_exists($class,$method))
-        {
-            $reflection = new ReflectionMethod($classPath,$method);
+        if (method_exists($class, $method)) {
+            $reflection = new ReflectionMethod($classPath, $method);
             $paramCount = $reflection->getNumberOfParameters();
-            if ($paramCount<=count(array_slice($this->currentRoute,2)))
-                call_user_func(array($class,$method),array_slice($this->currentRoute,2));
+            if ($paramCount <= count(array_slice($this->currentRoute, 2)))
+                call_user_func(array($class, $method), array_slice($this->currentRoute, 2));
             else
                 echo "parameter error!!";
 
-        }
-        else
+        } else
             echo "method not exists!!";
 
 

@@ -50,7 +50,7 @@
                             </form>
 
                             <a href="forgot-password.html" class="forgot-password-link">رمز عبور خود را فراموش کردید</a>
-                            <p class="forget-password-card-footer-text"> حساب کاربری ندارید؟<a href="register.html" class="register">ثبت نام در سایت</a></p>
+                            <p class="forget-password-card-footer-text"> حساب کاربری ندارید؟<a href="register.php" class="register">ثبت نام در سایت</a></p>
 
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                             </form>
 
                             <a href="forgot-password.html" class="forgot-password-link">رمز عبور خود را فراموش کردید</a>
-                            <p class="forget-password-card-footer-text"> حساب کاربری ندارید؟<a href="register.html" class="register">ثبت نام در سایت</a></p>
+                            <p class="forget-password-card-footer-text"> حساب کاربری ندارید؟<a href="register.php" class="register">ثبت نام در سایت</a></p>
 
                         </div>
                     </div>

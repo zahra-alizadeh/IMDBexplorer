@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html  lang="fa-IR" dir="rtl">
 
 <head>

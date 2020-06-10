@@ -10,7 +10,7 @@ trait View
     protected function view($dir, $variables = null)
     {
         $dir = str_replace('.', '/', $dir);
-        if ($variables != null)
+        if ($variables)
             extract($variables);
 
         // view path

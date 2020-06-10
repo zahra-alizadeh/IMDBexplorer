@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +22,9 @@
 </head>
 
 <body>
+<h1>
+    <?php echo $p; ?>
+</h1>
 
 </body>
 
