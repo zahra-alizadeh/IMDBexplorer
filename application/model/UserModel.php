@@ -3,7 +3,7 @@
 
 namespace application\model;
 
-class UserAuthentication extends Model
+class UserModel extends Model
 {
     public function checkLogin($request)
     {
@@ -26,7 +26,7 @@ class UserAuthentication extends Model
         else {
             $db = new Model();
             $user = $db->select("SELECT * FROM `users` WHERE (`email` = ?); ", [$request['email']])->fetch();
-            if ($user != null)
+            if ($user == null)
                 return false;
             else {
                 $request['password'] = password_hash($request['password'], PASSWORD_DEFAULT);
