@@ -1,142 +1,74 @@
-<!DOCTYPE html  lang="fa-IR" dir="rtl">
-
+<!doctype html>
+<html lang="fa-IR" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
+<body>
+<main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+    <div class="container">
+        <div class="card login-page-card">
+            <div class="row no-gutters">
+                <div class="col-md-5">
+                    <img src="../../public/image/people-watching-video-on-smartphon-gettyimages-youtube.jpg"
+                         alt="login-page" class="login-page-card-img">
+                </div>
 
-<body style="background-image: url(image/bg.jpg);">
-    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
-        <div class="container">
-            <div class="card login-page-card">
-                <div class="row no-gutters">
-                    <div class="col-md-5">
-                        <img src="image/people-watching-video-on-smartphon-gettyimages-youtube.jpg" alt="login-page" class="login-page-card-img">
-                    </div>
-
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <div class="brand-wrapper">
-                                <img src="image/logo.png" alt="logo" class="logo">
-                            </div>
-                            <p class="login-page-card-description">ایجاد حساب کاربری</p>
-                            <p class="login-page-card-description"></p>
-
-                            <form action="#!">
-
-                                <div class="form-group">
-                                    <label for="username" class="sr-only">Username</label>
-                                    <div class="inner-addon right-addon">
-                                        <i class="fa fa-user"></i>
-                                        <input type="username" name="username" id="username" class="form-control" placeholder="نام کاربری">
-                                    </div>
-
-                                    <label for="email" class="sr-only">Email</label>
-                                    <div class="inner-addon right-addon">
-                                        <i class="fa fa-envelope"></i>
-                                        <input type="email" name="email" id="eamil" class="form-control" placeholder="ایمیل">
-                                    </div>
-
-                                    <label for="password" class="sr-only">Password</label>
-                                    <div class="inner-addon right-addon">
-                                        <i class="fa fa-lock"></i>
-                                        <input type="password" name="password" id="password" class="form-control" placeholder="رمز عبور">
-                                    </div>
-
-                                    <label for="password" class="sr-only">Password</label>
-                                    <div class="inner-addon right-addon">
-                                        <i class="fa fa-lock"></i>
-                                        <input type="password" name="password" id="password" class="form-control" placeholder="تکرار رمز عبور">
-                                    </div>
-
-                                    <input name="login-page" id="login-page" class="btn btn-block login-page-btn mb-4" type="button" value="ثبت نام">
-
-                            </form>
-
-                           
-                            </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <div class="brand-wrapper">
+                            <img src="../../public/image/logo.png" alt="logo" class="logo">
                         </div>
+                        <p class="login-page-card-description">ایجاد حساب کاربری</p>
+                        <p class="login-page-card-description"></p>
+
+                        <form action="#!">
+
+                            <div class="form-group">
+                                <label for="username" class="sr-only">Username</label>
+                                <div class="inner-addon right-addon">
+                                    <i class="fa fa-user"></i>
+                                    <input type="username" name="username" id="username" class="form-control"
+                                           placeholder="نام کاربری">
+                                </div>
+
+                                <label for="email" class="sr-only">Email</label>
+                                <div class="inner-addon right-addon">
+                                    <i class="fa fa-envelope"></i>
+                                    <input type="email" name="email" id="email" class="form-control"
+                                           placeholder="ایمیل">
+                                </div>
+
+                                <label for="password" class="sr-only">Password</label>
+                                <div class="inner-addon right-addon">
+                                    <i class="fa fa-lock"></i>
+                                    <input type="password" name="password" id="password" class="form-control"
+                                           placeholder="رمز عبور">
+                                </div>
+
+                                <label for="password" class="sr-only">Password</label>
+                                <div class="inner-addon right-addon">
+                                    <i class="fa fa-lock"></i>
+                                    <input type="password" name="password" id="password" class="form-control"
+                                           placeholder="تکرار رمز عبور">
+                                </div>
+
+                                <input name="login-page" id="login-page" class="btn btn-block login-page-btn mb-4"
+                                       type="button" value="ثبت نام">
+
+                        </form>
+
+
                     </div>
                 </div>
             </div>
-    </main>
+        </div>
+    </div>
+</main>
 </body>
-
-
-</html>
-=======
-<!DOCTYPE html  lang="fa-IR" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body style="background-image: url(image/bg.jpg);">
-    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
-        <div class="container">
-            <div class="card login-page-card">
-                <div class="row no-gutters">
-                    <div class="col-md-5">
-                        <img src="image/people-watching-video-on-smartphon-gettyimages-youtube.jpg" alt="login-page" class="login-page-card-img">
-                    </div>
-
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <div class="brand-wrapper">
-                                <img src="image/logo.png" alt="logo" class="logo">
-                            </div>
-                            <p class="login-page-card-description">ایجاد حساب کاربری</p>
-                            <p class="login-page-card-description"></p>
-
-                            <form action="#!">
-
-                                <div class="form-group">
-                                    <label for="username" class="sr-only">Username</label>
-                                    <div class="inner-addon right-addon">
-                                        <i class="fa fa-user"></i>
-                                        <input type="username" name="username" id="username" class="form-control" placeholder="نام کاربری">
-                                    </div>
-
-                                    <label for="email" class="sr-only">Email</label>
-                                    <div class="inner-addon right-addon">
-                                        <i class="fa fa-envelope"></i>
-                                        <input type="email" name="email" id="eamil" class="form-control" placeholder="ایمیل">
-                                    </div>
-
-                                    <label for="password" class="sr-only">Password</label>
-                                    <div class="inner-addon right-addon">
-                                        <i class="fa fa-lock"></i>
-                                        <input type="password" name="password" id="password" class="form-control" placeholder="رمز عبور">
-                                    </div>
-
-                                    <label for="password" class="sr-only">Password</label>
-                                    <div class="inner-addon right-addon">
-                                        <i class="fa fa-lock"></i>
-                                        <input type="password" name="password" id="password" class="form-control" placeholder="تکرار رمز عبور">
-                                    </div>
-
-                                    <input name="login-page" id="login-page" class="btn btn-block login-page-btn mb-4" type="button" value="ثبت نام">
-
-                            </form>
-
-                           
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </main>
-</body>
-
-
 </html>
 >>>>>>> c49a2e65be8611861b9dfe20f3dc988e624e76d9

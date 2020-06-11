@@ -13,10 +13,9 @@ class Model
     public function __construct()
     {
         if (!isset($this->connection)) {
-            global $DB_HOST, $DB_NAME, $DB_USERNAME, $DB_PASSWORD;
             $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
             try {
-                $this->connection = new PDO("mysql:host=" . $DB_HOST . ";dbname=" . $DB_NAME, $DB_USERNAME, $DB_PASSWORD, $options);
+                $this->connection = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD, $options);
             } catch (PDOException $e) {
                 echo "There is a problem in connection:" . $e->getMessage();
             }

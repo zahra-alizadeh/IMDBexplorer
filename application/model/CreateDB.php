@@ -2,23 +2,23 @@
 
 
 namespace application\model;
-use application\model\Model;
 
 class CreateDB extends Model
 {
     private $createTableQueries = array(
-        "CREATE TABLE `users` (
-          `id` int(11) NOT NULL AUTO_INCREMENT,
-          `username` varchar(100) COLLATE utf8_persian_ci NOT NULL,
-          `email` varchar(100) COLLATE utf8_persian_ci NOT NULL,
-          `password` varchar(100) COLLATE utf8_persian_ci NOT NULL,
-          `picture` varchar(200) COLLATE utf8_persian_ci NOT NULL,
-          `admin` enum('user','admin') COLLATE utf8_persian_ci NOT NULL DEFAULT 'user',
-          `created_at` datetime NOT NULL,
-          `updated_at` datetime DEFAULT NULL,
-          PRIMARY KEY (`id`),
-          UNIQUE KEY `email` (`email`)
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
+//        "CREATE TABLE `users` (
+//          `id` int(11) NOT NULL AUTO_INCREMENT,
+//          `username` varchar(100) COLLATE utf8_persian_ci NOT NULL,
+//          `email` varchar(100) COLLATE utf8_persian_ci NOT NULL,
+//          `password` varchar(100) COLLATE utf8_persian_ci NOT NULL,
+//          `picture` varchar(200) COLLATE utf8_persian_ci NOT NULL,
+//          `admin` enum('user','admin') COLLATE utf8_persian_ci NOT NULL DEFAULT 'user',
+//          `created_at` datetime NOT NULL,
+//          `updated_at` datetime DEFAULT NULL,
+//          PRIMARY KEY (`id`),
+//          UNIQUE KEY `email` (`email`)
+//        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
+    
 
         "CREATE TABLE `watchList` (
           `id` int(11) NOT NULL AUTO_INCREMENT,
