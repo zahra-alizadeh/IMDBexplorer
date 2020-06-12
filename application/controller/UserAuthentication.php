@@ -46,8 +46,12 @@ class UserAuthentication extends Controller
         return $this->view('register');
     }
 
-    public function userRegister($request)
+    public function userRegister()
     {
+        echo "userRegister";
+        var_dump($_REQUEST);
+        var_dump($_POST);
+        var_dump($_GET);
         $checkUser = new UserModel();
         if ($checkUser == false)
             $this->redirectBack();

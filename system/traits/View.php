@@ -21,4 +21,18 @@ trait View
             echo "this view " . $dir . " not exists!";
     }
 
+    public function asset($dir)
+    {
+        $path = BASE_URL . "public/" . $dir;
+        echo $path;
+    }
+
+    protected function url($url)
+    {
+        echo "view";
+        if ($url[0] == '/')
+            $url = substr($url, 1, strlen($url) - 1);
+
+        echo BASE_URL . $url;
+    }
 }

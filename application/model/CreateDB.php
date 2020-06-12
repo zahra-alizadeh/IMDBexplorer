@@ -18,7 +18,21 @@ class CreateDB extends Model
 //          PRIMARY KEY (`id`),
 //          UNIQUE KEY `email` (`email`)
 //        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
-    
+
+        "CREATE TABLE `movies` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `movie_name` varchar(100) COLLATE utf8_persian_ci NOT NULL,
+          `release_date` datetime NOT NULL,
+          `trailer` varchar(100) COLLATE utf8_persian_ci NOT NULL,
+          `picture` varchar(200) COLLATE utf8_persian_ci NOT NULL,
+          `score` varchar(200) COLLATE utf8_persian_ci NOT NULL,
+          `summary` varchar(200) COLLATE utf8_persian_ci NOT NULL,
+          `created_at` datetime NOT NULL,
+          `updated_at` datetime DEFAULT NULL,
+          PRIMARY KEY (`id`),
+          UNIQUE KEY `email` (`email`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
+
 
         "CREATE TABLE `watchList` (
           `id` int(11) NOT NULL AUTO_INCREMENT,
