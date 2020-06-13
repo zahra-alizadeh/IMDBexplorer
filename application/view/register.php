@@ -26,8 +26,9 @@
                         <p class="login-page-card-description">ایجاد حساب کاربری</p>
                         <p class="login-page-card-description"></p>
 
-                        <form action="/application/controller/UserAuthentication.php" method="post">
-<!--                        <form action="--><?php //$this->url('UserAuthentication/userRegister/'); ?><!--" method="post">-->
+<!--                                                <form action="../controller/UserAuthentication.php" method="post">-->
+                        <form action="<?php $this->url('UserAuthentication/userRegister'); ?>" method="post">
+<!--                        <form action="--><?php //echo BASE_URL.'UserAuthentication/userRegister'; ?><!--" method="post">-->
 
 
                             <div class="form-group">
@@ -59,10 +60,8 @@
                                            placeholder="تکرار رمز عبور">
                                 </div>
 
-                                                                <input name="login-page" id="login-page" class="btn btn-block login-page-btn mb-4"
-                                                                       type="button" value="ثبت نام">
-<!--                                                                <a class="btn btn-block login-page-btn mb-4" href="main-page.php">create</a>-->
-<!--                                <button type="submit" class="btn btn-block login-page-btn mb-4">create</button>-->
+                                <input name="login-page" id="login-page" class="btn btn-block login-page-btn mb-4"
+                                       type="submit" value="ثبت نام">
                         </form>
                     </div>
                 </div>

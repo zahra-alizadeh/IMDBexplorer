@@ -23,16 +23,16 @@ trait View
 
     public function asset($dir)
     {
-        $path = BASE_URL . "public/" . $dir;
+        $path = BASE_URL ."public/". $dir;
         echo $path;
     }
 
     protected function url($url)
     {
-        echo "view";
-        if ($url[0] == '/')
-            $url = substr($url, 1, strlen($url) - 1);
+        if ($url[0] == '/') {
+            $url = substr($url , 1 , strlen($url) - 1);
+        }
 
-        echo BASE_URL . $url;
+        echo BASE_URL.$url;
     }
 }

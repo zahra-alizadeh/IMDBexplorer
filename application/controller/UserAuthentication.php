@@ -48,25 +48,21 @@ class UserAuthentication extends Controller
 
     public function userRegister()
     {
-        echo "userRegister";
-        var_dump($_REQUEST);
-        var_dump($_POST);
-        var_dump($_GET);
         $checkUser = new UserModel();
         if ($checkUser == false)
             $this->redirectBack();
-        else if (strlen($request['password'] < 8))
+        else if (strlen($_GET['password'] < 8))
             $this->redirectBack();
-        else if (!filter_var($request['email'], FILTER_VALIDATE_EMAIL))
+        else if (!filter_var($_GET['email'], FILTER_VALIDATE_EMAIL))
             $this->redirectBack();
         else {
             $user = new UserModel();
-            $user->registerStore($request);
+            $user->registerStore($_GET);
             if ($user == false)
                 $this->redirectBack();
             else
             {
-                $this->sendEmail($request);
+                $this->sendEmail($_GET);
                 $this->redirect('login');
             }
         }
