@@ -22,8 +22,14 @@
     <list default="true" id="512b1a97-9043-43cf-ae2a-3dd534e048fb" name="Default Changelist" comment="Merge branch 'master' of https://dev.azure.com/zahraalizade2500153/IMDB/_git/IMDB&#10;&#10;# Conflicts:&#10;#&#9;application/view/forgot-password.html&#10;#&#9;application/view/login.html&#10;#&#9;application/view/main-page.html&#10;#&#9;application/view/register.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controller/UserAuthentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/UserAuthentication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/model/CreateDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/model/CreateDB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/model/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/model/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/model/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/model/UserModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/forgot-password.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/forgot-password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/view/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/traits/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/traits/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/traits/Redirect.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/traits/Redirect.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +53,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../login" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../admin-panel" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -101,7 +107,10 @@
       <workItem from="1591852799760" duration="3604000" />
       <workItem from="1591948939551" duration="7867000" />
       <workItem from="1591982915231" duration="11814000" />
-      <workItem from="1592055856846" duration="624000" />
+      <workItem from="1592055856846" duration="2469000" />
+      <workItem from="1592073870950" duration="4602000" />
+      <workItem from="1592120190477" duration="5227000" />
+      <workItem from="1592156044565" duration="7333000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1588592486556</created>
@@ -190,10 +199,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="423" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1588613511034" />
-    <state x="580" y="183" key="FileChooserDialogImpl" timestamp="1591993022348">
+    <state x="580" y="183" key="FileChooserDialogImpl" timestamp="1592156051002">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="183" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1591993022348" />
+    <state x="580" y="183" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1592156051002" />
     <state x="605" y="135" key="NewPhpClassDialog" timestamp="1591813444468">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

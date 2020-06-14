@@ -1,6 +1,8 @@
 <?php
 
 namespace application\controller;
+require 'application/model/Model.php';
+require 'application/model/UserModel.php';
 
 use application\model\UserModel;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -21,7 +23,7 @@ class UserAuthentication extends Controller
         return $this->view('login');
     }
 
-    public function userLogin($request)
+    public function userLogin()
     {
         $checkLogin = new UserModel();
         if ($checkLogin == false)
@@ -29,11 +31,13 @@ class UserAuthentication extends Controller
         else {
             $user = new UserModel();
             if ($user == true) {
-                if (password_verify($request['password'], $user['password'])) {
+                if (password_verify($_GET['password'], $user['password'])) {
                     $_SESSION['userId'] = $user['id'];
-                    $_SESSION['userId'] = $user['userName'];
+                    $_SESSION['userName'] = $user['userName'];
+                    $_SESSION['email'] = $user['email'];
+                    $_SESSION['message'] = "you are logged in!";
                     setcookie($_SESSION['userName'], 'imdb', time() + 3600);
-                    $this->redirect('main-page');
+                    $this->redirect('Home/home');
                 } else
                     $this->redirectBack();
             } else
@@ -48,24 +52,30 @@ class UserAuthentication extends Controller
 
     public function userRegister()
     {
-        $checkUser = new UserModel();
-        if ($checkUser == false)
+        if (empty($_GET['email']) || empty($_GET['password']))
             $this->redirectBack();
         else if (strlen($_GET['password'] < 8))
             $this->redirectBack();
         else if (!filter_var($_GET['email'], FILTER_VALIDATE_EMAIL))
             $this->redirectBack();
         else {
+            echo "come here!";
             $user = new UserModel();
-            $user->registerStore($_GET);
+            $user->checkUserExists($_GET);
             if ($user == false)
                 $this->redirectBack();
-            else
-            {
+            else {
+                echo "come here2!";
                 $this->sendEmail($_GET);
-                $this->redirect('login');
+                $user->storeUser($_GET);
+                return $this->redirect('UserAuthentication/login');
             }
         }
+    }
+
+    public function forgetPassword()
+    {
+        return $this->view('forgot-password');
     }
 
     public function logout($request)
@@ -92,6 +102,7 @@ class UserAuthentication extends Controller
             $this->redirect('home');
     }
 
+    // send email for user to authentication
     public function sendEmail($request)
     {
         $mail = new PHPMailer(true);
@@ -108,12 +119,12 @@ class UserAuthentication extends Controller
             $mail->isSMTP();
             $mail->Host = "smtp.gmail.com";
             $mail->SMTPAuth = true;
-            $mail->Username = $request['email'];
+            $mail->Username = $request['userName'];
             $mail->Password = $request['password'];
             $mail->SMTPSecure = "tls";
             $mail->Port = 587;
 
-            $mail->setFrom("admin@gmail.com", "imdb");
+            $mail->setFrom("zahraalizade250@gmail.com", "imdb");
             $mail->addAddress($request['email']);
             $mail->isHTML(true);
             $mail->Subject = "authentication";

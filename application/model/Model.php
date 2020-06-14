@@ -22,11 +22,6 @@ class Model
         }
     }
 
-    public function __destruct()
-    {
-        $this->closeConnection();
-    }
-
     protected function query($query, $values = null)
     {
         try {
@@ -140,12 +135,15 @@ class Model
         }
 
     }
+    public function __destruct()
+    {
+        $this->closeConnection();
+    }
 
 
     protected function closeConnection()
     {
         $this->connection = null;
     }
-
 
 }

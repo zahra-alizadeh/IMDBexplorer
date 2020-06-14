@@ -19,21 +19,22 @@ class UserModel extends Model
         }
     }
 
-    public function registerStore($request)
+    // select user from DB to check if user exists or not
+    public function checkUserExists($request)
     {
-        if (empty($request['email']) || empty($request['password']))
-            return true;
-        else {
-            $db = new Model();
-            $user = $db->select("SELECT * FROM `users` WHERE (`email` = ?); ", [$request['email']])->fetch();
-            if ($user == null)
-                return false;
-            else {
-                $request['password'] = password_hash($request['password'], PASSWORD_DEFAULT);
-                $db->insert('users', array_keys($request), $request);
-                return true;
-            }
-        }
+        $db = new Model();
+        $user = $db->select("SELECT * FROM `users` WHERE (`email` = ?); ", [$request['email']])->fetch();
+        if ($user != null)
+            return false;
+    }
+
+    // store user in DB
+    public function storeUser($request)
+    {
+        $db = new Model();
+        $request['password'] = password_hash($request['password'], PASSWORD_DEFAULT);
+        $db->insert('users', array_keys($request), $request);
+        return true;
     }
 
     public function checkAdmin()
