@@ -4,6 +4,7 @@ namespace application\controller;
 require 'application/model/Model.php';
 require 'application/model/UserModel.php';
 
+use application\model\Model;
 use application\model\UserModel;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -25,13 +26,17 @@ class UserAuthentication extends Controller
 
     public function userLogin()
     {
-        $checkLogin = new UserModel();
-        if ($checkLogin == false)
+        $this->redirect('Home/home');
+        if (empty($_POST['username']) || empty($_POST['password']))
             $this->redirectBack();
+
         else {
+
             $user = new UserModel();
-            if ($user == true) {
-                if (password_verify($_GET['password'], $user['password'])) {
+            $checkUser = $user->checkUserExists($_POST['username']);
+            if ($checkUser == false) {
+                $this->redirect('Home/home');
+                if (password_verify($_POST['password'], $user['password'])) {
                     $_SESSION['userId'] = $user['id'];
                     $_SESSION['userName'] = $user['userName'];
                     $_SESSION['email'] = $user['email'];
@@ -65,6 +70,8 @@ class UserAuthentication extends Controller
             if ($checkUser == false)
                 $this->redirectBack();
             else {
+                $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
 //                $this->sendEmail($_POST);
                 $user->storeUser($_POST);
                 $this->redirect('Home/home');

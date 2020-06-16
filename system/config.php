@@ -1,7 +1,5 @@
 <?php
 
-//$BASE_URL = "http://localhost/IMDB/";
-//$BASE_DIR = "/IMDB/";
 define('APP_NAME','IMDB');
 define("BASE_URL","http://localhost/IMDB/");
 define("BASE_DIR","/IMDB/");

@@ -63,8 +63,7 @@ class Model
             } else {
                 $stmt = $this->connection->prepare($sql);
                 $stmt->execute($values);
-                $result = $stmt;
-                return $result;
+                return $stmt;
             }
         } catch (PDOException $e) {
             echo "<div style='color:red;'> There is some problem in connection :</div>" . $e->getMessage();
@@ -135,6 +134,7 @@ class Model
         }
 
     }
+
     public function __destruct()
     {
         $this->closeConnection();

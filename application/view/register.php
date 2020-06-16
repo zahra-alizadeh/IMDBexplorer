@@ -57,8 +57,7 @@
                                            placeholder="تکرار رمز عبور">
                                 </div>
 
-                                <input name="login-page" id="login-page" class="btn btn-block login-page-btn mb-4"
-                                       type="submit" value="ثبت نام">
+                                <input name="login-page" class="btn btn-block login-page-btn mb-4" type="submit" value="ثبت نام">
                         </form>
                     </div>
                 </div>

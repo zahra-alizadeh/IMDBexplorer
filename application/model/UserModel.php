@@ -5,19 +5,6 @@ namespace application\model;
 
 class UserModel extends Model
 {
-    public function checkLogin($request)
-    {
-        if (empty($request['email'] || empty($request['password'])))
-            return true;
-        else {
-            $db = new Model();
-            $user = $db->select("SELECT * FROM `users` WHERE `email`=? ;", [$request['email']])->fetch();
-            if ($user != null)
-                return true;
-            else
-                return false;
-        }
-    }
 
     // select user from DB to check if user exists or not
     public function checkUserExists($request)
@@ -34,14 +21,21 @@ class UserModel extends Model
     public function storeUser($request)
     {
         $db = new Model();
-        $request['password'] = password_hash($request['password'], PASSWORD_DEFAULT);
-        $db->insert('users', array_keys($request), $request);
+//        $db->insert('users', array_keys($request), $request);
+        $db->insert('users', ['username', 'email', 'password'], [$_POST['username'], $_POST['email'], $_POST['password']]);
         return true;
+    }
+
+    public function insertUser($values)
+    {
+        $query = "INSERT INTO `users` ( `user_name`, `email`, `password`, created_at) VALUES ( ?, ?, ?, now() );";
+        $this->execute($query, array_values($values));
+        $this->closeConnection();
     }
 
     public function checkAdmin()
     {
-        $db = new DataBase();
+        $db = new Model();
         $user = $db->select("SELECT * FROM `users` WHERE `id`=? ;", [$_SESSION['userId']])->fetch();
         if ($user != null) {
             return true;
