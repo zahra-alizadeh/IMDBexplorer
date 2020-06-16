@@ -141,9 +141,9 @@ class CreateDB extends Model
 
     public function run()
     {
-        foreach ($this->createTableQueries as $createTableQuery) {
-            $this->createTable($createTableQuery);
-        }
+//        foreach ($this->createTableQueries as $createTableQuery) {
+//            $this->createTable($createTableQuery);
+//        }
         foreach ($this->tableInitializes as $tableInitialize) {
             $this->insert($tableInitialize['table'], $tableInitialize['fields'], $tableInitialize['values']);
         }

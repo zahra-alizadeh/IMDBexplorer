@@ -52,23 +52,22 @@ class UserAuthentication extends Controller
 
     public function userRegister()
     {
-        if (empty($_GET['email']) || empty($_GET['password']))
+        if (empty($_POST['email']) || empty($_POST['password']))
             $this->redirectBack();
-        else if (strlen($_GET['password'] < 8))
+        else if (strlen($_POST['password'] <= 4))
             $this->redirectBack();
-        else if (!filter_var($_GET['email'], FILTER_VALIDATE_EMAIL))
+        else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
             $this->redirectBack();
         else {
-            echo "come here!";
             $user = new UserModel();
-            $user->checkUserExists($_GET);
-            if ($user == false)
+            $checkUser = $user->checkUserExists($_POST);
+
+            if ($checkUser == false)
                 $this->redirectBack();
             else {
-                echo "come here2!";
-                $this->sendEmail($_GET);
-                $user->storeUser($_GET);
-                return $this->redirect('UserAuthentication/login');
+//                $this->sendEmail($_POST);
+                $user->storeUser($_POST);
+                $this->redirect('Home/home');
             }
         }
     }
@@ -105,6 +104,7 @@ class UserAuthentication extends Controller
     // send email for user to authentication
     public function sendEmail($request)
     {
+        var_dump($request);
         $mail = new PHPMailer(true);
         try {
             $mail->SMTPOptions = array(
@@ -119,12 +119,12 @@ class UserAuthentication extends Controller
             $mail->isSMTP();
             $mail->Host = "smtp.gmail.com";
             $mail->SMTPAuth = true;
-            $mail->Username = $request['userName'];
-            $mail->Password = $request['password'];
+            $mail->Username = "imdb.team99@gmail.com";
+            $mail->Password = "imdb1234";
             $mail->SMTPSecure = "tls";
             $mail->Port = 587;
 
-            $mail->setFrom("zahraalizade250@gmail.com", "imdb");
+            $mail->setFrom("imdb.team99@gmail.com", "imdb");
             $mail->addAddress($request['email']);
             $mail->isHTML(true);
             $mail->Subject = "authentication";
@@ -133,7 +133,7 @@ class UserAuthentication extends Controller
             $mail->send();
             echo "ok";
         } catch (Exception $e) {
-            echo "no";
+            echo "no" . $e->getMessage();
         }
 
     }

@@ -26,6 +26,8 @@ class UserModel extends Model
         $user = $db->select("SELECT * FROM `users` WHERE (`email` = ?); ", [$request['email']])->fetch();
         if ($user != null)
             return false;
+        else
+            return true;
     }
 
     // store user in DB
