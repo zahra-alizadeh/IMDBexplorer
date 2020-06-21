@@ -26,15 +26,14 @@ class UserAuthentication extends Controller
 
     public function userLogin()
     {
-        $this->redirect('Home/home');
         if (empty($_POST['username']) || empty($_POST['password']))
             $this->redirectBack();
 
         else {
 
-            $user = new UserModel();
-            $checkUser = $user->checkUserExists($_POST['username']);
-            if ($checkUser == false) {
+            $userModel = new UserModel();
+            $user = $userModel->checkUserNameExists($_POST);
+            if ($user != null) {
                 $this->redirect('Home/home');
                 if (password_verify($_POST['password'], $user['password'])) {
                     $_SESSION['userId'] = $user['id'];
@@ -82,6 +81,7 @@ class UserAuthentication extends Controller
     public function forgetPassword()
     {
         return $this->view('forgot-password');
+
     }
 
     public function logout($request)

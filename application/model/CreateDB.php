@@ -16,7 +16,7 @@ class CreateDB extends Model
           `created_at` datetime NOT NULL,
           `updated_at` datetime DEFAULT NULL,
           PRIMARY KEY (`id`),
-          UNIQUE KEY `email` (`email`)
+          UNIQUE KEY `email` (`email`),`username` (`username`)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
 
         "CREATE TABLE `movies` (

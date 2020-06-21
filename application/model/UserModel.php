@@ -17,20 +17,19 @@ class UserModel extends Model
             return true;
     }
 
+    public function checkUserNameExists($request)
+    {
+        $db = new Model();
+        $user = $db->select("SELECT * FROM `users` WHERE (`username` = ?); ", [$request['username']])->fetch();
+        return $user;
+    }
+
     // store user in DB
     public function storeUser($request)
     {
         $db = new Model();
-//        $db->insert('users', array_keys($request), $request);
         $db->insert('users', ['username', 'email', 'password'], [$_POST['username'], $_POST['email'], $_POST['password']]);
         return true;
-    }
-
-    public function insertUser($values)
-    {
-        $query = "INSERT INTO `users` ( `user_name`, `email`, `password`, created_at) VALUES ( ?, ?, ?, now() );";
-        $this->execute($query, array_values($values));
-        $this->closeConnection();
     }
 
     public function checkAdmin()
