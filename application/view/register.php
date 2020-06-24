@@ -26,7 +26,7 @@
                         <p class="login-page-card-description">ایجاد حساب کاربری</p>
                         <p class="login-page-card-description"></p>
 
-                        <form action="<?php $this->url('UserAuthentication/userRegister'); ?>" method="post">
+                        <form action="<?php $this->url('User/registration'); ?>" method="post">
 
                             <div class="form-group">
                                 <label for="username" class="sr-only">Username</label>

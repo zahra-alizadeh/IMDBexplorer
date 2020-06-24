@@ -25,7 +25,7 @@
                         </div>
                         <p class="login-page-card-description">ورود به سایت</p>
 
-                        <form action="<?php $this->url('UserAuthentication/userLogin'); ?>" method="post">
+                        <form action="<?php $this->url('User/login'); ?>" method="post">
 
                             <div class="form-group">
                                 <label for="username" class="sr-only">Username</label>
@@ -50,10 +50,10 @@
 
                         </form>
 
-                        <a href="<?php $this->url('UserAuthentication/forgetPassword'); ?>"
+                        <a href="<?php $this->url('User/forgetPassword'); ?>"
                            class="forgot-password-link">رمز عبور خود را فراموش کردید</a>
                         <p class="forget-password-card-footer-text"> حساب کاربری ندارید؟<a
-                                    href="<?php $this->url('UserAuthentication/register'); ?>"
+                                    href="<?php $this->url('User/register'); ?>"
                                     class="register">ثبت نام در
                                 سایت</a></p>
 

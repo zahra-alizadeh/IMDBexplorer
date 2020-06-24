@@ -4,14 +4,13 @@ namespace application\controller;
 require 'application/model/Model.php';
 require 'application/model/UserModel.php';
 
-use application\model\Model;
 use application\model\UserModel;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'system/phpMailer/vendor/autoload.php';
 
-class UserAuthentication extends Controller
+class User extends Controller
 {
     function __construct()
     {
@@ -19,13 +18,14 @@ class UserAuthentication extends Controller
             session_start();
     }
 
+//    public function login()
+//    {
+//        return $this->view('login');
+//    }
+
     public function login()
     {
-        return $this->view('login');
-    }
-
-    public function userLogin()
-    {
+        $this->view('login');
         if (empty($_POST['username']) || empty($_POST['password']))
             $this->redirectBack();
 
@@ -49,12 +49,12 @@ class UserAuthentication extends Controller
         }
     }
 
-    public function register()
+    public function registration()
     {
         return $this->view('register');
     }
 
-    public function userRegister()
+    public function register()
     {
         if (empty($_POST['email']) || empty($_POST['password']))
             $this->redirectBack();
@@ -98,14 +98,15 @@ class UserAuthentication extends Controller
     {
         if (isset($_SESSION['userId'])) {
             $checkUser = new UserModel();
-            $user = $this->checkAdmin($_SESSION['userId']);
+            $user = $checkUser->checkUserExists($_POST);
+//            $user = $this->checkAdmin($_SESSION['userId']);
             if ($user != false) {
                 if ($user['permission'] != 'admin')
-                    $this->redirect('home');
+                    $this->redirect('Home/home');
             } else
-                $this->redirect('home');
+                $this->redirect('Home/home');
         } else
-            $this->redirect('home');
+            $this->redirect('Home/home');
     }
 
     // send email for user to authentication

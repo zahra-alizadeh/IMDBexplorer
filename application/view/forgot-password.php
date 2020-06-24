@@ -28,7 +28,7 @@
                         <p class="login-page-card-header-text">پس از وارد کردن ایمیل خود لینک تغییر رمز عبور به ایمیل
                             شما ارسال می شود.</p>
 
-                        <form action="<?php $this->url('UserAuthentication/forgetPassword'); ?>" method="post">
+                        <form action="<?php $this->url('User/forgetPassword'); ?>" method="post">
 
                             <div class="form-group">
                                 <label for="email" class="sr-only">Email</label>
@@ -47,7 +47,7 @@
                         </form>
 
                         <p class="login-page-card-footer-text"> حساب کاربری ندارید؟<a
-                                    href="<?php $this->url('UserAuthentication/register'); ?>" class="register">ثبت نام در سایت</a></p>
+                                    href="<?php $this->url('User/register'); ?>" class="register">ثبت نام در سایت</a></p>
 
                     </div>
                 </div>
