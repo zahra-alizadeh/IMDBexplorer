@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="512b1a97-9043-43cf-ae2a-3dd534e048fb" name="Default Changelist" comment="Merge branch 'master' of https://dev.azure.com/zahraalizade2500153/IMDB/_git/IMDB&#10;&#10;# Conflicts:&#10;#&#9;application/view/forgot-password.html&#10;#&#9;application/view/login.html&#10;#&#9;application/view/main-page.html&#10;#&#9;application/view/register.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/model/CreateDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/model/CreateDB.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +119,8 @@
       <workItem from="1593253707717" duration="1778000" />
       <workItem from="1593255527513" duration="779000" />
       <workItem from="1593262644457" duration="1789000" />
-      <workItem from="1593264458456" duration="830000" />
+      <workItem from="1593264458456" duration="2365000" />
+      <workItem from="1593267616007" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1588592486556</created>
