@@ -9,9 +9,5 @@ class Home extends Controller
         $p ="hello";
         return $this->view('main-page',compact('p'));
     }
-    public function index()
-    {
-        $p ="index";
-        return $this->view('main-page',compact('p'));
-    }
+
 }

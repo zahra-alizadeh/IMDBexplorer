@@ -59,7 +59,7 @@ class CreateDB extends Model
           `birth_place` varchar(100) ,
           `picture` varchar(200) COLLATE utf8_persian_ci,
           `bio` varchar(200) COLLATE utf8_persian_ci,
-          `role` enum('director','actor','both') COLLATE utf8_persian_ci NOT NULL,
+          `role` enum('director','actor&director','both') COLLATE utf8_persian_ci NOT NULL,
           `created_at` datetime NOT NULL,
           `updated_at` datetime DEFAULT NULL,
           PRIMARY KEY (`id`)

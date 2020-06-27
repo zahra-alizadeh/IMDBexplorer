@@ -7,6 +7,7 @@ require 'application/model/UserModel.php';
 use application\model\UserModel;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
 require 'system/phpMailer/vendor/autoload.php';
 
@@ -18,14 +19,13 @@ class User extends Controller
             session_start();
     }
 
-//    public function login()
-//    {
-//        return $this->view('login');
-//    }
-
     public function login()
     {
-        $this->view('login');
+        return $this->view('login');
+    }
+
+    public function userLogin()
+    {
         if (empty($_POST['username']) || empty($_POST['password']))
             $this->redirectBack();
 
@@ -71,9 +71,9 @@ class User extends Controller
             else {
                 $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-//                $this->sendEmail($_POST);
-                $user->storeUser($_POST);
-                $this->redirect('Home/home');
+                $this->sendEmail($_POST);
+//                $user->storeUser($_POST);
+//                $this->redirect('Home/home');
             }
         }
     }

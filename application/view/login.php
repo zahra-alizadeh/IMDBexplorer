@@ -14,14 +14,14 @@
         <div class="card login-page-card">
             <div class="row no-gutters">
                 <div class="col-md-5">
-                    <img src="<?php $this->asset('image/people-watching-video-on-smartphon-gettyimages-youtube.jpg') ?>"
+                    <img src="<?php $this->asset('image/login/people-watching-video-on-smartphon-gettyimages-youtube.jpg') ?>"
                          alt="login-page" class="login-page-card-img">
                 </div>
 
                 <div class="col-md-7">
                     <div class="card-body">
                         <div class="brand-wrapper">
-                            <img src="<?php $this->asset('image/logo.png') ?>" alt="logo" class="logo">
+                            <img src="<?php $this->asset('image/login/logo.png') ?>" alt="logo" class="logo">
                         </div>
                         <p class="login-page-card-description">ورود به سایت</p>
 
@@ -53,7 +53,7 @@
                         <a href="<?php $this->url('User/forgetPassword'); ?>"
                            class="forgot-password-link">رمز عبور خود را فراموش کردید</a>
                         <p class="forget-password-card-footer-text"> حساب کاربری ندارید؟<a
-                                    href="<?php $this->url('User/register'); ?>"
+                                    href="<?php $this->url('User/registration'); ?>"
                                     class="register">ثبت نام در
                                 سایت</a></p>
 

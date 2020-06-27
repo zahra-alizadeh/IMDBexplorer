@@ -18,7 +18,7 @@ class Routing
     {
         // make path of the class
         $this->currentRoute[0] = strtoupper($this->currentRoute[0]);
-        $path = realpath(dirname(__FILE__) . "/../../application/controller/" . $this->currentRoute[0] . ".php");
+        $path = realpath(dirname(__FILE__) . "/../../application/controller/" . strtoupper($this->currentRoute[0]) . ".php");
         if (!file_exists($path)) {
 //            echo "404 - File not exists!!hi";
 //            header("location:error404.php?wrong=10");

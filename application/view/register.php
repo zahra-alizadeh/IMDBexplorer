@@ -14,19 +14,19 @@
         <div class="card login-page-card">
             <div class="row no-gutters">
                 <div class="col-md-5">
-                    <img src="<?php $this->asset('image/people-watching-video-on-smartphon-gettyimages-youtube.jpg') ?>"
+                    <img src="<?php $this->asset('image/login/people-watching-video-on-smartphon-gettyimages-youtube.jpg') ?>"
                          alt="login-page" class="login-page-card-img">
                 </div>
 
                 <div class="col-md-7">
                     <div class="card-body">
                         <div class="brand-wrapper">
-                            <img src="<?php $this->asset('image/logo.png') ?>" alt="logo" class="logo">
+                            <img src="<?php $this->asset('image/login/logo.png') ?>" alt="logo" class="logo">
                         </div>
                         <p class="login-page-card-description">ایجاد حساب کاربری</p>
                         <p class="login-page-card-description"></p>
 
-                        <form action="<?php $this->url('User/registration'); ?>" method="post">
+                        <form action="<?php $this->url('User/register'); ?>" method="post">
 
                             <div class="form-group">
                                 <label for="username" class="sr-only">Username</label>
