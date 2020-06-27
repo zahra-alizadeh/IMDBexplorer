@@ -20,232 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="512b1a97-9043-43cf-ae2a-3dd534e048fb" name="Default Changelist" comment="Merge branch 'master' of https://dev.azure.com/zahraalizade2500153/IMDB/_git/IMDB&#10;&#10;# Conflicts:&#10;#&#9;application/view/forgot-password.html&#10;#&#9;application/view/login.html&#10;#&#9;application/view/main-page.html&#10;#&#9;application/view/register.html">
-      <change afterPath="$PROJECT_DIR$/application/controller/Movie.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/model/PersonModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/view/moviesingle_light.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/loginpagestyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/plugins.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/blank.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/fancybox_loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/fancybox_loading@2x.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/fancybox_overlay.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/fancybox_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/fancybox_sprite@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/imdb_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/nivo/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/nivo/close@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/nivo/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/nivo/loading@2x.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/nivo/next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/nivo/next@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/nivo/prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/nivo/prev@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ads1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ads2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/author.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/author2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/author3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/author4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ava1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ava2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ava3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ava4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/blog-detail.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/blog-detail2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/blog-it1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/blog-it2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/blog26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/blog27.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/blog29.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/bloglist-it1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/bloglist-it2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/bloglist-it3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/bloglist-it4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/bloglist-it5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/bloglist-it6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/blogv21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/blogv22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/blogv23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/blogv24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/blogv25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/blogv29.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/cast1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/cast2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/cast3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/cast4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/cast5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/cast6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/cast7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/cast9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb27.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb28.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb29.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceb9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceblist1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceblist2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceblist3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceblist4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceblist5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceblist6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceblist7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ceblist8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/cebsingle2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/celeb-hero-single.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/cm-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/drop-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/err-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/error-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/film1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/film2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/film3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/film4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/film5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/film6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/film7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/film8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/ft-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/hero-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image1-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image101.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image111.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image121.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image131.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image141.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image151.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image161.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image171.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image181.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image191.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image2-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image201.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image211.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image51.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image61.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image71.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image81.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/image91.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/landing-dark-version.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/landing-light-version.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/movie-single.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-it1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-it10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-it11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-it12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-it2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-it3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-it4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-it5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-it6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-it7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-it8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-it9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-item1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-item10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-item11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-item12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-item2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-item3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-item4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-item5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-item6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-item7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-item8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv-item9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/mv5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/play-vd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/poster1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/search-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/search-bgsb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/season.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/series-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/slider-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/slider-bg2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/slider1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/slider2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/slider3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/slider4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/sr-single.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/topsearch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/trailer2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/trailer3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/trailer4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/trailer5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/trailer6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/trailer7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/user-hero-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/user-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/userava1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/userava2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/userava3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/userava4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/userava5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/vd-item1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/vd-item2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/vd-item3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/uploads/vd-item4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/طعم گیلاس.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/plugins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/plugins2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controller/Actor.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/Person.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controller/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controller/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/model/CreateDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/model/CreateDB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/view/forgot-password.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/forgot-password.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/view/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/image/login/bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/image/login/login.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/image/login/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/people-watching-video-on-smartphon-gettyimages-youtube.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/image/login/people-watching-video-on-smartphon-gettyimages-youtube.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/alaki.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/alaki.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/router/Routing.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/router/Routing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/traits/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/traits/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IM" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -341,7 +118,9 @@
       <workItem from="1593054941023" duration="3149000" />
       <workItem from="1593251372675" duration="944000" />
       <workItem from="1593253707717" duration="1778000" />
-      <workItem from="1593255527513" duration="387000" />
+      <workItem from="1593255527513" duration="779000" />
+      <workItem from="1593262644457" duration="1789000" />
+      <workItem from="1593264458456" duration="830000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1588592486556</created>
@@ -430,10 +209,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="423" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1588613511034" />
-    <state x="580" y="183" key="FileChooserDialogImpl" timestamp="1592997451263">
+    <state x="580" y="183" key="FileChooserDialogImpl" timestamp="1593264151655">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="183" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1592997451263" />
+    <state x="580" y="183" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1593264151655" />
     <state x="605" y="135" key="NewPhpClassDialog" timestamp="1593254770238">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
