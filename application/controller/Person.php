@@ -7,13 +7,7 @@ use application\model\PersonModel;
 
 class Person extends Controller
 {
-    // get biography of person
-    public function actorBio($actorId)
-    {
-        $personModel = new PersonModel();
-        $bio = $personModel->getActorBio($actorId);
-        return $this->view('actor&director', compact('bio'));
-    }
+
 
     public function directorBio($directorId)
     {

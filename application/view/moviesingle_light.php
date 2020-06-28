@@ -13,7 +13,7 @@
 	<!-- Basic need -->
 	<title>دنیای فیلم و سریال</title>
 	<link rel="icon" href="<?php $this->asset('image/imdb_logo.png') ?>" type="image/x-icon">
-	<link rel="icon" href="../../public/image/imdb_logo.png" type="image/x-icon">
+	<link rel="icon" href="../../public/image/login/imdb_logo.png" type="image/x-icon">
 	<meta name="description" content="فیلم و سریال از بهترین سایت دانلود فیلم بهمراه جدیدترین فیلم های ایرانی  imdb">
 	<meta name="keywords"
 		content="پخش تریلر فیلم,فیلم,season,video, movie, film,online,تماشای آنلاین,فیل ,,فیلم های کمدی,جدیدترین فیلم ها,فیلم های جدید,بهترین فیلم,فیلم جدید,سریا,">
@@ -53,7 +53,7 @@
 						class="MuiButtonBase-root MuiIconButton-root jss14 MuiIconButton-colorInherit MuiIconButton-edgeStart" 
 						tabindex="0" type="button" aria-label="open drawer">
 							<span class="MuiIconButton-label">
-								<img src="../../public/image/imdb_logo.png">
+								<img src="../../public/image/login/imdb_logo.png">
 							</span>
 							<span class="MuiTouchRipple-root"></span>
 						</button>

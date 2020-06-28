@@ -168,14 +168,17 @@ class CreateDB extends Model
     );
 
     private $tableInitializes = array(
-        ['table' => 'users', 'fields' => ['username', 'email', 'password', 'admin'], 'values' => ['zahra', 'alaki@gmail.com', '1234', 'admin']],
+//        ['table' => 'users', 'fields' => ['username', 'email', 'password', 'admin'], 'values' => ['zahra', 'alaki@gmail.com', '1234', 'admin']],
+        ['table' => 'actors', 'fields' => ['first_name', 'last_name', 'birth_date', 'birth_place','bio'], 'values' => ['امین', 'حیایی', '۱۹ خرداد ۱۳۴۹', 'تهران',
+            'امین حیایی در ۱۹ خرداد ۱۳۴۹ در تهران در محله قیطریه[نیازمند منبع] به دنیا آمد پدرش تقی حیایی کارمند شغل آزاد بود در دوران تحصیل به فعالیت در تئاتر پرداخت و پس از گرفتن دیپلم، ضمن خدمت سربازی در مرکز هنرهای نمایشی عقیدتی - سیاسی نیروی هوایی فعالیتش را آغاز کرد. در سال ۱۳۷۰ بازیگر یک تئاتر کودکان به کارگردانی ثریا قاسمی بود. در پانزدهمین جشنواره فیلم فجر نامزد دریافت جایزه بازیگر نقش دوم برای فیلم «براده‌های خورشید» شد.'],
+            ],['table' => 'actors', 'fields' => ['first_name', 'last_name', 'birth_date', 'birth_place','bio'], 'values' => ['هومن', 'سیدی', '۸ آذر ۱۳۵۹۹', 'تهران',
+            'هومن سیدی پس از پایان دبیرستان و دریافت دیپلم گرافیک کار خود را با حضور در کلاس‌های انجمن سینمای جوان رشت و ساخت چند فیلم کوتاه آغاز کرد. سپس به تهران آمد و در کلاس‌های بازیگری کارنامه به مدیریت پرویز پرستویی شرکت کرد. او فرزند دوم خانواده است و ۲ برادر (حامد و هامون) و یک خواهر (هیلدا) دارد. مادرش بازنشسته نیروی دریایی است و پدرش بازنشسته کارمند بانک کشاورزی.']]
     );
-
     public function run()
     {
-        foreach ($this->createTableQueries as $createTableQuery) {
-            $this->createTable($createTableQuery);
-        }
+//        foreach ($this->createTableQueries as $createTableQuery) {
+//            $this->createTable($createTableQuery);
+//        }
         foreach ($this->tableInitializes as $tableInitialize) {
             $this->insert($tableInitialize['table'], $tableInitialize['fields'], $tableInitialize['values']);
         }

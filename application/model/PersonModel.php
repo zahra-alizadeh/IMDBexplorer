@@ -6,14 +6,23 @@ namespace application\model;
 
 class PersonModel extends Model
 {
-    // get biography of person
-    public function getActorBio($actorId)
+    public function all($tableName)
     {
-        $query = "SELECT * FROM `actors` WHERE $actorId = ? ";
+        $query = "SELECT * FROM " . $tableName . "; ";
+        $result = $this->query($query)->fetchAll();
+        $this->closeConnection();
+        return $result;
+    }
+
+    // get biography of person
+    public function getActor($actorId)
+    {
+        $query = "SELECT * FROM `actors` WHERE id = ? ";
         $result = $this->query($query, array($actorId))->fetchAll();
         $this->closeConnection();
         return $result;
     }
+
     public function getDirectorBio($directorId)
     {
         $query = "SELECT * FROM `directors` WHERE $directorId = ? ";

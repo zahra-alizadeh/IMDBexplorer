@@ -7,7 +7,6 @@ require 'application/model/UserModel.php';
 use application\model\UserModel;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
 
 require 'system/phpMailer/vendor/autoload.php';
 
@@ -30,9 +29,8 @@ class User extends Controller
             $this->redirectBack();
 
         else {
-
             $userModel = new UserModel();
-            $user = $userModel->checkUserNameExists($_POST);
+            $user = $userModel->checkUserNameExists('users',$_POST);
             if ($user != null) {
                 $this->redirect('Home/home');
                 if (password_verify($_POST['password'], $user['password'])) {
@@ -71,9 +69,9 @@ class User extends Controller
             else {
                 $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-                $this->sendEmail($_POST);
-//                $user->storeUser($_POST);
-//                $this->redirect('Home/home');
+//                $this->sendEmail($_POST);
+                $user->storeUser($_POST);
+                $this->redirect('Home/home');
             }
         }
     }
