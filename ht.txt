@@ -1,5 +1,0 @@
-ErrorDocument 404 /application/view/error404.php
-RewriteEngine On
-
-RewriteCond %{REQUEST_URI} ^/404/$
-RewriteRule ^(.*)$ application/view/error404.php [L]
