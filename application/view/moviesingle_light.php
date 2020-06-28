@@ -12,7 +12,7 @@
 <head>
 	<!-- Basic need -->
 	<title>دنیای فیلم و سریال</title>
-	<link rel="icon" href="<?php $this->asset('image/imdb_logo.png') ?>" type="image/x-icon">
+	<link rel="icon" href="<?php $this->asset('image/login/imdb_logo.png') ?>" type="image/x-icon">
 	<link rel="icon" href="../../public/image/login/imdb_logo.png" type="image/x-icon">
 	<meta name="description" content="فیلم و سریال از بهترین سایت دانلود فیلم بهمراه جدیدترین فیلم های ایرانی  imdb">
 	<meta name="keywords"

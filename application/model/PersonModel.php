@@ -23,9 +23,9 @@ class PersonModel extends Model
         return $result;
     }
 
-    public function getDirectorBio($directorId)
+    public function getDirector($directorId)
     {
-        $query = "SELECT * FROM `directors` WHERE $directorId = ? ";
+        $query = "SELECT * FROM `directors` WHERE id = ? ";
         $result = $this->query($query, array($directorId))->fetchAll();
         $this->closeConnection();
         return $result;
