@@ -166,9 +166,11 @@
                                                                 class="ion-ios-arrow-left"></i></a>
                                                 </div>
                                                 <div class="mvsingle-item ov-item">
+                                                    <?php foreach ($actorPictures as $actorPicture) { ?>
                                                     <a class="img-lightbox" data-fancybox-group="gallery"
-                                                       href="<?php $this->asset('image/uploads/image11.jpg') ?>"><img
-                                                                src="<?php $this->asset('image/uploads/image1.jpg') ?>" alt=""></a>
+                                                       href="<?php echo $actorPicture[1]['picture']; ?>"><img
+                                                                src="<?php echo $actorPicture[1]['picture']; ?>" alt=""></a>
+                                                    <?php } ?>
 <!--                                                    <a class="img-lightbox" data-fancybox-group="gallery"-->
 <!--                                                       href="images/uploads/image21.jpg"><img-->
 <!--                                                                src="images/uploads/image2.jpg" alt=""></a>-->

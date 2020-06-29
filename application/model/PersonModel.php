@@ -23,6 +23,22 @@ class PersonModel extends Model
         return $result;
     }
 
+    public function getActorPicture($actorId)
+    {
+        $query = "SELECT * FROM `actor_pictures` WHERE actor_id = ? ";
+        $result = $this->query($query, array($actorId))->fetchAll();
+        $this->closeConnection();
+        return $result;
+    }
+
+    public function getActorMovies($actorId)
+    {
+        $query = "SELECT `movie_name`,`picture` FROM (`movies` INNER JOIN `movie_actor` ON `id`=`movie_id`) WHERE actor_id = ? LIMIT 8; ";
+        $result = $this->query($query, array($actorId))->fetchAll();
+        $this->closeConnection();
+        return $result;
+    }
+
     public function getDirector($directorId)
     {
         $query = "SELECT * FROM `directors` WHERE id = ? ";

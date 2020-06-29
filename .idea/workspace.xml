@@ -20,15 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="512b1a97-9043-43cf-ae2a-3dd534e048fb" name="Default Changelist" comment="Merge branch 'master' of https://dev.azure.com/zahraalizade2500153/IMDB/_git/IMDB&#10;&#10;# Conflicts:&#10;#&#9;application/view/forgot-password.html&#10;#&#9;application/view/login.html&#10;#&#9;application/view/main-page.html&#10;#&#9;application/view/register.html">
+      <change afterPath="$PROJECT_DIR$/application/model/MovieModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controller/Actor.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controller/Person.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/Person.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/model/CreateDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/model/CreateDB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/model/Movie.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/application/model/PersonModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/model/PersonModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/view/celebrity-single.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/celebrity-single.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/view/moviesingle_light.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/moviesingle_light.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/view/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/plugins.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/plugins.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,29 +55,30 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WampServer\www\IMDB\public\image\login" />
-      <recent name="D:\WampServer\www\IMDB\public\css" />
-      <recent name="D:\WampServer\www\IMDB\public\bootstrap\css" />
-      <recent name="D:\WampServer\www\IMDB\application\view" />
-      <recent name="D:\WampServer\www\IMDB\application\controller" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WampServer\www\IMDB\public\css" />
       <recent name="D:\WampServer\www\IMDB\application\view" />
       <recent name="D:\WampServer\www\IMDB\public\js" />
       <recent name="D:\WampServer\www\IMDB\public\image" />
       <recent name="D:\WampServer\www\IMDB\system\router" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WampServer\www\IMDB\public\image\login" />
+      <recent name="D:\WampServer\www\IMDB\public\css" />
+      <recent name="D:\WampServer\www\IMDB\public\bootstrap\css" />
+      <recent name="D:\WampServer\www\IMDB\application\view" />
+      <recent name="D:\WampServer\www\IMDB\application\controller" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -131,7 +135,10 @@
       <workItem from="1593282706446" duration="58000" />
       <workItem from="1593282785890" duration="7887000" />
       <workItem from="1593324706134" duration="74000" />
-      <workItem from="1593331429511" duration="2651000" />
+      <workItem from="1593331429511" duration="4495000" />
+      <workItem from="1593351188737" duration="2182000" />
+      <workItem from="1593367129165" duration="5778000" />
+      <workItem from="1593416387910" duration="851000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1588592486556</created>
@@ -212,6 +219,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="362" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1592997047369" />
+    <state x="530" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593416705336">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1593416705336" />
     <state x="930" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593285033572">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -220,14 +231,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="423" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1588613511034" />
-    <state x="580" y="183" key="FileChooserDialogImpl" timestamp="1593284584376">
+    <state x="580" y="183" key="FileChooserDialogImpl" timestamp="1593335792888">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="183" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1593284584376" />
-    <state x="605" y="135" key="NewPhpClassDialog" timestamp="1593283493588">
+    <state x="580" y="183" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1593335792888" />
+    <state x="605" y="135" key="NewPhpClassDialog" timestamp="1593367653257">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="135" key="NewPhpClassDialog/0.0.1600.860@0.0.1600.860" timestamp="1593283493588" />
+    <state x="605" y="135" key="NewPhpClassDialog/0.0.1600.860@0.0.1600.860" timestamp="1593367653257" />
     <state x="635" y="348" key="NewPhpFileDialog" timestamp="1592997152285">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -240,9 +251,9 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="607" y="338" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1590859693961" />
-    <state x="56" y="190" key="run.anything.popup" timestamp="1593285035888">
+    <state x="56" y="190" key="run.anything.popup" timestamp="1593372739118">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="56" y="190" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1593285035888" />
+    <state x="56" y="190" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1593372739118" />
   </component>
 </project>

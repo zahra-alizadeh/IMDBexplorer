@@ -120,7 +120,7 @@ margin-right: -12px;
 }
 
 .MuiIconButton-label {
-width: 100%;
+width: 50%;
 display: flex;
 align-items: inherit;
 justify-content: inherit;
@@ -150,7 +150,7 @@ display: none;
 color: white;
 margin: 0 10px;
 display: inline-block;
-font-size: 87.50%;
+font-size: medium;
 text-decoration: none;
 }
 .jss4 {
@@ -189,6 +189,7 @@ display: block;
 font-size: 87.50%;
 }
 .MuiButton-label {
+font-size: medium;
 width: 100%;
 display: inherit;
 align-items: inherit;

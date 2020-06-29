@@ -2,7 +2,7 @@
 
 
 namespace application\model;
-require_once ('Model.php');
+require_once('Model.php');
 
 class CreateDB extends Model
 {
@@ -178,8 +178,16 @@ class CreateDB extends Model
     );
 
     private $tableInitializes = array(
-        ['table' => 'users', 'fields' => ['username', 'email', 'password', 'admin'], 'values' => ['zahra', 'alaki@gmail.com', '1234', 'admin']],
-        ['table' => 'users', 'fields' => ['username', 'email', 'password', 'admin'], 'values' => ['zahra', 'alaki@gmail.com', '1234', 'admin']]
+
+//        ['table' => 'movie_actor', 'fields' => ['movie_id','actor_id'], 'values' => ['1', '1']]
+
+//        ['table' => 'movies', 'fields' => ['movie_name', 'release_date', 'trailer', 'picture', 'score', 'summary'],
+//            'values' => ['طعم گیلاس', '۱۳۷۶', 'https://www.didestan.com/video/m8kmO9xG', 'https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D9%88%D9%86%D8%AF%D9%87:%D8%B7%D8%B9%D9%85_%DA%AF%DB%8C%D9%84%D8%A7%D8%B3.jpg', '8', 'محمد تاجیک –طعم گیلاس فیلم برگزیده نخل طلای کن تولید مشترک با فرانسه محصول ۱۹۹۷ میلادی است. فیلم درباره مردی است که در حومهٔ شهر تهران، با اتوموبیلش دنبال کسی می‌گردد که تقاضای پردردسر او را در ازای دریافت ۲۰۰هزار تومان پول انجام دهد.فیلم طعم گیلاس همراه با فیلم ژاپنی «مارماهی» ساختهٔ «شوهی ایمامورا» جایزهٔ نخل طلای جشنوارهٔ کن رادر سال ۱۹۹۷ برد که مهم ترین جایزه‌ای است که سینمای ایران به دست آورده است.']]
+
+//        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['2', 'https://commons.wikimedia.org/wiki/File:Hooman_seyedi_khashm_hayahoo.jpg?uselang=fa']],
+//        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['1', 'https://commons.wikimedia.org/wiki/File:Amin_Hayayi.jpg?uselang=fa']],
+//        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['2', 'https://namnak.com/%D9%87%D9%88%D9%85%D9%86-%D8%B3%DB%8C%D8%AF%DB%8C.p9131']],
+//        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['1', 'https://files.namnak.com/users/kk/aup/201902/348_pics/%D8%A7%D9%85%DB%8C%D9%86-%D8%AD%DB%8C%D8%A7%DB%8C%DB%8C.jpg']]
 
 //        ['table' => 'users', 'fields' => ['username', 'email', 'password', 'admin'], 'values' => ['zahra', 'alaki@gmail.com', '1234', 'admin']],
 //        ['table' => 'actors', 'fields' => ['first_name', 'last_name', 'birth_date', 'birth_place','bio'], 'values' => ['امین', 'حیایی', '۱۹ خرداد ۱۳۴۹', 'تهران',
@@ -187,13 +195,15 @@ class CreateDB extends Model
 //            ],['table' => 'actors', 'fields' => ['first_name', 'last_name', 'birth_date', 'birth_place','bio'], 'values' => ['هومن', 'سیدی', '۸ آذر ۱۳۵۹۹', 'تهران',
 //            'هومن سیدی پس از پایان دبیرستان و دریافت دیپلم گرافیک کار خود را با حضور در کلاس‌های انجمن سینمای جوان رشت و ساخت چند فیلم کوتاه آغاز کرد. سپس به تهران آمد و در کلاس‌های بازیگری کارنامه به مدیریت پرویز پرستویی شرکت کرد. او فرزند دوم خانواده است و ۲ برادر (حامد و هامون) و یک خواهر (هیلدا) دارد. مادرش بازنشسته نیروی دریایی است و پدرش بازنشسته کارمند بانک کشاورزی.']]
     );
+
     public function run()
     {
-        foreach ($this->createTableQueries as $createTableQuery) {
-            $this->createTable($createTableQuery);
-        }
+//        foreach ($this->createTableQueries as $createTableQuery) {
+//            $this->createTable($createTableQuery);
+//        }
         foreach ($this->tableInitializes as $tableInitialize) {
             $this->insert($tableInitialize['table'], $tableInitialize['fields'], $tableInitialize['values']);
+            echo "helllo";
         }
     }
 }

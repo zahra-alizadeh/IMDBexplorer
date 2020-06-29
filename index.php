@@ -8,9 +8,9 @@ include('application/controller/Controller.php');
 include('application/controller/Home.php');
 include('system/bootstrap/boot.php');
 
-include ('application/model/CreateDB.php');
-use application\model\CreateDB;
-
-$db = new CreateDB();
-$db->run();
+//include ('application/model/CreateDB.php');
+//use application\model\CreateDB;
+//
+//$db = new CreateDB();
+//$db->run();
 
