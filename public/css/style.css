@@ -5899,6 +5899,7 @@ ul {
   font-weight: bold;
   text-transform: uppercase;
   margin-right: 35px;;
+  color:white
 }
 @media (max-width: 767px) {
   .social-btn a.parent-btn {
@@ -7002,6 +7003,7 @@ p.ceb-single {
   margin-top: 10px;
   height: 150px;
   border: 1px solid #e1e1e1;
+  margin-bottom: 10px;
 }
 .overlay .login-content label input::-webkit-input-placeholder {
   font-family: 'Dosis', sans-serif;

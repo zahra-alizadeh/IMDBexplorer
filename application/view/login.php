@@ -1,14 +1,8 @@
-<!doctype html>
-<html lang="fa-IR" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php $this->asset('bootstrap/css/bootstrap.min.css') ?>">
-    <link rel="stylesheet" href="<?php $this->asset('css/style.css') ?>">
-</head>
+<?php include('Layouts/header.php');?>
 <body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="<?php $this->asset('css/bootstrap.min.css') ?>">
+<link rel="stylesheet" href="<?php $this->asset('css/loginstyle.css') ?>">
 <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
     <div class="container">
         <div class="card login-page-card">
@@ -63,5 +57,4 @@
         </div>
     </div>
 </main>
-</body>
-</html>
+<?php include('Layouts/footer.php');?>

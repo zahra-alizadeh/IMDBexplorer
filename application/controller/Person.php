@@ -22,12 +22,20 @@ class Person extends Controller
         return $this->view('', compact('actors'));
     }
 
+    public function actor()
+    {
+        $this->actorDetails();
+        $this->actorPictures();
+        $this->actorMovie();
+    }
+
     // get biography of person
     public function actorDetails()
     {
         $personModel = new PersonModel();
         $actor = $personModel->getActor('1');
         $actor = $actor[0];
+//        var_dump($actor);
         return $this->view('celebrity-single', compact('actor'));
     }
 
@@ -35,9 +43,8 @@ class Person extends Controller
     {
         $personModel = new PersonModel();
         $actorPictures = $personModel->getActorPicture('1');
-//        $actorPictures = $actorPictures[0];
+        $actorPictures = $actorPictures[0];
 //        var_dump($actorPictures);
-
         return $this->view('celebrity-single', compact('actorPictures'));
     }
 
@@ -53,6 +60,7 @@ class Person extends Controller
         $movieModel = new PersonModel();
         $actorMovies = $movieModel->getActorMovies('1');
         $actorMovies = $actorMovies[0];
+//        var_dump($actorMovies);
         return $this->view('celebrity-single', compact('actorMovies'));
     }
 }

@@ -13,6 +13,15 @@ $(window).on('load', function() { // makes sure the whole site is loaded
 		} 
 	}
 })
+function toggleBg(element, color) {
+    if(!color) {
+      color = element.dataset.normalColor;
+    } else {
+      element.dataset.normalColor = element.style.color;
+    }
+
+    element.style.color = color;
+  }
 $(function(){
 	'use strict';
 	// js for dropdown menu
@@ -444,8 +453,10 @@ $(function(){
 	//==js for login and sign up
 	var loginLink = $(".loginLink");
 	var signupLink = $(".signupLink");
+	var commentLink = $(".commentLink");
 	var loginct = $( "#login-content" );
 	var signupct= $("#signup-content");
+	var commentct= $("#comment-content");
 	var loginWrap = $(".login-wrapper");
 	var overlay = $(".overlay");
 	loginWrap.each( function(){
@@ -475,6 +486,21 @@ $(function(){
 		var target = $(e.target);
 		if ($(target).hasClass("overlay")){
 				$(target).find(signupct).each( function(){
+					$(this).removeClass("openform");
+				});
+				setTimeout( function(){
+					$(target).removeClass("openform");
+				}, 350);
+			}	
+		});
+	});
+	commentLink.on('click', function(event){
+    	event.preventDefault();
+    	commentct.parents(overlay).addClass("openform");
+		$(document).on('click', function(e){
+		var target = $(e.target);
+		if ($(target).hasClass("overlay")){
+				$(target).find(commentct).each( function(){
 					$(this).removeClass("openform");
 				});
 				setTimeout( function(){
@@ -566,3 +592,4 @@ $(function(){
 	// });
 
 });
+

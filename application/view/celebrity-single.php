@@ -162,116 +162,114 @@
                                                 <!-- <p class="time"><a href="#biography">مشاهده کامل<i class="ion-ios-arrow-left"></i></a></p> -->
                                                 <div class="title-hd-sm">
                                                     <h4>Videos & Photos</h4>
-                                                    <a href="#" class="time">All 5 Videos & 245 Photos <i
-                                                                class="ion-ios-arrow-left"></i></a>
                                                 </div>
                                                 <div class="mvsingle-item ov-item">
-                                                    <?php foreach ($actorPictures as $actorPicture) { ?>
-                                                    <a class="img-lightbox" data-fancybox-group="gallery"
-                                                       href="<?php echo $actorPicture[1]['picture']; ?>"><img
-                                                                src="<?php echo $actorPicture[1]['picture']; ?>" alt=""></a>
+                                                    <?php foreach ($actorPictures as $actorPicture) { var_dump($actorPictures);?>
+                                                        <a class="img-lightbox" data-fancybox-group="gallery"
+                                                           href="<?php echo $actorPicture['picture']; ?>"><img
+                                                                    src="<?php echo $actorPicture['picture']; ?>"
+                                                                    alt=""></a>
                                                     <?php } ?>
-<!--                                                    <a class="img-lightbox" data-fancybox-group="gallery"-->
-<!--                                                       href="images/uploads/image21.jpg"><img-->
-<!--                                                                src="images/uploads/image2.jpg" alt=""></a>-->
-<!--                                                    <a class="img-lightbox" data-fancybox-group="gallery"-->
-<!--                                                       href="images/uploads/image31.jpg"><img-->
-<!--                                                                src="images/uploads/image3.jpg" alt=""></a>-->
-<!--                                                    <div class="vd-it">-->
-<!--                                                        <img class="vd-img" src="images/uploads/image4.jpg" alt="">-->
-<!--                                                        <a class="fancybox-media hvr-grow"-->
-<!--                                                           href="https://www.youtube.com/embed/o-0hcF97wy0"><img-->
-<!--                                                                    src="images/uploads/play-vd.png" alt=""></a>-->
-                                                    </div>
+                                                    <!--                                                    <a class="img-lightbox" data-fancybox-group="gallery"-->
+                                                    <!--                                                       href="../../public/image/uploads/image21.jpg"><img-->
+                                                    <!--                                                                src="../../public/image/uploads/image2.jpg" alt=""></a>-->
+                                                    <!--                                                    <a class="img-lightbox" data-fancybox-group="gallery"-->
+                                                    <!--                                                       href="../../public/image/uploads/image31.jpg"><img-->
+                                                    <!--                                                                src="../../public/image/uploads/image3.jpg" alt=""></a>-->
+                                                    <!--                                                    <div class="vd-it">-->
+                                                    <!--                                                        <img class="vd-img" src="../../public/image/uploads/image4.jpg" alt="">-->
+                                                    <!--                                                        <a class="fancybox-media hvr-grow"-->
+                                                    <!--                                                           href="https://www.youtube.com/embed/o-0hcF97wy0"><img-->
+                                                    <!--                                                                    src="../../public/image/uploads/play-vd.png" alt=""></a>-->
                                                 </div>
-                                                <div class="title-hd-sm">
-                                                    <h4>filmography</h4>
-                                                    <a href="#" class="time">Full Filmography<i
-                                                                class="ion-ios-arrow-left"></i></a>
-                                                </div>
-                                                <!-- movie cast -->
-                                                <div class="mvcast-item">
-                                                    <div class="cast-it">
-                                                        <div class="cast-left cebleb-film">
-                                                            <img src="images/uploads/film1.jpg" alt="">
-                                                            <div>
-                                                                <a href="#">X-Men: Apocalypse </a>
-                                                                <p class="time">Logan</p>
-                                                            </div>
+                                            </div>
+                                            <div class="title-hd-sm">
+                                                <h4>filmography</h4>
+                                                <a href="#" class="time">Full Filmography<i
+                                                            class="ion-ios-arrow-left"></i></a>
+                                            </div>
+                                            <!-- movie cast -->
+                                            <div class="mvcast-item">
+                                                <div class="cast-it">
+                                                    <div class="cast-left cebleb-film">
+                                                        <img src="../../public/image/uploads/film1.jpg" alt="">
+                                                        <div>
+                                                            <a href="#">X-Men: Apocalypse </a>
+                                                            <p class="time">Logan</p>
+                                                        </div>
 
-                                                        </div>
-                                                        <p> 2016</p>
                                                     </div>
-                                                    <div class="cast-it">
-                                                        <div class="cast-left cebleb-film">
-                                                            <img src="images/uploads/film2.jpg" alt="">
-                                                            <div>
-                                                                <a href="#">Eddie the Eagle </a>
-                                                                <p class="time">Bronson Peary</p>
-                                                            </div>
+                                                    <p> 2016</p>
+                                                </div>
+                                                <div class="cast-it">
+                                                    <div class="cast-left cebleb-film">
+                                                        <img src="../../public/image/uploads/film2.jpg" alt="">
+                                                        <div>
+                                                            <a href="#">Eddie the Eagle </a>
+                                                            <p class="time">Bronson Peary</p>
                                                         </div>
-                                                        <p> 2015</p>
                                                     </div>
-                                                    <div class="cast-it">
-                                                        <div class="cast-left cebleb-film">
-                                                            <img src="images/uploads/film3.jpg" alt="">
-                                                            <div>
-                                                                <a href="#">Me and Earl and the Dying Girl </a>
-                                                                <p class="time">هومن سیدی</p>
-                                                            </div>
+                                                    <p> 2015</p>
+                                                </div>
+                                                <div class="cast-it">
+                                                    <div class="cast-left cebleb-film">
+                                                        <img src="../../public/image/uploads/film3.jpg" alt="">
+                                                        <div>
+                                                            <a href="#">Me and Earl and the Dying Girl </a>
+                                                            <p class="time">هومن سیدی</p>
                                                         </div>
-                                                        <p> 2015</p>
                                                     </div>
-                                                    <div class="cast-it">
-                                                        <div class="cast-left cebleb-film">
-                                                            <img src="images/uploads/film4.jpg" alt="">
-                                                            <div>
-                                                                <a href="#">Night at the Museum 3 </a>
-                                                                <p class="time">Blackbeard</p>
-                                                            </div>
+                                                    <p> 2015</p>
+                                                </div>
+                                                <div class="cast-it">
+                                                    <div class="cast-left cebleb-film">
+                                                        <img src="../../public/image/uploads/film4.jpg" alt="">
+                                                        <div>
+                                                            <a href="#">Night at the Museum 3 </a>
+                                                            <p class="time">Blackbeard</p>
                                                         </div>
-                                                        <p> 2014</p>
                                                     </div>
-                                                    <div class="cast-it">
-                                                        <div class="cast-left cebleb-film">
-                                                            <img src="images/uploads/film5.jpg" alt="">
-                                                            <div>
-                                                                <a href="#">X-Men: Days of Future Past </a>
-                                                                <p class="time">Wolverine</p>
-                                                            </div>
+                                                    <p> 2014</p>
+                                                </div>
+                                                <div class="cast-it">
+                                                    <div class="cast-left cebleb-film">
+                                                        <img src="../../public/image/uploads/film5.jpg" alt="">
+                                                        <div>
+                                                            <a href="#">X-Men: Days of Future Past </a>
+                                                            <p class="time">Wolverine</p>
                                                         </div>
-                                                        <p> 2012</p>
                                                     </div>
-                                                    <div class="cast-it">
-                                                        <div class="cast-left cebleb-film">
-                                                            <img src="images/uploads/film6.jpg" alt="">
-                                                            <div>
-                                                                <a href="#">The Wolverine </a>
-                                                                <p class="time">Logan</p>
-                                                            </div>
+                                                    <p> 2012</p>
+                                                </div>
+                                                <div class="cast-it">
+                                                    <div class="cast-left cebleb-film">
+                                                        <img src="../../public/image/uploads/film6.jpg" alt="">
+                                                        <div>
+                                                            <a href="#">The Wolverine </a>
+                                                            <p class="time">Logan</p>
                                                         </div>
-                                                        <p> 2011</p>
                                                     </div>
-                                                    <div class="cast-it">
-                                                        <div class="cast-left cebleb-film">
-                                                            <img src="images/uploads/film7.jpg" alt="">
-                                                            <div>
-                                                                <a href="#">Rise of the Guardians </a>
-                                                                <p class="time">Bunny</p>
-                                                            </div>
+                                                    <p> 2011</p>
+                                                </div>
+                                                <div class="cast-it">
+                                                    <div class="cast-left cebleb-film">
+                                                        <img src="../../public/image/uploads/film7.jpg" alt="">
+                                                        <div>
+                                                            <a href="#">Rise of the Guardians </a>
+                                                            <p class="time">Bunny</p>
                                                         </div>
-                                                        <p> 2011</p>
                                                     </div>
-                                                    <div class="cast-it">
-                                                        <div class="cast-left cebleb-film">
-                                                            <img src="images/uploads/film8.jpg" alt="">
-                                                            <div>
-                                                                <a href="#">The Prestige </a>
-                                                                <p class="time">Robert Angier</p>
-                                                            </div>
+                                                    <p> 2011</p>
+                                                </div>
+                                                <div class="cast-it">
+                                                    <div class="cast-left cebleb-film">
+                                                        <img src="../../public/image/uploads/film8.jpg" alt="">
+                                                        <div>
+                                                            <a href="#">The Prestige </a>
+                                                            <p class="time">Robert Angier</p>
                                                         </div>
-                                                        <p> 2010</p>
                                                     </div>
+                                                    <p> 2010</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -281,17 +279,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                    <div class="mv-ceb">
-                        <img src="images/uploads/cebsingle2.png" alt="">
-                    </div>
-                </div>
-
             </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="mv-ceb">
+                    <img src="../../public/image/uploads/cebsingle2.png" alt="">
+                </div>
+            </div>
+
         </div>
-
-
     </div>
+
+
+</div>
 </div>
 
 

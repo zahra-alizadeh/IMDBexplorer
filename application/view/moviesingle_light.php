@@ -1,106 +1,6 @@
-<!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7 no-js" lang="en-US">
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8 no-js" lang="en-US">
-<![endif]-->
-<!--[if !(IE 7) | !(IE 8)  ]><!-->
-<html lang="en" class="no-js">
-
+<?php include('Layouts/header.php');?>
 <!-- moviesingle_light16:30-->
-<head>
-    <!-- Basic need -->
-    <title>دنیای فیلم و سریال</title>
-    <link rel="icon" href="../../public/image/imdb_logo.png" type="image/x-icon">
-    <meta name="description" content="فیلم و سریال از بهترین سایت دانلود فیلم بهمراه جدیدترین فیلم های ایرانی  imdb">
-    <meta name="keywords"
-          content="پخش تریلر فیلم,فیلم,season,video, movie, film,online,تماشای آنلاین,فیل ,,فیلم های کمدی,جدیدترین فیلم ها,فیلم های جدید,بهترین فیلم,فیلم جدید,سریا,">
-    <meta name="author" content="TEAM IMDB">
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <link rel="profile" href="#">
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <meta name="format-detection" content="telephone-no">
-    <!-- CSS files -->
-    <link rel="stylesheet" href="../../public/css/plugins.css">
-    <link rel="stylesheet" href="../../public/css/style.css">
-    <link rel="stylesheet" href="../../public/css/header.css">
-
-</head>
 <body>
-<!--preloading-->
-<div id="preloader">
-    <img class="logo" src="../../public/image/logo.png" alt="" width="119" height="58">
-    <div id="status">
-        <span></span>
-        <span></span>
-    </div>
-</div>
-<!--end of preloading-->
-<!-- BEGIN | Header -->
-<header class="ht-header">
-    <div class="container">
-        <nav class="navbar navbar-default navbar-custom">
-            <div style="direction: rtl;background-color: black;"
-                 class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary jss2 MuiPaper-elevation4">
-                <div class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters">
-                    <a class="jss17">
-                        <button
-                                class="MuiButtonBase-root MuiIconButton-root jss14 MuiIconButton-colorInherit MuiIconButton-edgeStart"
-                                tabindex="0" type="button" aria-label="open drawer">
-							<span class="MuiIconButton-label">
-								<img src="../../public/image/imdb_logo.png">
-							</span>
-                            <span class="MuiTouchRipple-root"></span>
-                        </button>
-                    </a>
-                    <div class="jss8">
-                        <div>
-                            <a class="jss11">دسته بندی ها </a>
-                            <a class="jss11">فیلم</a>
-                            <a class="jss11">سریال</a>
-                            <a class="jss11">بازیگران</a>
-                            <a class="jss11">درباره ما </a>
-                        </div>
-                    </div>
-                    <!-- top search form -->
-                    <div class="top-search" style="margin-top: 10px; margin-right: 50px;" >
-                        <a class="jss17" style="margin-right: 15px;">
-                            <button
-                                    class="MuiButtonBase-root MuiIconButton-root jss14 MuiIconButton-colorInherit MuiIconButton-edgeStart"
-                                    tabindex="0" type="button" aria-label="open drawer">
-								<span class="MuiIconButton-label">
-									<img src="../../public/image/search.png">
-								</span>
-                                <span class="MuiTouchRipple-root"></span>
-                            </button>
-                        </a>
-                        <input type="text" placeholder="دنبال چی میگردی؟" style="width: 600px;height:35px ;" >
-                    </div>
-                    <!-- top search form -->
-                    <div class="jss4" style="direction: ltr;">
-                        <div class="jss74" style="direction: ltr;">
-                            <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75"tabindex="0" type="button">
-                                <a class="MuiButton-label"style="color: white;" href="'UserAuthentication/userRegister'">ورود</a>
-                                <span class="MuiTouchRipple-root"></span>
-                            </button>
-                            <a class="MuiButton-label"style="color: white;">/</a>
-                            <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75"tabindex="0" type="button">
-                                <a class="MuiButton-label"style="color: white; font-siz" href="register.php">ثبت‌نام</a>
-                                <span class="MuiTouchRipple-root"></span>
-                            </button>
-                        </div>
-                        <a class="jss15"></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
-<!-- END | Header -->
 <!-- Cooment popup -->
 <div class="login-wrapper"  id="comment-content">
     <div class="login-content">
@@ -215,7 +115,7 @@
                                                     <p>141 min</p>
                                                 </div>
                                                 <div class="ads">
-                                                    <img src="../../public/image/uploads/ads1.png" alt="">
+                                                    <img src="<?php $this->asset('image/uploads/ads1.png') ?>" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-md-8 col-sm-12 col-xs-12">
@@ -227,12 +127,12 @@
 
                                                 </div>
                                                 <div class="mvsingle-item ov-item">
-                                                    <a class="img-lightbox"  data-fancybox-group="gallery" href="../../public/image/uploads/image11.jpg" ><img src="../../public/image/uploads/image1.jpg" alt=""></a>
-                                                    <a class="img-lightbox"  data-fancybox-group="gallery" href="../../public/image/uploads/image21.jpg" ><img src="../../public/image/uploads/image2.jpg" alt=""></a>
-                                                    <a class="img-lightbox"  data-fancybox-group="gallery" href="../../public/image/uploads/image31.jpg" ><img src="../../public/image/uploads/image3.jpg" alt=""></a>
+                                                    <a class="img-lightbox"  data-fancybox-group="gallery" href="<?php $this->asset('image/uploads/iamges11.png') ?>" ><img src="<?php $this->asset('image/uploads/iamges1.png') ?>" alt=""></a>
+                                                    <a class="img-lightbox"  data-fancybox-group="gallery" href="<?php $this->asset('image/uploads/iamges21.png') ?>" ><img src="<?php $this->asset('image/uploads/iamges2.png') ?>" alt=""></a>
+                                                    <a class="img-lightbox"  data-fancybox-group="gallery" href="<?php $this->asset('image/uploads/iamges31.png') ?>" ><img src="<?php $this->asset('image/uploads/iamges3.png') ?>" alt=""></a>
                                                     <div class="vd-it">
-                                                        <img class="vd-img" src="../../public/image/uploads/image4.jpg" alt="">
-                                                        <a class="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0"><img src="../../public/image/uploads/play-vd.png" alt=""></a>
+                                                        <img class="vd-img" src="<?php $this->asset('image/uploads/iamges4.png') ?>" alt="">
+                                                        <a class="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0"><img src="<?php $this->asset('image/uploads/play-vd.png') ?>" alt=""></a>
                                                     </div>
                                                 </div>
                                                 <div class="title-hd-sm">
@@ -243,56 +143,56 @@
                                                 <div class="mvcast-item">
                                                     <div class="cast-it">
                                                         <div class="cast-left">
-                                                            <img src="../../public/image/uploads/cast1.jpg" alt="">
+                                                            <img src="<?php $this->asset('image/uploads/cast1.jpg') ?>" alt="">
                                                             <a href="#">Robert Downey Jr.</a>
                                                         </div>
                                                         <p>...  Robert Downey Jr.</p>
                                                     </div>
                                                     <div class="cast-it">
                                                         <div class="cast-left">
-                                                            <img src="../../public/image/uploads/cast2.jpg" alt="">
+                                                            <img src="<?php $this->asset('image/uploads/cast2.ppg') ?>" alt="">
                                                             <a href="#">Chris Hemsworth</a>
                                                         </div>
                                                         <p>...  Thor</p>
                                                     </div>
                                                     <div class="cast-it">
                                                         <div class="cast-left">
-                                                            <img src="../../public/image/uploads/cast3.jpg" alt="">
+                                                            <img src="<?php $this->asset('image/uploads/cast3.jpg') ?>" alt="">
                                                             <a href="#">Mark Ruffalo</a>
                                                         </div>
                                                         <p>...  Bruce Banner/ Hulk</p>
                                                     </div>
                                                     <div class="cast-it">
                                                         <div class="cast-left">
-                                                            <img src="../../public/image/uploads/cast4.jpg" alt="">
+                                                            <img src="<?php $this->asset('image/uploads/cast4.jpg') ?>" alt="">
                                                             <a href="#">Chris Evans</a>
                                                         </div>
                                                         <p>...  Steve Rogers/ Captain America</p>
                                                     </div>
                                                     <div class="cast-it">
                                                         <div class="cast-left">
-                                                            <img src="../../public/image/uploads/cast5.jpg" alt="">
+                                                            <img src="<?php $this->asset('image/uploads/cast5.jpg') ?>" alt="">
                                                             <a href="#">Scarlett Johansson</a>
                                                         </div>
                                                         <p>...  Natasha Romanoff/ Black Widow</p>
                                                     </div>
                                                     <div class="cast-it">
                                                         <div class="cast-left">
-                                                            <img src="../../public/image/uploads/cast6.jpg" alt="">
+                                                            <img src="<?php $this->asset('image/uploads/cast6.jpg') ?>" alt="">
                                                             <a href="#">Jeremy Renner</a>
                                                         </div>
                                                         <p>...  Clint Barton/ Hawkeye</p>
                                                     </div>
                                                     <div class="cast-it">
                                                         <div class="cast-left">
-                                                            <img src="../../public/image/uploads/cast7.jpg" alt="">
+                                                            <img src="<?php $this->asset('image/uploads/cast7.jpeg') ?>" alt="">
                                                             <a href="#">James Spader</a>
                                                         </div>
                                                         <p>...  Ultron</p>
                                                     </div>
                                                     <div class="cast-it">
                                                         <div class="cast-left">
-                                                            <img src="../../public/image/uploads/cast9.jpg" alt="">
+                                                            <img src="<?php $this->asset('image/uploads/cast9.jpg') ?>" alt="">
                                                             <a href="#">Don Cheadle</a>
                                                         </div>
                                                         <p>...  James Rhodes/ War Machine</p>
@@ -326,7 +226,7 @@
                                             </div>
                                             <div class="mv-user-review-item">
                                                 <div class="user-infor ">
-                                                    <img src="../../public/image/avatar.png" alt="">
+                                                    <img src="<?php $this->asset('image/avatar.png') ?>" alt="">
                                                     <div style="margin-right: 20px;">
                                                         <h3>از نظر من بهترین فیلم سال بود!</h3>
 
@@ -435,49 +335,49 @@
                                                 </div>
                                                 <div class="cast-it">
                                                     <div class="cast-left">
-                                                        <img src="../../public/image/uploads/cast2.jpg" alt="">
+                                                        <img src="<?php $this->asset('image/uploads/cast1.jpg') ?>" alt="">
                                                         <a href="#">Chris Hemsworth</a>
                                                     </div>
                                                     <p>...  Thor</p>
                                                 </div>
                                                 <div class="cast-it">
                                                     <div class="cast-left">
-                                                        <img src="../../public/image/uploads/cast3.jpg" alt="">
+                                                        <img src="<?php $this->asset('image/uploads/cast2.jpg') ?>" alt="">
                                                         <a href="#">Mark Ruffalo</a>
                                                     </div>
                                                     <p>...  Bruce Banner/ Hulk</p>
                                                 </div>
                                                 <div class="cast-it">
                                                     <div class="cast-left">
-                                                        <img src="../../public/image/uploads/cast4.jpg" alt="">
+                                                        <img src="<?php $this->asset('image/uploads/cast3.jpg') ?>" alt="">
                                                         <a href="#">Chris Evans</a>
                                                     </div>
                                                     <p>...  Steve Rogers/ Captain America</p>
                                                 </div>
                                                 <div class="cast-it">
                                                     <div class="cast-left">
-                                                        <img src="../../public/image/uploads/cast5.jpg" alt="">
+                                                        <img src="<?php $this->asset('image/uploads/cast4.jpg') ?>" alt="">
                                                         <a href="#">Scarlett Johansson</a>
                                                     </div>
                                                     <p>...  Natasha Romanoff/ Black Widow</p>
                                                 </div>
                                                 <div class="cast-it">
                                                     <div class="cast-left">
-                                                        <img src="../../public/image/uploads/cast6.jpg" alt="">
+                                                        <img src="<?php $this->asset('image/uploads/cast5.jpg') ?>" alt="">
                                                         <a href="#">Jeremy Renner</a>
                                                     </div>
                                                     <p>...  Clint Barton/ Hawkeye</p>
                                                 </div>
                                                 <div class="cast-it">
                                                     <div class="cast-left">
-                                                        <img src="../../public/image/uploads/cast7.jpg" alt="">
+                                                        <img src="<?php $this->asset('image/uploads/cast6.jpg') ?>" alt="">
                                                         <a href="#">James Spader</a>
                                                     </div>
                                                     <p>...  Ultron</p>
                                                 </div>
                                                 <div class="cast-it">
                                                     <div class="cast-left">
-                                                        <img src="../../public/image/uploads/cast9.jpg" alt="">
+                                                        <img src="<?php $this->asset('image/uploads/cast7.jpg') ?>" alt="">
                                                         <a href="#">Don Cheadle</a>
                                                     </div>
                                                     <p>...  James Rhodes/ War Machine</p>
@@ -554,7 +454,7 @@
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12">
                     <div class="movie-img sticky-sb">
-                        <img src="../../public/image/طعم گیلاس.jpg" alt="">
+                        <img src="<?php $this->asset('image/طعم گیلاس.jpg') ?>" alt="">
                         <div class="movie-btn">
                             <div class="btn-transform transform-vertical red">
                                 <div><a href="#" class="item item-1 redbtn"> <i class="ion-play"></i> تماشای تریلر </a></div>
@@ -567,71 +467,5 @@
         </div>
     </div>
 </div>
-
-<!-- footer section-->
-<footer class="ht-footer">
-    <div class="container">
-        <div class="flex-parent-ft">
-            <div class="flex-child-ft item1">
-                <a href="index-2.html"><img class="logo" src="images/logo1.png" alt=""></a>
-                <p>5th Avenue st, manhattan<br>
-                    New York, NY 10001</p>
-                <p>Call us: <a href="#">(+01) 202 342 6789</a></p>
-            </div>
-            <div class="flex-child-ft item2">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blockbuster</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Forums</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Help Center</a></li>
-                </ul>
-            </div>
-            <div class="flex-child-ft item3">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Security</a></li>
-                </ul>
-            </div>
-            <div class="flex-child-ft item4">
-                <h4>Account</h4>
-                <ul>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Watchlist</a></li>
-                    <li><a href="#">Collections</a></li>
-                    <li><a href="#">User Guide</a></li>
-                </ul>
-            </div>
-            <div class="flex-child-ft item5">
-                <h4>Newsletter</h4>
-                <p>Subscribe to our newsletter system now <br> to get latest news from us.</p>
-                <form action="#">
-                    <input type="text" placeholder="Enter your email...">
-                </form>
-                <a href="#" class="btn">Subscribe now <i class="ion-ios-arrow-forward"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="ft-copyright">
-        <div class="ft-left">
-            <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
-        </div>
-        <div class="backtotop">
-            <p><a href="#" id="back-to-top">Back to top  <i class="ion-ios-arrow-thin-up"></i></a></p>
-        </div>
-    </div>
-</footer>
-<!-- end of footer section-->
-
-<script src="../../public/js/jquery.js"></script>
-<script src="../../public/js/plugins.js"></script>
-<script src="../../public/js/plugins2.js"></script>
-<script src="../../public/js/custom.js"></script>
-</body>
-
 <!-- moviesingle_light16:30-->
-</html>
+<?php include('Layouts/footer.php');?>
