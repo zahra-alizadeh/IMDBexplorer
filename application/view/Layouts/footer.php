@@ -1,61 +1,76 @@
+<link rel="stylesheet" href="<?php $this->asset('css/footer.css') ?>">
 <!-- footer section-->
-<footer class="ht-footer">
-    <div class="container">
-        <div class="flex-parent-ft">
-            <div class="flex-child-ft item1">
-                <a href="index-2.html"><img class="logo" src="images/logo1.png" alt=""></a>
-                <p>5th Avenue st, manhattan<br>
-                    New York, NY 10001</p>
-                <p>Call us: <a href="#">(+01) 202 342 6789</a></p>
-            </div>
-            <div class="flex-child-ft item2">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blockbuster</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Forums</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Help Center</a></li>
-                </ul>
-            </div>
-            <div class="flex-child-ft item3">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Security</a></li>
-                </ul>
-            </div>
-            <div class="flex-child-ft item4">
-                <h4>Account</h4>
-                <ul>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Watchlist</a></li>
-                    <li><a href="#">Collections</a></li>
-                    <li><a href="#">User Guide</a></li>
-                </ul>
-            </div>
-            <div class="flex-child-ft item5">
-                <h4>Newsletter</h4>
-                <p>Subscribe to our newsletter system now <br> to get latest news from us.</p>
-                <form action="#">
-                    <input type="text" placeholder="Enter your email...">
-                </form>
-                <a href="#" class="btn">Subscribe now <i class="ion-ios-arrow-forward"></i></a>
+<footer id="footer" class="footer-1">
+    <div class="main-footer widgets-dark typo-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="widget no-box">
+                        <h5 class="widget-title">Contact Us<span></span></h5>
+
+                        <div class="social-link cebsingle-socail">
+                            <a href="#"><i class="ion-social-facebook"></i></a>
+                            <a href="#"><i class="ion-social-twitter"></i></a>
+                            <a href="#"><i class="ion-social-googleplus"></i></a>
+                            <a href="#"><i class="ion-social-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="widget no-box">
+                        <h5 class="widget-title">Get Started<span></span></h5>
+                        <p>Get access to your full Training and Marketing Suite.</p>
+                        <a class="footer_btn" href="#." target="_blank">Register Now</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="widget no-box">
+                        <h5 class="widget-title">Quick Links<span></span></h5>
+                        <ul class="thumbnail-widget">
+                            <li>
+                                <div class="thumb-content"><a href="#.">Get Started</a></div>
+                            </li>
+                            <li>
+                                <div class="thumb-content"><a href="#.">Top Leaders</a></div>
+                            </li>
+                            <li>
+                                <div class="thumb-content"><a href="#.">Success Stories</a></div>
+                            </li>
+                            <li>
+                                <div class="thumb-content"><a href="#.">Event/Tickets</a></div>
+                            </li>
+                            <li>
+                                <div class="thumb-content"><a href="#.">News</a></div>
+                            </li>
+                            <li>
+                                <div class="thumb-content"><a href="#.">Lifestyle</a></div>
+                            </li>
+                            <li>
+                                <div class="thumb-content"><a href="#.">About</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="widget subscribe no-box">
+                        <h5 class="widget-title">COMPANY NAME<span></span></h5>
+                        <p>About the company, little discription will goes here.. </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="ft-copyright">
-        <div class="ft-left">
-            <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
-        </div>
-        <div class="backtotop">
-            <p><a href="#" id="back-to-top">Back to top <i class="ion-ios-arrow-thin-up"></i></a></p>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright Company Name © 2016. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
 <!-- end of footer section-->
-</body>
 
-</html>
+

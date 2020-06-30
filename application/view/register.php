@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php $this->asset('css/bootstrap.min.css') ?>">
-    <link rel="stylesheet" href="<?php $this->asset('css/style.css') ?>">
+    <link rel="stylesheet" href="<?php $this->asset('css/loginpagestyle.css') ?>">
 </head>
 <body>
 <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">

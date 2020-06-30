@@ -127,11 +127,11 @@
 
                                                 </div>
                                                 <div class="mvsingle-item ov-item">
-                                                    <a class="img-lightbox"  data-fancybox-group="gallery" href="<?php $this->asset('image/uploads/iamges11.png') ?>" ><img src="<?php $this->asset('image/uploads/iamges1.png') ?>" alt=""></a>
-                                                    <a class="img-lightbox"  data-fancybox-group="gallery" href="<?php $this->asset('image/uploads/iamges21.png') ?>" ><img src="<?php $this->asset('image/uploads/iamges2.png') ?>" alt=""></a>
-                                                    <a class="img-lightbox"  data-fancybox-group="gallery" href="<?php $this->asset('image/uploads/iamges31.png') ?>" ><img src="<?php $this->asset('image/uploads/iamges3.png') ?>" alt=""></a>
+                                                    <a class="img-lightbox"  data-fancybox-group="gallery" href="<?php $this->asset('image/uploads/image11.jpg') ?>" ><img src="<?php $this->asset('image/uploads/image1.jpg') ?>" alt=""></a>
+                                                    <a class="img-lightbox"  data-fancybox-group="gallery" href="<?php $this->asset('image/uploads/image21.jpg') ?>" ><img src="<?php $this->asset('image/uploads/image2.ipg') ?>" alt=""></a>
+                                                    <a class="img-lightbox"  data-fancybox-group="gallery" href="<?php $this->asset('image/uploads/image31.jpg') ?>" ><img src="<?php $this->asset('image/uploads/image3.jpg') ?>" alt=""></a>
                                                     <div class="vd-it">
-                                                        <img class="vd-img" src="<?php $this->asset('image/uploads/iamges4.png') ?>" alt="">
+                                                        <img class="vd-img" src="<?php $this->asset('image/uploads/image4.png') ?>" alt="">
                                                         <a class="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0"><img src="<?php $this->asset('image/uploads/play-vd.png') ?>" alt=""></a>
                                                     </div>
                                                 </div>
