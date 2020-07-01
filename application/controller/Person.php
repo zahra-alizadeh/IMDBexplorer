@@ -33,7 +33,7 @@ class Person extends Controller
 
         $movieModel = new PersonModel();
         $actorMovies = $movieModel->getActorMovies('1');
-//        var_dump($actorMovies);
+//        var_dump($actor);
         return $this->view('celebrity-single', compact('actor','actorPictures','actorMovies'));
     }
 

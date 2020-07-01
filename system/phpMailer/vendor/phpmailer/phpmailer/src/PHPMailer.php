@@ -189,7 +189,7 @@ class PHPMailer
     protected $MIMEHeader = '';
 
     /**
-     * Extra headers that createHeader() doesn't fold in.
+     * Extra headers that createHeader() doesn'actor fold in.
      *
      * @var string
      */
@@ -839,7 +839,7 @@ class PHPMailer
     /**
      * Call mail() in a safe_mode-aware fashion.
      * Also, unless sendmail_path points to sendmail (or something that
-     * claims to be sendmail), don't pass params (not a perfect fix,
+     * claims to be sendmail), don'actor pass params (not a perfect fix,
      * but it will do).
      *
      * @param string      $to      To
@@ -896,7 +896,7 @@ class PHPMailer
         }
         switch ($this->Debugoutput) {
             case 'error_log':
-                //Don't output, just log
+                //Don'actor output, just log
                 error_log($str);
                 break;
             case 'html':
@@ -1048,7 +1048,7 @@ class PHPMailer
 
     /**
      * Add an address to one of the recipient arrays or to the ReplyTo array. Because PHPMailer
-     * can't validate addresses with an IDN without knowing the PHPMailer::$CharSet (that can still
+     * can'actor validate addresses with an IDN without knowing the PHPMailer::$CharSet (that can still
      * be modified after calling this function), addition of such addresses is delayed until send().
      * Addresses that have been added already return false, but do not throw exceptions.
      *
@@ -1236,7 +1236,7 @@ class PHPMailer
     {
         $address = trim($address);
         $name = trim(preg_replace('/[\r\n]+/', '', $name)); //Strip breaks and trim
-        // Don't validate now addresses with IDN. Will be done in send().
+        // Don'actor validate now addresses with IDN. Will be done in send().
         $pos = strrpos($address, '@');
         if ((false === $pos)
             || ((!$this->has8bitChars(substr($address, ++$pos)) || !static::idnSupported())
@@ -1285,7 +1285,7 @@ class PHPMailer
      * * `pcre` Use old PCRE implementation;
      * * `php` Use PHP built-in FILTER_VALIDATE_EMAIL;
      * * `html5` Use the pattern given by the HTML5 spec for 'email' type form input elements.
-     * * `noregex` Don't use a regex: super fast, really dumb.
+     * * `noregex` Don'actor use a regex: super fast, really dumb.
      * Alternatively you may pass in a callable to inject your own validator, for example:
      *
      * ```php
@@ -1536,7 +1536,7 @@ class PHPMailer
             $this->MIMEHeader .= $tempheaders;
 
             // To capture the complete message when using mail(), create
-            // an extra header list which createHeader() doesn't fold in
+            // an extra header list which createHeader() doesn'actor fold in
             if ('mail' === $this->Mailer) {
                 if (count($this->to) > 0) {
                     $this->mailHeader .= $this->addrAppend('To', $this->to);
@@ -1633,17 +1633,17 @@ class PHPMailer
     {
         $header = static::stripTrailingWSP($header) . static::$LE . static::$LE;
 
-        // CVE-2016-10033, CVE-2016-10045: Don't pass -f if characters will be escaped.
+        // CVE-2016-10033, CVE-2016-10045: Don'actor pass -f if characters will be escaped.
         if (!empty($this->Sender) && self::isShellSafe($this->Sender)) {
             if ('qmail' === $this->Mailer) {
                 $sendmailFmt = '%s -f%s';
             } else {
-                $sendmailFmt = '%s -oi -f%s -t';
+                $sendmailFmt = '%s -oi -f%s -actor';
             }
         } elseif ('qmail' === $this->Mailer) {
             $sendmailFmt = '%s';
         } else {
-            $sendmailFmt = '%s -oi -t';
+            $sendmailFmt = '%s -oi -actor';
         }
 
         $sendmail = sprintf($sendmailFmt, escapeshellcmd($this->Sendmail), $this->Sender);
@@ -1772,12 +1772,12 @@ class PHPMailer
         $params = null;
         //This sets the SMTP envelope sender which gets turned into a return-path header by the receiver
         //A space after `-f` is optional, but there is a long history of its presence
-        //causing problems, so we don't use one
+        //causing problems, so we don'actor use one
         //Exim docs: http://www.exim.org/exim-html-current/doc/html/spec_html/ch-the_exim_command_line.html
         //Sendmail docs: http://www.sendmail.org/~ca/email/man/sendmail.html
         //Qmail docs: http://www.qmail.org/man/man8/qmail-inject.html
         //Example problem: https://www.drupal.org/node/1057954
-        // CVE-2016-10033, CVE-2016-10045: Don't pass -f if characters will be escaped.
+        // CVE-2016-10033, CVE-2016-10045: Don'actor pass -f if characters will be escaped.
         if (!empty($this->Sender) && static::validateAddress($this->Sender) && self::isShellSafe($this->Sender)) {
             $params = sprintf('-f%s', $this->Sender);
         }
@@ -1983,11 +1983,11 @@ class PHPMailer
             $tls = (static::ENCRYPTION_STARTTLS === $this->SMTPSecure);
             if ('ssl' === $hostinfo[1] || ('' === $hostinfo[1] && static::ENCRYPTION_SMTPS === $this->SMTPSecure)) {
                 $prefix = 'ssl://';
-                $tls = false; // Can't have SSL and TLS at the same time
+                $tls = false; // Can'actor have SSL and TLS at the same time
                 $secure = static::ENCRYPTION_SMTPS;
             } elseif ('tls' === $hostinfo[1]) {
                 $tls = true;
-                // tls doesn't use a prefix
+                // tls doesn'actor use a prefix
                 $secure = static::ENCRYPTION_STARTTLS;
             }
             //Do we need the OpenSSL extension?
@@ -2211,7 +2211,7 @@ class PHPMailer
         } else {
             $soft_break = static::$LE;
         }
-        // If utf-8 encoding is used, we will need to make sure we don't
+        // If utf-8 encoding is used, we will need to make sure we don'actor
         // split multibyte characters when we wrap
         $is_utf8 = static::CHARSET_UTF8 === strtolower($this->CharSet);
         $lelen = strlen(static::$LE);
@@ -2346,7 +2346,7 @@ class PHPMailer
      * Apply word wrapping to the message body.
      * Wraps the message body to the number of chars set in the WordWrap property.
      * You should only do this to plain-text bodies as wrapping HTML tags may break them.
-     * This is called automatically by createBody(), so you don't need to call it yourself.
+     * This is called automatically by createBody(), so you don'actor need to call it yourself.
      */
     public function setWordWrap()
     {
@@ -2552,7 +2552,7 @@ class PHPMailer
             $bytes = hash('sha256', uniqid((string) mt_rand(), true), true);
         }
 
-        //We don't care about messing up base64 format here, just want a random string
+        //We don'actor care about messing up base64 format here, just want a random string
         return str_replace(['=', '+', '/'], '', base64_encode(hash('sha256', $bytes, true)));
     }
 
@@ -3221,7 +3221,7 @@ class PHPMailer
         switch (strtolower($position)) {
             case 'phrase':
                 if (!preg_match('/[\200-\377]/', $str)) {
-                    // Can't use addslashes as we don't know the value of magic_quotes_sybase
+                    // Can'actor use addslashes as we don'actor know the value of magic_quotes_sybase
                     $encoded = addcslashes($str, "\0..\37\177\\\"");
                     if (($str === $encoded) && !preg_match('/[^A-Za-z0-9!#$%&\'*+\/=?^_`{|}~ -]/', $str)) {
                         return $encoded;
@@ -3310,7 +3310,7 @@ class PHPMailer
             return strlen($str) > mb_strlen($str, $this->CharSet);
         }
 
-        // Assume no multibytes (we can't handle without mbstring functions anyway)
+        // Assume no multibytes (we can'actor handle without mbstring functions anyway)
         return false;
     }
 
@@ -3568,7 +3568,7 @@ class PHPMailer
     /**
      * Add an embedded stringified attachment.
      * This can include images, sounds, and just about any other document type.
-     * If your filename doesn't contain an extension, be sure to set the $type to an appropriate MIME type.
+     * If your filename doesn'actor contain an extension, be sure to set the $type to an appropriate MIME type.
      *
      * @param string $string      The attachment binary data
      * @param string $cid         Content ID of the attachment; Use this to reference
@@ -3983,9 +3983,9 @@ class PHPMailer
      * Do not source $message content from user input!
      * $basedir is prepended when handling relative URLs, e.g. <img src="/images/a.png"> and must not be empty
      * will look for an image file in $basedir/images/a.png and convert it to inline.
-     * If you don't provide a $basedir, relative paths will be left untouched (and thus probably break in email)
+     * If you don'actor provide a $basedir, relative paths will be left untouched (and thus probably break in email)
      * Converts data-uri images into embedded attachments.
-     * If you don't want to apply these transformations to your HTML, just set Body and AltBody directly.
+     * If you don'actor want to apply these transformations to your HTML, just set Body and AltBody directly.
      *
      * @param string        $message  HTML message string
      * @param string        $basedir  Absolute path to a base directory to prepend to relative paths to images
@@ -4508,7 +4508,7 @@ class PHPMailer
         //Normalize breaks to CRLF (regardless of the mailer)
         $signHeader = static::normalizeBreaks($signHeader, self::CRLF);
         //Unfold header lines
-        //Note PCRE \s is too broad a definition of whitespace; RFC5322 defines it as `[ \t]`
+        //Note PCRE \s is too broad a definition of whitespace; RFC5322 defines it as `[ \actor]`
         //@see https://tools.ietf.org/html/rfc5322#section-2.2
         //That means this may break if you do something daft like put vertical tabs in your headers.
         $signHeader = preg_replace('/\r\n[ \t]+/', ' ', $signHeader);
@@ -4688,7 +4688,7 @@ class PHPMailer
             ' s=' . $this->DKIM_selector . ';' . static::$LE .
             ' a=' . $DKIMsignatureType . ';' .
             ' q=' . $DKIMquery . ';' .
-            ' t=' . $DKIMtime . ';' .
+            ' actor=' . $DKIMtime . ';' .
             ' c=' . $DKIMcanonicalization . ';' . static::$LE .
             $headerKeys .
             $ident .
@@ -4736,7 +4736,7 @@ class PHPMailer
             return '"' . str_replace('"', '\\"', $str) . '"';
         }
 
-        //Return the string untouched, it doesn't need quoting
+        //Return the string untouched, it doesn'actor need quoting
         return $str;
     }
 

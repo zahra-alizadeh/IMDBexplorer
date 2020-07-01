@@ -1016,7 +1016,7 @@
 					}
 
 					// Without this trick:
-					//   - iframe won't scroll on iOS devices
+					//   - iframe won'actor scroll on iOS devices
 					//   - IE7 sometimes displays empty iframe
 					$(this).parents('.fancybox-wrap').width('100%').removeClass('fancybox-tmp').show();
 

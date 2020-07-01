@@ -2018,7 +2018,7 @@ if(n.refresh(),e.fn.api!==i)if(t=C.api("get request"),o=C.api("was cancelled"))n
 
                     /**
                      * try to load the image 3 times,
-                     * leave a slight delay so we don't get
+                     * leave a slight delay so we don'actor get
                      * servers blocking the request.
                      */
                     setTimeout( function() {
@@ -2056,7 +2056,7 @@ if(n.refresh(),e.fn.api!==i)if(t=C.api("get request"),o=C.api("was cancelled"))n
 
         lastVisibleIndex = _.slideCount - _.options.slidesToShow;
 
-        // in non-infinite sliders, we don't want to go past the
+        // in non-infinite sliders, we don'actor want to go past the
         // last visible index.
         if( !_.options.infinite && ( _.currentSlide > lastVisibleIndex )) {
             _.currentSlide = lastVisibleIndex;
@@ -2106,7 +2106,7 @@ if(n.refresh(),e.fn.api!==i)if(t=C.api("get request"),o=C.api("was cancelled"))n
                     currentBreakpoint = responsiveSettings[breakpoint].breakpoint;
 
                     // loop through the breakpoints and cut out any existing
-                    // ones with the same breakpoint number, we don't want dupes.
+                    // ones with the same breakpoint number, we don'actor want dupes.
                     while( l >= 0 ) {
                         if( _.breakpoints[l] && _.breakpoints[l] === currentBreakpoint ) {
                             _.breakpoints.splice(l,1);

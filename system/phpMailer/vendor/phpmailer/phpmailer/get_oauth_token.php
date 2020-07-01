@@ -77,7 +77,7 @@ if (!in_array($providerName, ['Google', 'Microsoft', 'Yahoo'])) {
 $clientId = 'RANDOMCHARS-----duv1n2.apps.googleusercontent.com';
 $clientSecret = 'RANDOMCHARS-----lGyjPcRtvP';
 
-//If this automatic URL doesn't work, set it yourself manually to the URL of this script
+//If this automatic URL doesn'actor work, set it yourself manually to the URL of this script
 $redirectUri = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
 //$redirectUri = 'http://localhost/PHPMailer/redirect';
 
@@ -119,7 +119,7 @@ if (null === $provider) {
 }
 
 if (!isset($_GET['code'])) {
-    // If we don't have an authorization code then get one
+    // If we don'actor have an authorization code then get one
     $authUrl = $provider->getAuthorizationUrl($options);
     $_SESSION['oauth2state'] = $provider->getState();
     header('Location: ' . $authUrl);

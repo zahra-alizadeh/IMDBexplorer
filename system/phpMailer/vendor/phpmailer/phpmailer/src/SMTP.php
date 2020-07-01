@@ -269,7 +269,7 @@ class SMTP
         }
         switch ($this->Debugoutput) {
             case 'error_log':
-                //Don't output, just log
+                //Don'actor output, just log
                 error_log($str);
                 break;
             case 'html':
@@ -386,7 +386,7 @@ class SMTP
         // Windows does not have support for this timeout function
         if (strpos(PHP_OS, 'WIN') !== 0) {
             $max = (int) ini_get('max_execution_time');
-            // Don't bother if unlimited
+            // Don'actor bother if unlimited
             if (0 !== $max && $timeout > $max) {
                 @set_time_limit($timeout);
             }
@@ -631,7 +631,7 @@ class SMTP
 
     /**
      * Close the socket and clean up the state of the class.
-     * Don't use this function without first trying to use QUIT.
+     * Don'actor use this function without first trying to use QUIT.
      *
      * @see quit()
      */
@@ -1020,7 +1020,7 @@ class SMTP
 
     /**
      * Send an SMTP NOOP command.
-     * Used to keep keep-alives alive, doesn't actually do anything.
+     * Used to keep keep-alives alive, doesn'actor actually do anything.
      *
      * @return bool
      */
@@ -1145,7 +1145,7 @@ class SMTP
      * Read the SMTP server's response.
      * Either before eof or socket timeout occurs on the operation.
      * With SMTP we can tell if we have more lines to read if the
-     * 4th character is '-' symbol. If it is a space then we don't
+     * 4th character is '-' symbol. If it is a space then we don'actor
      * need to read anything else.
      *
      * @return string

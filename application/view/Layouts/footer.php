@@ -2,8 +2,8 @@
 <!-- footer section-->
 <footer id="footer" class="footer-1">
     <div class="main-footer widgets-dark typo-light">
-        <div class="container">
-            <div class="row">
+        <div class="container-footer">
+            <div class="row-footer">
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="widget no-box">
                         <h5 class="widget-title">Contact Us<span></span></h5>
@@ -62,8 +62,8 @@
         </div>
     </div>
     <div class="footer-copyright">
-        <div class="container">
-            <div class="row">
+        <div class="container-footer">
+            <div class="row-footer">
                 <div class="col-md-12 text-center">
                     <p>Copyright Company Name © 2016. All rights reserved.</p>
                 </div>
