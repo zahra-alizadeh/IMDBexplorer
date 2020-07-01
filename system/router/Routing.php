@@ -17,6 +17,8 @@ class Routing
     public function run()
     {
         // make path of the class
+//        $className=strtoupper($this->currentRoute[0][0]).substr($this->currentRoute[0],1);
+//        echo $className;
         $path = realpath(dirname(__FILE__) . "/../../application/controller/" . $this->currentRoute[0] . ".php");
         if (!file_exists($path)) {
 //            echo "404 - File not exists!!hi";

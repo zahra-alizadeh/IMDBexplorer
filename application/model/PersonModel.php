@@ -33,7 +33,7 @@ class PersonModel extends Model
 
     public function getActorMovies($actorId)
     {
-        $query = "SELECT `movie_name`,`picture` FROM (`movies` INNER JOIN `movie_actor` ON `id`=`movie_id`) WHERE actor_id = ? LIMIT 8; ";
+        $query = "SELECT `movie_name`,`director`,`picture`,`release_date` FROM (`movies` INNER JOIN `movie_actor` ON `id`=`movie_id`) WHERE actor_id = ? LIMIT 8; ";
         $result = $this->query($query, array($actorId))->fetchAll();
         $this->closeConnection();
         return $result;

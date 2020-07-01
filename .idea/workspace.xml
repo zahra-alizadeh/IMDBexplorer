@@ -20,16 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="512b1a97-9043-43cf-ae2a-3dd534e048fb" name="Default Changelist" comment="Merge branch 'master' of https://dev.azure.com/zahraalizade2500153/IMDB/_git/IMDB&#10;&#10;# Conflicts:&#10;#&#9;application/view/forgot-password.html&#10;#&#9;application/view/login.html&#10;#&#9;application/view/main-page.html&#10;#&#9;application/view/register.html">
-      <change afterPath="$PROJECT_DIR$/application/view/celebrity-single1.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/view/Layouts/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/Layouts/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controller/Person.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/Person.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/model/CreateDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/model/CreateDB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/model/PersonModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/model/PersonModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/view/celebrity-single.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/celebrity-single.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/view/moviesingle_light.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/moviesingle_light.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/celebrity-single1.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/application/view/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/router/Routing.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/router/Routing.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mvc" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -138,7 +137,8 @@
       <workItem from="1593367129165" duration="5778000" />
       <workItem from="1593416387910" duration="3599000" />
       <workItem from="1593431783915" duration="5505000" />
-      <workItem from="1593514222624" duration="1500000" />
+      <workItem from="1593514222624" duration="4208000" />
+      <workItem from="1593585538999" duration="7677000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1588592486556</created>
@@ -231,10 +231,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="423" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1588613511034" />
-    <state x="580" y="183" key="FileChooserDialogImpl" timestamp="1593431849889">
+    <state x="580" y="183" key="FileChooserDialogImpl" timestamp="1593587753847">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="183" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1593431849889" />
+    <state x="580" y="183" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1593587753847" />
     <state x="605" y="135" key="NewPhpClassDialog" timestamp="1593367653257">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

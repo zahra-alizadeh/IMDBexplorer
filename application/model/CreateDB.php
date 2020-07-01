@@ -16,31 +16,32 @@ class CreateDB extends Model
 //          `created_at` datetime NOT NULL,
 //          `updated_at` datetime DEFAULT NULL,
 //          PRIMARY KEY (`id`),
-//          UNIQUE KEY `email` (`email`),`username` (`username`)
+//          UNIQUE KEY (`email`,`username`)
 //        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
-//
+
 //        "CREATE TABLE `actors` (
 //          `id` int(11) NOT NULL AUTO_INCREMENT,
 //          `first_name` varchar(100) COLLATE utf8_persian_ci NOT NULL,
 //          `last_name` varchar(100) COLLATE utf8_persian_ci NOT NULL,
-//          `birth_date` datetime ,
+//          `picture` varchar(200) NOT NULL,
+//          `birth_date` varchar(100) ,
 //          `birth_place` varchar(100) ,
-//          `bio` varchar(200) COLLATE utf8_persian_ci,
+//          `bio` varchar(1000) COLLATE utf8_persian_ci,
 //          `created_at` datetime NOT NULL,
 //          `updated_at` datetime DEFAULT NULL,
-//          PRIMARY KEY (`id`),
+//          PRIMARY KEY (`id`)
 //        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
-
+//
 //        "CREATE TABLE `actor_pictures` (
 //          `actor_id` int(11) NOT NULL ,
-//          `picture` varchar(200) COLLATE utf8_persian_ci,
+//          `picture` varchar(200),
 //          `created_at` datetime NOT NULL,
 //          `updated_at` datetime DEFAULT NULL,
 //          PRIMARY KEY (`actor_id`,`picture`),
 //          FOREIGN KEY (`actor_id`) REFERENCES `actors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 //        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
-
-
+//
+//
 //        "CREATE TABLE `directors` (
 //          `id` int(11) NOT NULL AUTO_INCREMENT,
 //          `first_name` varchar(100) COLLATE utf8_persian_ci NOT NULL,
@@ -51,41 +52,41 @@ class CreateDB extends Model
 //          `bio` varchar(200) COLLATE utf8_persian_ci,
 //          `created_at` datetime NOT NULL,
 //          `updated_at` datetime DEFAULT NULL,
-//          PRIMARY KEY (`id`),
+//          PRIMARY KEY (`id`)
 //        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
-
-        "CREATE TABLE `director_pictures` (
-          `director_id` int(11) NOT NULL ,
-          `picture` varchar(200) COLLATE utf8_persian_ci,
-          `created_at` datetime NOT NULL,
-          `updated_at` datetime DEFAULT NULL,
-          PRIMARY KEY (`director_id`,`picture`),
-          FOREIGN KEY (`director_id`) REFERENCES `directors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
-
+//
+//        "CREATE TABLE `director_pictures` (
+//          `director_id` int(11) NOT NULL ,
+//          `picture` varchar(200) COLLATE utf8_persian_ci,
+//          `created_at` datetime NOT NULL,
+//          `updated_at` datetime DEFAULT NULL,
+//          PRIMARY KEY (`director_id`,`picture`),
+//          FOREIGN KEY (`director_id`) REFERENCES `directors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+//        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
+//
 //        "CREATE TABLE `movies` (
 //          `id` int(11) NOT NULL AUTO_INCREMENT,
 //          `movie_name` varchar(100) COLLATE utf8_persian_ci NOT NULL,
-//          `director` int(11) NOT NULL,
-//          `release_date` datetime,
+//          `director` varchar(100) COLLATE utf8_persian_ci NOT NULL,
+//          `release_date` varchar(100),
 //          `trailer` varchar(100) COLLATE utf8_persian_ci,
 //          `picture` varchar(200) COLLATE utf8_persian_ci,
 //          `score` varchar(200) COLLATE utf8_persian_ci,
-//          `summary` varchar(200) COLLATE utf8_persian_ci,
+//          `summary` varchar(2000) COLLATE utf8_persian_ci,
 //          `created_at` datetime NOT NULL,
 //          `updated_at` datetime DEFAULT NULL,
 //          PRIMARY KEY (`id`)
 //        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
-
-        "CREATE TABLE `movie_pictures` (
-          `movie_id` int(11) NOT NULL ,
-          `picture` varchar(200) COLLATE utf8_persian_ci,
-          `created_at` datetime NOT NULL,
-          `updated_at` datetime DEFAULT NULL,
-          PRIMARY KEY (`movie_id`,`picture`),
-          FOREIGN KEY (`movie_id`) REFERENCES `movies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
-
+//
+//        "CREATE TABLE `movie_pictures` (
+//          `movie_id` int(11) NOT NULL ,
+//          `picture` varchar(200) COLLATE utf8_persian_ci,
+//          `created_at` datetime NOT NULL,
+//          `updated_at` datetime DEFAULT NULL,
+//          PRIMARY KEY (`movie_id`,`picture`),
+//          FOREIGN KEY (`movie_id`) REFERENCES `movies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+//        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
+//
 //
 //        "CREATE TABLE `movie_genre` (
 //          `movie_id` int(11) NOT NULL,
@@ -106,26 +107,16 @@ class CreateDB extends Model
 //          FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 //        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
 //
-//
-//        "CREATE TABLE `movie_director` (
+//        "CREATE TABLE `movie_actor` (
 //          `movie_id` int(11) NOT NULL,
-//          `director_id` int(11) NOT NULL,
+//          `actor_id` int(11) NOT NULL,
 //          `created_at` datetime NOT NULL,
 //          `updated_at` datetime DEFAULT NULL,
-//          PRIMARY KEY (`movie_id`,`director_id`),
+//          PRIMARY KEY (`movie_id`,`actor_id`),
 //          FOREIGN KEY (`movie_id`) REFERENCES `movies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 //        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
-
-        "CREATE TABLE `movie_actor` (
-          `movie_id` int(11) NOT NULL,
-          `actor_id` int(11) NOT NULL,
-          `created_at` datetime NOT NULL,
-          `updated_at` datetime DEFAULT NULL,
-          PRIMARY KEY (`movie_id`,`actor_id`),
-          FOREIGN KEY (`movie_id`) REFERENCES `movies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
-
-
+//
+//
 //        "CREATE TABLE `comments` (
 //          `id` int(11) NOT NULL AUTO_INCREMENT,
 //          `user_id` int(11) NOT NULL,
@@ -136,21 +127,21 @@ class CreateDB extends Model
 //          `updated_at` datetime DEFAULT NULL,
 //          PRIMARY KEY (`id`),
 //          FOREIGN KEY (`movie_id`) REFERENCES `movies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-//          FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
-//           ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
-//
+//          FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+//          )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
+
 //        "CREATE TABLE `blogs` (
 //          `id` int(11) NOT NULL AUTO_INCREMENT,
 //          `movie_id` int(11)  NOT NULL,
-//          `person_id` int(11)  NOT NULL,
+//          `actor_id` int(11)  NOT NULL,
 //          `picture` varchar(200) COLLATE utf8_persian_ci,
 //          `text` text COLLATE utf8_persian_ci NOT NULL,
 //          `created_at` datetime NOT NULL,
 //          `updated_at` datetime DEFAULT NULL,
 //          PRIMARY KEY (`id`),
 //          FOREIGN KEY (`movie_id`) REFERENCES `movies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-//          FOREIGN KEY (`person_id`) REFERENCES `persons` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
-//           ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
+//          FOREIGN KEY (`actor_id`) REFERENCES `actors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+//          ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
 
 //        "CREATE TABLE `votes` (
 //          `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -179,21 +170,21 @@ class CreateDB extends Model
 
     private $tableInitializes = array(
 
-//        ['table' => 'movie_actor', 'fields' => ['movie_id','actor_id'], 'values' => ['1', '1']]
+        ['table' => 'movie_actor', 'fields' => ['movie_id','actor_id'], 'values' => ['1', '1']]
 
-//        ['table' => 'movies', 'fields' => ['movie_name', 'release_date', 'trailer', 'picture', 'score', 'summary'],
-//            'values' => ['طعم گیلاس', '۱۳۷۶', 'https://www.didestan.com/video/m8kmO9xG', 'https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D9%88%D9%86%D8%AF%D9%87:%D8%B7%D8%B9%D9%85_%DA%AF%DB%8C%D9%84%D8%A7%D8%B3.jpg', '8', 'محمد تاجیک –طعم گیلاس فیلم برگزیده نخل طلای کن تولید مشترک با فرانسه محصول ۱۹۹۷ میلادی است. فیلم درباره مردی است که در حومهٔ شهر تهران، با اتوموبیلش دنبال کسی می‌گردد که تقاضای پردردسر او را در ازای دریافت ۲۰۰هزار تومان پول انجام دهد.فیلم طعم گیلاس همراه با فیلم ژاپنی «مارماهی» ساختهٔ «شوهی ایمامورا» جایزهٔ نخل طلای جشنوارهٔ کن رادر سال ۱۹۹۷ برد که مهم ترین جایزه‌ای است که سینمای ایران به دست آورده است.']]
+//        ['table' => 'actors', 'fields' => ['first_name', 'last_name', 'birth_date', 'birth_place', 'bio'], 'values' => ['امین', 'حیایی', '۱۹ خرداد ۱۳۴۹', 'تهران',
+//            'امین حیایی در ۱۹ خرداد ۱۳۴۹ در تهران در محله قیطریه[نیازمند منبع] به دنیا آمد پدرش تقی حیایی کارمند شغل آزاد بود در دوران تحصیل به فعالیت در تئاتر پرداخت و پس از گرفتن دیپلم، ضمن خدمت سربازی در مرکز هنرهای نمایشی عقیدتی - سیاسی نیروی هوایی فعالیتش را آغاز کرد. در سال ۱۳۷۰ بازیگر یک تئاتر کودکان به کارگردانی ثریا قاسمی بود. در پانزدهمین جشنواره فیلم فجر نامزد دریافت جایزه بازیگر نقش دوم برای فیلم «براده‌های خورشید» شد.'],
+//        ], ['table' => 'actors', 'fields' => ['first_name', 'last_name', 'birth_date', 'birth_place', 'bio'], 'values' => ['هومن', 'سیدی', '۸ آذر ۱۳۵۹۹', 'تهران',
+//            'هومن سیدی پس از پایان دبیرستان و دریافت دیپلم گرافیک کار خود را با حضور در کلاس‌های انجمن سینمای جوان رشت و ساخت چند فیلم کوتاه آغاز کرد. سپس به تهران آمد و در کلاس‌های بازیگری کارنامه به مدیریت پرویز پرستویی شرکت کرد. او فرزند دوم خانواده است و ۲ برادر (حامد و هامون) و یک خواهر (هیلدا) دارد. مادرش بازنشسته نیروی دریایی است و پدرش بازنشسته کارمند بانک کشاورزی.']],
+
+//        ['table' => 'movies', 'fields' => ['movie_name', 'director', 'release_date', 'trailer', 'picture', 'score', 'summary'],
+//            'values' => ['طعم گیلاس','عباس کیارستمی', '۱۳۷۶', 'https://www.didestan.com/video/m8kmO9xG', 'https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D9%88%D9%86%D8%AF%D9%87:%D8%B7%D8%B9%D9%85_%DA%AF%DB%8C%D9%84%D8%A7%D8%B3.jpg', '8', 'محمد تاجیک –طعم گیلاس فیلم برگزیده نخل طلای کن تولید مشترک با فرانسه محصول ۱۹۹۷ میلادی است. فیلم درباره مردی است که در حومهٔ شهر تهران، با اتوموبیلش دنبال کسی می‌گردد که تقاضای پردردسر او را در ازای دریافت ۲۰۰هزار تومان پول انجام دهد.فیلم طعم گیلاس همراه با فیلم ژاپنی «مارماهی» ساختهٔ «شوهی ایمامورا» جایزهٔ نخل طلای جشنوارهٔ کن رادر سال ۱۹۹۷ برد که مهم ترین جایزه‌ای است که سینمای ایران به دست آورده است.']],
 
 //        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['2', 'https://commons.wikimedia.org/wiki/File:Hooman_seyedi_khashm_hayahoo.jpg?uselang=fa']],
 //        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['1', 'https://commons.wikimedia.org/wiki/File:Amin_Hayayi.jpg?uselang=fa']],
 //        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['2', 'https://namnak.com/%D9%87%D9%88%D9%85%D9%86-%D8%B3%DB%8C%D8%AF%DB%8C.p9131']],
 //        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['1', 'https://files.namnak.com/users/kk/aup/201902/348_pics/%D8%A7%D9%85%DB%8C%D9%86-%D8%AD%DB%8C%D8%A7%DB%8C%DB%8C.jpg']]
 
-//        ['table' => 'users', 'fields' => ['username', 'email', 'password', 'admin'], 'values' => ['zahra', 'alaki@gmail.com', '1234', 'admin']],
-//        ['table' => 'actors', 'fields' => ['first_name', 'last_name', 'birth_date', 'birth_place','bio'], 'values' => ['امین', 'حیایی', '۱۹ خرداد ۱۳۴۹', 'تهران',
-//            'امین حیایی در ۱۹ خرداد ۱۳۴۹ در تهران در محله قیطریه[نیازمند منبع] به دنیا آمد پدرش تقی حیایی کارمند شغل آزاد بود در دوران تحصیل به فعالیت در تئاتر پرداخت و پس از گرفتن دیپلم، ضمن خدمت سربازی در مرکز هنرهای نمایشی عقیدتی - سیاسی نیروی هوایی فعالیتش را آغاز کرد. در سال ۱۳۷۰ بازیگر یک تئاتر کودکان به کارگردانی ثریا قاسمی بود. در پانزدهمین جشنواره فیلم فجر نامزد دریافت جایزه بازیگر نقش دوم برای فیلم «براده‌های خورشید» شد.'],
-//            ],['table' => 'actors', 'fields' => ['first_name', 'last_name', 'birth_date', 'birth_place','bio'], 'values' => ['هومن', 'سیدی', '۸ آذر ۱۳۵۹۹', 'تهران',
-//            'هومن سیدی پس از پایان دبیرستان و دریافت دیپلم گرافیک کار خود را با حضور در کلاس‌های انجمن سینمای جوان رشت و ساخت چند فیلم کوتاه آغاز کرد. سپس به تهران آمد و در کلاس‌های بازیگری کارنامه به مدیریت پرویز پرستویی شرکت کرد. او فرزند دوم خانواده است و ۲ برادر (حامد و هامون) و یک خواهر (هیلدا) دارد. مادرش بازنشسته نیروی دریایی است و پدرش بازنشسته کارمند بانک کشاورزی.']]
     );
 
     public function run()
