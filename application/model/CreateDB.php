@@ -46,10 +46,10 @@ class CreateDB extends Model
 //          `id` int(11) NOT NULL AUTO_INCREMENT,
 //          `first_name` varchar(100) COLLATE utf8_persian_ci NOT NULL,
 //          `last_name` varchar(100) COLLATE utf8_persian_ci NOT NULL,
-//          `birth_date` datetime ,
+//          `birth_date` varchar(100) ,
 //          `birth_place` varchar(100) ,
 //          `picture` varchar(200) COLLATE utf8_persian_ci,
-//          `bio` varchar(200) COLLATE utf8_persian_ci,
+//          `bio` varchar(1000) COLLATE utf8_persian_ci,
 //          `created_at` datetime NOT NULL,
 //          `updated_at` datetime DEFAULT NULL,
 //          PRIMARY KEY (`id`)
@@ -68,6 +68,7 @@ class CreateDB extends Model
 //          `id` int(11) NOT NULL AUTO_INCREMENT,
 //          `movie_name` varchar(100) COLLATE utf8_persian_ci NOT NULL,
 //          `director` varchar(100) COLLATE utf8_persian_ci NOT NULL,
+//          `author` varchar(100) COLLATE utf8_persian_ci NOT NULL,
 //          `release_date` varchar(100),
 //          `trailer` varchar(100) COLLATE utf8_persian_ci,
 //          `picture` varchar(200) COLLATE utf8_persian_ci,
@@ -170,7 +171,7 @@ class CreateDB extends Model
 
     private $tableInitializes = array(
 
-        ['table' => 'movie_actor', 'fields' => ['movie_id','actor_id'], 'values' => ['1', '1']]
+//        ['table' => 'movie_actor', 'fields' => ['movie_id','actor_id'], 'values' => ['1', '1']]
 
 //        ['table' => 'actors', 'fields' => ['first_name', 'last_name', 'birth_date', 'birth_place', 'bio'], 'values' => ['امین', 'حیایی', '۱۹ خرداد ۱۳۴۹', 'تهران',
 //            'امین حیایی در ۱۹ خرداد ۱۳۴۹ در تهران در محله قیطریه[نیازمند منبع] به دنیا آمد پدرش تقی حیایی کارمند شغل آزاد بود در دوران تحصیل به فعالیت در تئاتر پرداخت و پس از گرفتن دیپلم، ضمن خدمت سربازی در مرکز هنرهای نمایشی عقیدتی - سیاسی نیروی هوایی فعالیتش را آغاز کرد. در سال ۱۳۷۰ بازیگر یک تئاتر کودکان به کارگردانی ثریا قاسمی بود. در پانزدهمین جشنواره فیلم فجر نامزد دریافت جایزه بازیگر نقش دوم برای فیلم «براده‌های خورشید» شد.'],
@@ -179,11 +180,17 @@ class CreateDB extends Model
 
 //        ['table' => 'movies', 'fields' => ['movie_name', 'director', 'release_date', 'trailer', 'picture', 'score', 'summary'],
 //            'values' => ['طعم گیلاس','عباس کیارستمی', '۱۳۷۶', 'https://www.didestan.com/video/m8kmO9xG', 'https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D9%88%D9%86%D8%AF%D9%87:%D8%B7%D8%B9%D9%85_%DA%AF%DB%8C%D9%84%D8%A7%D8%B3.jpg', '8', 'محمد تاجیک –طعم گیلاس فیلم برگزیده نخل طلای کن تولید مشترک با فرانسه محصول ۱۹۹۷ میلادی است. فیلم درباره مردی است که در حومهٔ شهر تهران، با اتوموبیلش دنبال کسی می‌گردد که تقاضای پردردسر او را در ازای دریافت ۲۰۰هزار تومان پول انجام دهد.فیلم طعم گیلاس همراه با فیلم ژاپنی «مارماهی» ساختهٔ «شوهی ایمامورا» جایزهٔ نخل طلای جشنوارهٔ کن رادر سال ۱۹۹۷ برد که مهم ترین جایزه‌ای است که سینمای ایران به دست آورده است.']],
+        ['table' => 'directors', 'fields' => ['first_name', 'last_name', 'birth_date', 'birth_place','picture', 'bio'],
+            'values' => ['عباس','کیارستمی','۱ تیر ۱۳۱۹', ' تهران', 'https://upload.wikimedia.org/wikipedia/commons/5/57/Kiarostami_Boroujerdi_%283%29%28Cropped%29.jpg',
+                'عبّاس کیارستمی (زاده ۱ تیر ۱۳۱۹ تهران – درگذشته ۱۴ تیر ۱۳۹۵ پاریس) کارگردان، فیلمنامه‌نویس، تدوین‌گر، عکاس، تهیه‌کننده، گرافیست و کارگردان هنری بین‌المللی، همچنین نویسنده و نقاش ایرانی بود. او فیلم‌سازی تأثیرگذار در سینمای جهان به‌شمار می‌آید، و آثار وی با استقبال فراوان ناقدان، داوران، کارگردانان، فستیوال‌ها و بنیادهای فرهنگی و هنری جهان روبه‌رو شده‌است. ']],
+
+
 
 //        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['2', 'https://commons.wikimedia.org/wiki/File:Hooman_seyedi_khashm_hayahoo.jpg?uselang=fa']],
 //        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['1', 'https://commons.wikimedia.org/wiki/File:Amin_Hayayi.jpg?uselang=fa']],
 //        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['2', 'https://namnak.com/%D9%87%D9%88%D9%85%D9%86-%D8%B3%DB%8C%D8%AF%DB%8C.p9131']],
-//        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['1', 'https://files.namnak.com/users/kk/aup/201902/348_pics/%D8%A7%D9%85%DB%8C%D9%86-%D8%AD%DB%8C%D8%A7%DB%8C%DB%8C.jpg']]
+//        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['1', 'http://www.nazbahar.com/wp-content/uploads/2016/02/amin-hayaei-niloofar.jpg']],
+//        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['1', 'https://cinemabartar.ir/wp-content/uploads/2019/11/amin-hayai-1.jpg']]
 
     );
 

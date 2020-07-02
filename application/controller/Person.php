@@ -33,14 +33,10 @@ class Person extends Controller
 
         $movieModel = new PersonModel();
         $actorMovies = $movieModel->getActorMovies('1');
-//        var_dump($actor);
-        return $this->view('celebrity-single', compact('actor','actorPictures','actorMovies'));
+
+        return $this->view('celebrity-single', compact('actor', 'actorPictures', 'actorMovies'));
     }
 
-    public function directorDetails($directorId)
-    {
-        $personModel = new PersonModel();
-        $director = $personModel->getDirector($directorId);
-        return $this->view('celebrity-single', compact('director'));
-    }
+
+
 }
