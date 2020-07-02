@@ -7,7 +7,7 @@ require 'application/model/PersonModel.php';
 
 use application\model\PersonModel;
 
-class Person extends Controller
+class Actor extends Controller
 {
 
     public function show()
@@ -36,7 +36,4 @@ class Person extends Controller
 
         return $this->view('celebrity-single', compact('actor', 'actorPictures', 'actorMovies'));
     }
-
-
-
 }
