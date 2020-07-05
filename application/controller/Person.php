@@ -7,21 +7,8 @@ require 'application/model/PersonModel.php';
 
 use application\model\PersonModel;
 
-class Actor extends Controller
+class Person extends Controller
 {
-
-    public function show()
-    {
-        $this->view('celebrity-single');
-    }
-
-    public function actors()
-    {
-        $actorModel = new PersonModel();
-        $actors = $actorModel->all('actors');
-        return $this->view('', compact('actors'));
-    }
-
     public function actor()
     {
         $personModel = new PersonModel();
@@ -35,5 +22,19 @@ class Actor extends Controller
         $actorMovies = $movieModel->getActorMovies('1');
 
         return $this->view('celebrity-single', compact('actor', 'actorPictures', 'actorMovies'));
+    }
+    public function director()
+    {
+        $personModel = new PersonModel();
+        $director = $personModel->getDirector('1');
+        $director = $director[0];
+
+        $personModel = new PersonModel();
+        $directorPictures = $personModel->getDirectorPicture('1');
+
+//        $movieModel = new PersonModel();
+//        $directorMovies = $movieModel->getActorMovies('1');
+
+        return $this->view('director-single', compact('director', 'directorPictures'));
     }
 }

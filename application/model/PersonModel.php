@@ -25,14 +25,14 @@ class PersonModel extends Model
 
     public function getActorPicture($actorId)
     {
-        $query = "SELECT * FROM `actor_pictures` WHERE actor_id = ? LIMIT 3;";
+        $query = "SELECT * FROM `actor_pictures` WHERE actor_id = ? LIMIT 4;";
         $result = $this->query($query, array($actorId))->fetchAll();
         $this->closeConnection();
         return $result;
     }
     public function getDirectorPicture($directorId)
     {
-        $query = "SELECT * FROM `director_pictures` WHERE director_id = ? LIMIT 3;";
+        $query = "SELECT * FROM `director_pictures` WHERE director_id = ? LIMIT 4;";
         $result = $this->query($query, array($directorId))->fetchAll();
         $this->closeConnection();
         return $result;
