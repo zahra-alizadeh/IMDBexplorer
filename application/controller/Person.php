@@ -9,6 +9,18 @@ use application\model\PersonModel;
 
 class Person extends Controller
 {
+    // get all actors
+    public function actors()
+    {
+        $personModel = new PersonModel();
+        $actors = $personModel->all('actors');
+
+//        var_dump($actors);
+
+        return $this->view('celebrity-grid', compact('actors'));
+    }
+
+    // get actor information such as name, picture and ...
     public function actor()
     {
         $personModel = new PersonModel();
@@ -23,6 +35,8 @@ class Person extends Controller
 
         return $this->view('celebrity-single', compact('actor', 'actorPictures', 'actorMovies'));
     }
+
+    // get director information such as name, picture and ...
     public function director()
     {
         $personModel = new PersonModel();
