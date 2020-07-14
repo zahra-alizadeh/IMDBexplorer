@@ -34,22 +34,4 @@ trait View
         }
         echo BASE_URL.$url;
     }
-    protected function saveImage($image, $imagePath, $imageName = null)
-    {
-        if ($imageName)
-            $imageName = $imageName . "." . substr($image['type'], 6, strlen($image['type']));
-        else
-            $imageName = date("Y-m-d-H-i-s") . "." . substr($image['type'], 6, strlen($image['type']));
-
-        $imageTemp = $image['tmp_name'];
-        $imagePath = "public/" . $imagePath . "/";
-
-        if (is_uploaded_file($imageTemp))
-            if (move_uploaded_file($imageTemp, $imagePath . $imageName))
-                return $imagePath . $imageName;
-            else
-                return false;
-        else
-            return false;
-    }
 }

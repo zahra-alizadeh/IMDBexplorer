@@ -69,7 +69,7 @@ class User extends Controller
             else {
                 $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-//                $this->sendEmail($_POST);
+                $this->sendEmail($_POST);
                 $user->storeUser($_POST);
                 $this->redirect('Home/home');
             }
@@ -133,7 +133,7 @@ class User extends Controller
             $mail->setFrom("imdb.team99@gmail.com", "imdb");
             $mail->addAddress($request['email']);
             $mail->isHTML(true);
-            $mail->Subject = "authentication";
+            $mail->Subject = "IMDB";
             $mail->Body = "You already have an account with imdb.";
 
             $mail->send();

@@ -26,7 +26,7 @@
 		<div class="row">
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="topbar-filter ">
-					<p>Found <span>1,608 movies</span> in total</p>
+					<p>Found <span><?php echo sizeof($actors); ?></span> in total</p>
 					<label>نمایش بر اساس </label>
 					<select>
 						<option value="actor">بازیگران</option>
@@ -36,10 +36,10 @@
                 <div class="celebrity-items">
                     <?php foreach ($actors as $actor){ ?>
                     <div class="ceb-item">
-                         <a href="celebrity-single"><img src="<?php echo $actor['picture']; ?>" alt=""></a>
+                         <a href="<?php $this->url('Person/actor/'.$actor['id']); ?>"><img src="<?php echo $actor['picture']; ?>" alt=""></a>
                         <div class="ceb-infor">
                             <h2><a href="celebritylist.html"><?php echo $actor['first_name'] . " " . $actor['last_name']; ?></a></h2>
-<!--                            <span>بازیگر , تهران</span>-->
+                            <span><?php echo 'بازیگر، '.$actor['birth_place']; ?></span>
                         </div>
                      </div>
                     <?php } ?>

@@ -15,13 +15,11 @@ class Person extends Controller
         $personModel = new PersonModel();
         $actors = $personModel->all('actors');
 
-//        var_dump($actors);
-
         return $this->view('celebrity-grid', compact('actors'));
     }
 
     // get actor information such as name, picture and ...
-    public function actor()
+    public function actor($id)
     {
         $personModel = new PersonModel();
         $actor = $personModel->getActor('1');
