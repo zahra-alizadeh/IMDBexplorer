@@ -10,17 +10,17 @@
 <body>
     
 <div class="buster-light">
-<div class="hero common-hero">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="hero-ct">
-					<h1>Movie Listing - Grid Fullwidth</h1>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<!--<div class="hero common-hero">-->
+<!--	<div class="container">-->
+<!--		<div class="row">-->
+<!--			<div class="col-md-12">-->
+<!--				<div class="hero-ct">-->
+<!--<!--					<h1>بازیگران</h1>-->-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
 <div class="page-single">
 	<div class="container">
 		<div class="row">
@@ -36,9 +36,9 @@
                 <div class="celebrity-items">
                     <?php foreach ($actors as $actor){ ?>
                     <div class="ceb-item">
-                         <a href="<?php $this->url('Person/actor/'.$actor['id']); ?>"><img src="<?php echo $actor['picture']; ?>" alt=""></a>
+                         <a href="<?php $this->url('person/actor/'.$actor['id']); ?>"><img src="<?php echo $actor['picture']; ?>" alt=""></a>
                         <div class="ceb-infor">
-                            <h2><a href="celebritylist.html"><?php echo $actor['first_name'] . " " . $actor['last_name']; ?></a></h2>
+                            <h2><a href=""><?php echo $actor['first_name'] . " " . $actor['last_name']; ?></a></h2>
                             <span><?php echo 'بازیگر، '.$actor['birth_place']; ?></span>
                         </div>
                      </div>

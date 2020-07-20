@@ -21,14 +21,18 @@ class UserModel extends Model
     {
         $db = new Model();
         $user = $db->select("SELECT * FROM `users` WHERE (`username` = ?); ", [$request['username']])->fetch();
-        return $user;
+        if ($user != null)
+            return false;
+        else
+            return true;
     }
 
     // store user in DB
-    public function storeUser($request)
+    public function storeUser($request,$token)
     {
+
         $db = new Model();
-        $db->insert('users', ['username', 'email', 'password'], [$_POST['username'], $_POST['email'], $_POST['password']]);
+        $db->insert('users', ['username', 'email', 'password', 'token'], [$_POST['username'], $_POST['email'], $_POST['password'], $token]);
         return true;
     }
 

@@ -17,16 +17,15 @@ class Routing
     public function run()
     {
         // make path of the class
-//        $className=strtoupper($this->currentRoute[0][0]).substr($this->currentRoute[0],1);
-//        echo $className;
         $path = realpath(dirname(__FILE__) . "/../../application/controller/" . $this->currentRoute[0] . ".php");
-        if (!file_exists($path)) {
+        if (!file_exists($path))
+        {
 //            echo "404 - File not exists!!hi";
-//            header("location:error404.php?wrong=10");
+            header("location:error404.php?wrong=10");
 //            header("location:application/view/error404.php");
 //            include(realpath(dirname(__FILE__) . "/../../application/view/error404.php"));
-            $this->error404();
-            header("HTTP/1.1 404 Not Found");
+//            $this->error404();
+//            header("HTTP/1.1 404 Not Found");
             exit;
         }
         require_once($path);

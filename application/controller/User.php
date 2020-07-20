@@ -30,7 +30,7 @@ class User extends Controller
 
         else {
             $userModel = new UserModel();
-            $user = $userModel->checkUserNameExists('users',$_POST);
+            $user = $userModel->checkUserNameExists('users', $_POST);
             if ($user != null) {
                 $this->redirect('Home/home');
                 if (password_verify($_POST['password'], $user['password'])) {
@@ -62,16 +62,23 @@ class User extends Controller
             $this->redirectBack();
         else {
             $user = new UserModel();
-            $checkUser = $user->checkUserExists($_POST);
+            $checkUser = $user->checkUserNameExists($_POST);
 
             if ($checkUser == false)
                 $this->redirectBack();
             else {
                 $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-                $this->sendEmail($_POST);
-                $user->storeUser($_POST);
-                $this->redirect('Home/home');
+                $token = md5(rand(10, 100));
+//                $user->storeUser($_POST,$token);
+
+                $message = '<!DOCTYPE html>
+                <body><a href="http://localhost/IMDB/Home/home?token=' . $token . '">"برای تایید حساب کاربری خود اینجا کلیک کنید!</a></body>';
+                $b = $this->sendEmail($_POST, $message);
+                if ($b)
+
+
+                    $this->redirect('Home/home');
             }
         }
     }
@@ -108,7 +115,7 @@ class User extends Controller
     }
 
     // send email for user to authentication
-    public function sendEmail($request)
+    public function sendEmail($request, $message)
     {
         var_dump($request);
         $mail = new PHPMailer(true);
@@ -125,22 +132,23 @@ class User extends Controller
             $mail->isSMTP();
             $mail->Host = "smtp.gmail.com";
             $mail->SMTPAuth = true;
-            $mail->Username = "imdb.team99@gmail.com";
-            $mail->Password = "imdb1234";
+            $mail->Username = "imdbteam2@gmail.com";
+            $mail->Password = "1234imdb";
             $mail->SMTPSecure = "tls";
             $mail->Port = 587;
 
-            $mail->setFrom("imdb.team99@gmail.com", "imdb");
+            $mail->setFrom("imdbteam2@gmail.com", "IMDB");
             $mail->addAddress($request['email']);
             $mail->isHTML(true);
-            $mail->Subject = "IMDB";
-            $mail->Body = "You already have an account with imdb.";
+            $mail->Subject = "فعال سازی حساب کاربری";
+            $mail->Body = $message;
 
             $mail->send();
             echo "ok";
+            return true;
         } catch (Exception $e) {
             echo "no" . $e->getMessage();
+            return false;
         }
-
     }
 }

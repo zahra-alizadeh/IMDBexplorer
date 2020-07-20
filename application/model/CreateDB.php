@@ -7,17 +7,18 @@ require_once('Model.php');
 class CreateDB extends Model
 {
     private $createTableQueries = array(
-//        "CREATE TABLE `users` (
-//          `id` int(11) NOT NULL AUTO_INCREMENT,
-//          `username` varchar(100) COLLATE utf8_persian_ci NOT NULL,
-//          `email` varchar(100) COLLATE utf8_persian_ci NOT NULL,
-//          `password` varchar(100) COLLATE utf8_persian_ci NOT NULL,
-//          `admin` enum('user','admin') COLLATE utf8_persian_ci NOT NULL DEFAULT 'user',
-//          `created_at` datetime NOT NULL,
-//          `updated_at` datetime DEFAULT NULL,
-//          PRIMARY KEY (`id`),
-//          UNIQUE KEY (`email`,`username`)
-//        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
+        "CREATE TABLE `users` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `username` varchar(100) COLLATE utf8_persian_ci NOT NULL,
+          `email` varchar(100) COLLATE utf8_persian_ci NOT NULL,
+          `password` varchar(100) COLLATE utf8_persian_ci NOT NULL,
+          `admin` enum('user','admin') COLLATE utf8_persian_ci NOT NULL DEFAULT 'user',
+          `active` iint(10) NOT NULL DEFAULT 0, 
+          `created_at` datetime NOT NULL,
+          `updated_at` datetime DEFAULT NULL,
+          PRIMARY KEY (`id`),
+          UNIQUE KEY (`email`,`username`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
 
 //        "CREATE TABLE `actors` (
 //          `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -199,13 +200,13 @@ class CreateDB extends Model
 
     public function run()
     {
-//        foreach ($this->createTableQueries as $createTableQuery) {
-//            $this->createTable($createTableQuery);
-//        }
-        foreach ($this->tableInitializes as $tableInitialize) {
-            $this->insert($tableInitialize['table'], $tableInitialize['fields'], $tableInitialize['values']);
-            echo "helllo";
+        foreach ($this->createTableQueries as $createTableQuery) {
+            $this->createTable($createTableQuery);
         }
+//        foreach ($this->tableInitializes as $tableInitialize) {
+//            $this->insert($tableInitialize['table'], $tableInitialize['fields'], $tableInitialize['values']);
+//            echo "helllo";
+//        }
     }
 }
 

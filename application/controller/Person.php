@@ -22,14 +22,14 @@ class Person extends Controller
     public function actor($id)
     {
         $personModel = new PersonModel();
-        $actor = $personModel->getActor('1');
+        $actor = $personModel->getActor($id[0]);
         $actor = $actor[0];
 
         $personModel = new PersonModel();
-        $actorPictures = $personModel->getActorPicture('1');
+        $actorPictures = $personModel->getActorPicture($id[0]);
 
         $movieModel = new PersonModel();
-        $actorMovies = $movieModel->getActorMovies('1');
+        $actorMovies = $movieModel->getActorMovies($id[0]);
 
         return $this->view('celebrity-single', compact('actor', 'actorPictures', 'actorMovies'));
     }
