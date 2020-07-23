@@ -30,8 +30,8 @@ class User extends Controller
 
         else {
             $userModel = new UserModel();
-            $user = $userModel->checkUserNameExists('users', $_POST);
-            if ($user != null) {
+            $user = $userModel->checkUserExists('username', $_POST['username']);
+            if ($user) {
                 $this->redirect('Home/home');
                 if (password_verify($_POST['password'], $user['password'])) {
                     $_SESSION['userId'] = $user['id'];
@@ -54,39 +54,91 @@ class User extends Controller
 
     public function register()
     {
-        if (empty($_POST['email']) || empty($_POST['password']))
+        if (empty($_POST['username']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['repeatPassword']))
             $this->redirectBack();
         else if (strlen($_POST['password'] <= 4))
             $this->redirectBack();
         else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
             $this->redirectBack();
+        else if ($_POST['password'] != $_POST['repeatPassword'])
+            $this->redirectBack();
         else {
             $user = new UserModel();
-            $checkUser = $user->checkUserNameExists($_POST);
+            $checkUser = $user->checkUserExists('email', $_POST['email']);
 
-            if ($checkUser == false)
-                $this->redirectBack();
-            else {
+//            if ($checkUser)
+//                $this->redirectBack();
+//            else {
                 $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
                 $token = md5(rand(10, 100));
-//                $user->storeUser($_POST,$token);
+//                $user->storeUser($_POST, $token);
 
                 $message = '<!DOCTYPE html>
                 <body><a href="http://localhost/IMDB/Home/home?token=' . $token . '">"برای تایید حساب کاربری خود اینجا کلیک کنید!</a></body>';
                 $b = $this->sendEmail($_POST, $message);
                 if ($b)
-
-
                     $this->redirect('Home/home');
-            }
+//            }
         }
     }
 
     public function forgetPassword()
     {
         return $this->view('forgot-password');
+    }
 
+    public function forgetUserPassword()
+    {
+        if (empty($_POST['email']))
+            $this->redirectBack();
+        else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
+            $this->redirectBack();
+        else {
+            $user = new UserModel();
+            $checkUser = $user->checkUserExists('email', $_POST['email']);
+
+            if ($checkUser)
+                $this->redirectBack();
+            else {
+                $token = md5(rand(10, 100));
+
+                $message = '<!DOCTYPE html>
+                <body>
+                <a href="http://localhost/IMDB/Home/home?token=' . $token . '">برای تغییر کلمه عبور خود اینجا کلیک کنید!</a>
+                </body>';
+                $b = $this->sendEmail($_POST, $message);
+                if ($b)
+                    $this->redirect('Home/home');
+            }
+        }
+    }
+
+    public function changePassword()
+    {
+        return $this->view('change-password');
+    }
+
+    public function changeUserPassword()
+    {
+        if (empty($_POST['currentPassword']) || empty($_POST['newPassword']) || empty($_POST['repeatNewPassword']))
+            $this->redirectBack();
+        else if (strlen($_POST['password'] <= 4))
+            $this->redirectBack();
+        else if ($_POST['newPassword'] != $_POST['repeatNewPassword'])
+            $this->redirectBack();
+        else {
+            $user = new UserModel();
+            $checkUser = $user->checkUserExists('id', $_POST['id']);
+
+            if ($checkUser)
+                $this->redirectBack();
+            else {
+                $_POST['newPassword'] = password_hash($_POST['newPassword'], PASSWORD_DEFAULT);
+                $user->updatePassword($_POST);
+                $this->redirect('Home/home');
+            }
+        }
     }
 
     public function logout($request)
@@ -103,7 +155,7 @@ class User extends Controller
     {
         if (isset($_SESSION['userId'])) {
             $checkUser = new UserModel();
-            $user = $checkUser->checkUserExists($_POST);
+            $user = $checkUser->checkUserExists('email', $_POST['email']);
 //            $user = $this->checkAdmin($_SESSION['userId']);
             if ($user != false) {
                 if ($user['permission'] != 'admin')

@@ -1,5 +1,5 @@
-<?php include('Layouts/header.php');?>
-<body>
+<?php include('Layouts/header.php'); ?>
+    <body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?php $this->asset('css/bootstrap.min.css') ?>">
 <link rel="stylesheet" href="<?php $this->asset('css/loginpagestyle.css') ?>">
@@ -20,13 +20,13 @@
                         </div>
                         <p class="login-page-card-description">ورود به سایت</p>
 
-                        <form action="<?php $this->url('User/login'); ?>" method="post">
+                        <form action="<?php $this->url('user/userLogin'); ?>" method="post">
 
                             <div class="form-group">
                                 <label for="username" class="sr-only">Username</label>
                                 <div class="inner-addon right-addon">
                                     <i class="fa fa-user"></i>
-                                    <input type="username" name="username" id="username" class="form-control"
+                                    <input type="text" name="username" id="username" class="form-control"
                                            placeholder="نام کاربری">
                                 </div>
                             </div>
@@ -39,9 +39,8 @@
                                            placeholder="رمز عبور">
                                 </div>
                             </div>
-
-                            <input name="login-page" id="login-page" class="btn btn-block login-page-btn mb-4"
-                                   type="submit" value="ورود">
+                            <input name="login-page" class="btn btn-block login-page-btn mb-4" type="submit"
+                                   value="ورود">
 
                         </form>
 
@@ -58,4 +57,4 @@
         </div>
     </div>
 </main>
-<?php include('Layouts/footer.php');?>
+<?php include('Layouts/footer.php'); ?>

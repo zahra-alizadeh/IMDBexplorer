@@ -59,7 +59,7 @@
                     </a>
                     <div class="jss8">
                         <div>
-                            <a class="jss11">دسته بندی ها </a>
+                            <a href="" class="jss11">دسته بندی ها </a>
                             <a class="jss11">فیلم</a>
                             <a class="jss11">سریال</a>
                             <a class="jss11">بازیگران</a>

@@ -20,13 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="512b1a97-9043-43cf-ae2a-3dd534e048fb" name="Default Changelist" comment="Merge branch 'master' of https://dev.azure.com/zahraalizade2500153/IMDB/_git/IMDB&#10;&#10;# Conflicts:&#10;#&#9;application/view/forgot-password.html&#10;#&#9;application/view/login.html&#10;#&#9;application/view/main-page.html&#10;#&#9;application/view/register.html">
+      <change afterPath="$PROJECT_DIR$/application/view/change-password.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controller/Person.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/Person.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controller/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/model/CreateDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/model/CreateDB.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/model/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/model/UserModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/Layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/Layouts/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/view/celebrity-grid.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/celebrity-grid.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/router/Routing.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/router/Routing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/forgot-password.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/forgot-password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/main-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/main-page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/config.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +55,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/system/router" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/view" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -61,19 +66,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\WampServer\www\IMDB\system\router" />
-      <recent name="D:\WampServer\www\IMDB\application\view" />
-      <recent name="D:\WampServer\www\IMDB\application\view\t" />
-      <recent name="D:\WampServer\www\IMDB\public\css" />
-      <recent name="D:\WampServer\www\IMDB\application\view\Layout" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\WampServer\www\IMDB\public\image\login" />
       <recent name="D:\WampServer\www\IMDB\public\css" />
       <recent name="D:\WampServer\www\IMDB\public\bootstrap\css" />
       <recent name="D:\WampServer\www\IMDB\application\view" />
       <recent name="D:\WampServer\www\IMDB\application\controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WampServer\www\IMDB\application\view" />
+      <recent name="D:\WampServer\www\IMDB\system\router" />
+      <recent name="D:\WampServer\www\IMDB\application\view\t" />
+      <recent name="D:\WampServer\www\IMDB\public\css" />
+      <recent name="D:\WampServer\www\IMDB\application\view\Layout" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -152,6 +157,9 @@
       <workItem from="1595080869700" duration="4075000" />
       <workItem from="1595097303524" duration="5563000" />
       <workItem from="1595255488647" duration="8998000" />
+      <workItem from="1595338229494" duration="2230000" />
+      <workItem from="1595427754451" duration="15042000" />
+      <workItem from="1595486564976" duration="1110000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1588592486556</created>
@@ -236,10 +244,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1593435491544" />
-    <state x="930" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593872734694">
+    <state x="930" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595451257610">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="930" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1593872734694" />
+    <state x="930" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1595451257610" />
     <state x="423" y="0" key="CommitChangelistDialog2" timestamp="1588613511034">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

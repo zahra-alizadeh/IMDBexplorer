@@ -9,7 +9,8 @@
 
 <body>
 <h1>
-    <?php echo $p; ?>
+    <?php echo $p; ?><br>
+    <a href="<?php $this->url('user/changeUserPassword'); ?>">change</a>
 </h1>
 
 </body>

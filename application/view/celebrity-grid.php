@@ -38,7 +38,7 @@
                     <div class="ceb-item">
                          <a href="<?php $this->url('person/actor/'.$actor['id']); ?>"><img src="<?php echo $actor['picture']; ?>" alt=""></a>
                         <div class="ceb-infor">
-                            <h2><a href=""><?php echo $actor['first_name'] . " " . $actor['last_name']; ?></a></h2>
+                            <h2><a href="<?php $this->url('person/actor/'.$actor['id']); ?>"><?php echo $actor['first_name'] . " " . $actor['last_name']; ?></a></h2>
                             <span><?php echo 'بازیگر، '.$actor['birth_place']; ?></span>
                         </div>
                      </div>
@@ -54,7 +54,7 @@
 					<div class="pagination2">
 						<span>Page 1 of 2:</span>
 						<a class="active" href="#">1</a>
-						<a href="#">2</a>
+						<a href="<?php $this->url('person/pagination/2'); ?>">2</a>
 						<a href="#">3</a>
 						<a href="#">...</a>
 						<a href="#">78</a>

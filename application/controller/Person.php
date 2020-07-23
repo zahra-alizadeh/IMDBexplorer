@@ -49,4 +49,25 @@ class Person extends Controller
 
         return $this->view('director-single', compact('director', 'directorPictures'));
     }
+
+    public function pagination($pageNumber)
+    {
+        $personModel = new PersonModel();
+        $actors = $personModel->all('actors');
+
+        $actorsCount = sizeof($actors);
+        $numberOfPages = $actorsCount / 25;
+        $endPage = $actorsCount % 25;
+        $ac = array();
+
+        if ($pageNumber != $numberOfPages) {
+            for ($i = ($pageNumber - 1) * 25; $i < $pageNumber * 25; $i++)
+                $ac[$i] = $actors[$i];
+        } else {
+            for ($i = ($pageNumber - 1) * 25 + 1; $i < sizeof($actors) - (($pageNumber - 1) * 25) * 25; $i++)
+                $ac[$i] = $actors[$i];
+        }
+
+        return $this->view('celebrity-grid', compact('actors'));
+    }
 }
