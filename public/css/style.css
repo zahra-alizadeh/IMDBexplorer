@@ -52,9 +52,17 @@ body {
     font-family: "yekan";
     min-height: 100vh;
     text-align: right;
+<<<<<<< HEAD
+    
+}
+.bodydirection {
+    direction: rtl;
+}
+=======
     direction: rtl;
 }
 
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 @media print {
     *,
     *:before,
@@ -4376,6 +4384,12 @@ td {
     padding: 0;
     vertical-align: baseline;
 }
+<<<<<<< HEAD
+.textdirection{
+    direction: ltr;
+}
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 
 html {
     -webkit-text-size-adjust: 100%;
@@ -4455,6 +4469,10 @@ a:active {
 
 a img {
     border: 0;
+<<<<<<< HEAD
+    margin-left: 10px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 }
 
 
@@ -4558,6 +4576,10 @@ a {
     color: rgb(241, 241, 241);
     border-bottom: 1px solid dotted;
     font-size: medium;
+<<<<<<< HEAD
+    margin-right: 10px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 }
 
 a:hover {
@@ -5034,6 +5056,10 @@ ul {
     bottom: 0;
     left: 0;
     position: absolute;
+<<<<<<< HEAD
+
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 }
 
 @media (max-width: 767px) {
@@ -5470,6 +5496,10 @@ ul {
     flex-direction: column;
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 .movie-items .slick-multiItem .slick-list,
 .movie-items .slick-multiItem2 .slick-list {
     order: 2;
@@ -5478,8 +5508,13 @@ ul {
 .movie-items .slick-multiItem .slick-dots,
 .movie-items .slick-multiItem2 .slick-dots {
     position: absolute;
+<<<<<<< HEAD
+    margin-left: 5%;
+    text-align: left;
+=======
     margin-left: 50%;
     text-align: right;
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
     right: 15px;
     width: 50%;
     position: inherit;
@@ -5551,7 +5586,10 @@ ul {
     -webkit-appearance: none;
     -moz-appearance: none;
     /* Firefox */
+<<<<<<< HEAD
+=======
     background: url('../../public/image/uploads/drop-icon.png') no-repeat right 20px center;
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
     border-left: 1px solid #405266;
     border-right: 1px solid #405266;
     border-top: none;
@@ -6130,11 +6168,22 @@ ul {
 
 .sidebar {
     margin-left: 60px;
+<<<<<<< HEAD
+    margin-top: 20px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 }
 
 .sidebar .sb-it {
     margin-bottom: 60px;
 }
+<<<<<<< HEAD
+.sidebar .sb-it-question {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 
 .sidebar .sb-title {
     font-family: "yekan", sans-serif;
@@ -6153,7 +6202,16 @@ ul {
     flex-direction: row;
     align-items: center;
 }
+<<<<<<< HEAD
+.sidebar .celebrities .checkbox-item {
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+=======
 
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 .sidebar .celebrities .celeb-item img {
     margin-right: 20px;
     -webkit-border-radius: 3px;
@@ -6321,6 +6379,10 @@ ul {
     color: #abb7c4;
     font-weight: 300;
     text-transform: none;
+<<<<<<< HEAD
+    margin-right: 10px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 }
 
 .blog-item-style-1 {
@@ -6889,6 +6951,13 @@ ul {
     height: 385px;
     background: url('../../public/image/uploads/user-hero-bg.jpg') no-repeat;
 }
+<<<<<<< HEAD
+.common-hero-grid {
+    height: 285px;
+    background: url('../../public/image/uploads/user-hero-bg.jpg') no-repeat;
+}
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 
 .common-hero:before {
     background-color: rgba(0, 0, 0, 0.4);
@@ -8492,7 +8561,11 @@ p.ceb-single {
 }
 
 .slider {
+<<<<<<< HEAD
+    background: url('../image/uploads/slider-bg.jpg') no-repeat;
+=======
     background: url('../images/uploads/slider-bg.jpg') no-repeat;
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
     background-position: center;
     text-align: center;
     background-size: cover;
@@ -9051,6 +9124,10 @@ p.ceb-single {
 
 .buster-light .blog-item-style-1 .blog-it-infor p {
     color: #9ca9b7;
+<<<<<<< HEAD
+    margin-right: 10px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 }
 
 .buster-light .blog-item-style-1 .blog-it-infor h3 a:hover {
@@ -10046,4 +10123,108 @@ label.star:before {
     margin-bottom: 15px;
     width: 200px;
     height: 300px;
+<<<<<<< HEAD
 }
+
+
+
+* {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  @keyframes click-wave {
+    0% {
+      height: 40px;
+      width: 40px;
+      opacity: 0.35;
+      position: relative;
+    }
+    100% {
+      height: 200px;
+      width: 200px;
+      margin-left: -80px;
+      margin-top: -80px;
+      opacity: 0;
+    }
+  }
+  
+  .option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    align-items: center;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+  }
+  .option-input:hover {
+    background: #9faab7;
+  }
+  .option-input:checked {
+    background: #dd003f;
+  }
+  .option-input:checked::before {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    /* content: "✔"; */
+    display: inline-block;
+    font-size: 26.66667px;
+    text-align: right;
+    line-height: 40px;
+  }
+  .option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #dd003f;
+    content: "";
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+  .option-input.radio {
+    border-radius: 50%;
+    margin-bottom: 7px;
+    margin-left: 10px;
+  }
+  .option-input.radio::after {
+    border-radius: 50%;
+  }
+  
+  .bodycheckbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: box;
+    color: #9faab7;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    text-align: center;
+  }
+  .bodycheckbox div {
+    padding: 5rem;
+  }
+  .bodycheckbox label {
+    display: block;
+    line-height: 40px;
+  }
+  
+=======
+}
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
