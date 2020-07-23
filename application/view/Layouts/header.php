@@ -22,10 +22,13 @@
     <link rel="profile" href="#">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone-no">
+<<<<<<< HEAD
     <!-- Mobile specific meta -->
 	<meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone-no">
     
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
     <link rel="stylesheet" href="<?php $this->asset('css/style.css') ?>">
     <link rel="stylesheet" href="<?php $this->asset('css/plugins.css') ?>">
     <link rel="stylesheet" href="<?php $this->asset('css/header.css') ?>">
@@ -63,9 +66,15 @@
                     </a>
                     <div class="jss8">
                         <div>
+<<<<<<< HEAD
                             <!-- <a class="jss11">دسته بندی ها </a> -->
                             <a class="jss11">فیلم</a>
                             <!-- <a class="jss11">سریال</a> -->
+=======
+                            <a class="jss11">دسته بندی ها </a>
+                            <a class="jss11">فیلم</a>
+                            <a class="jss11">سریال</a>
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
                             <a class="jss11">بازیگران</a>
                             <a class="jss11">درباره ما </a>
                         </div>

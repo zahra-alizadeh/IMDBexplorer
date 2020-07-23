@@ -52,11 +52,17 @@ body {
     font-family: "yekan";
     min-height: 100vh;
     text-align: right;
+<<<<<<< HEAD
     
 }
 .bodydirection {
     direction: rtl;
 }
+=======
+    direction: rtl;
+}
+
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 @media print {
     *,
     *:before,
@@ -4378,9 +4384,12 @@ td {
     padding: 0;
     vertical-align: baseline;
 }
+<<<<<<< HEAD
 .textdirection{
     direction: ltr;
 }
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 
 html {
     -webkit-text-size-adjust: 100%;
@@ -4460,7 +4469,10 @@ a:active {
 
 a img {
     border: 0;
+<<<<<<< HEAD
     margin-left: 10px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 }
 
 
@@ -4564,7 +4576,10 @@ a {
     color: rgb(241, 241, 241);
     border-bottom: 1px solid dotted;
     font-size: medium;
+<<<<<<< HEAD
     margin-right: 10px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 }
 
 a:hover {
@@ -5041,7 +5056,10 @@ ul {
     bottom: 0;
     left: 0;
     position: absolute;
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 }
 
 @media (max-width: 767px) {
@@ -5478,7 +5496,10 @@ ul {
     flex-direction: column;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 .movie-items .slick-multiItem .slick-list,
 .movie-items .slick-multiItem2 .slick-list {
     order: 2;
@@ -5487,8 +5508,13 @@ ul {
 .movie-items .slick-multiItem .slick-dots,
 .movie-items .slick-multiItem2 .slick-dots {
     position: absolute;
+<<<<<<< HEAD
     margin-left: 5%;
     text-align: left;
+=======
+    margin-left: 50%;
+    text-align: right;
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
     right: 15px;
     width: 50%;
     position: inherit;
@@ -5560,6 +5586,10 @@ ul {
     -webkit-appearance: none;
     -moz-appearance: none;
     /* Firefox */
+<<<<<<< HEAD
+=======
+    background: url('../../public/image/uploads/drop-icon.png') no-repeat right 20px center;
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
     border-left: 1px solid #405266;
     border-right: 1px solid #405266;
     border-top: none;
@@ -6138,16 +6168,22 @@ ul {
 
 .sidebar {
     margin-left: 60px;
+<<<<<<< HEAD
     margin-top: 20px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 }
 
 .sidebar .sb-it {
     margin-bottom: 60px;
 }
+<<<<<<< HEAD
 .sidebar .sb-it-question {
     margin-bottom: 20px;
     font-size: 30px;
 }
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 
 .sidebar .sb-title {
     font-family: "yekan", sans-serif;
@@ -6166,12 +6202,16 @@ ul {
     flex-direction: row;
     align-items: center;
 }
+<<<<<<< HEAD
 .sidebar .celebrities .checkbox-item {
    
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+=======
+
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 .sidebar .celebrities .celeb-item img {
     margin-right: 20px;
     -webkit-border-radius: 3px;
@@ -6339,7 +6379,10 @@ ul {
     color: #abb7c4;
     font-weight: 300;
     text-transform: none;
+<<<<<<< HEAD
     margin-right: 10px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 }
 
 .blog-item-style-1 {
@@ -6908,10 +6951,13 @@ ul {
     height: 385px;
     background: url('../../public/image/uploads/user-hero-bg.jpg') no-repeat;
 }
+<<<<<<< HEAD
 .common-hero-grid {
     height: 285px;
     background: url('../../public/image/uploads/user-hero-bg.jpg') no-repeat;
 }
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 
 .common-hero:before {
     background-color: rgba(0, 0, 0, 0.4);
@@ -8515,7 +8561,11 @@ p.ceb-single {
 }
 
 .slider {
+<<<<<<< HEAD
     background: url('../image/uploads/slider-bg.jpg') no-repeat;
+=======
+    background: url('../images/uploads/slider-bg.jpg') no-repeat;
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
     background-position: center;
     text-align: center;
     background-size: cover;
@@ -9074,7 +9124,10 @@ p.ceb-single {
 
 .buster-light .blog-item-style-1 .blog-it-infor p {
     color: #9ca9b7;
+<<<<<<< HEAD
     margin-right: 10px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
 }
 
 .buster-light .blog-item-style-1 .blog-it-infor h3 a:hover {
@@ -10070,6 +10123,7 @@ label.star:before {
     margin-bottom: 15px;
     width: 200px;
     height: 300px;
+<<<<<<< HEAD
 }
 
 
@@ -10171,3 +10225,6 @@ label.star:before {
     line-height: 40px;
   }
   
+=======
+}
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d

@@ -39,7 +39,11 @@
         </div>
     </div>
     <div class="page-single movie-single movie_single">
+<<<<<<< HEAD
         <div class="container bodydirection">
+=======
+        <div class="container">
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
             <div class="row ipad-width2">
                 <div class="col-md-8 col-sm-12 col-xs-12">
                     <div class="movie-single-ct main-content">
@@ -467,7 +471,12 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 
 <!-- moviesingle_light16:30-->
 <?php include('Layouts/footer.php');?>
 </html>
+=======
+<!-- moviesingle_light16:30-->
+<?php include('Layouts/footer.php');?>
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
