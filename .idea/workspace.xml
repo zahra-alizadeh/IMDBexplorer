@@ -19,7 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="512b1a97-9043-43cf-ae2a-3dd534e048fb" name="Default Changelist" comment="Merge branch 'master' of https://dev.azure.com/zahraalizade2500153/IMDB/_git/IMDB&#10;&#10;# Conflicts:&#10;#&#9;application/view/forgot-password.html&#10;#&#9;application/view/login.html&#10;#&#9;application/view/main-page.html&#10;#&#9;application/view/register.html" />
+=======
+    <list default="true" id="512b1a97-9043-43cf-ae2a-3dd534e048fb" name="Default Changelist" comment="Merge branch 'master' of https://dev.azure.com/zahraalizade2500153/IMDB/_git/IMDB&#10;&#10;# Conflicts:&#10;#&#9;application/view/forgot-password.html&#10;#&#9;application/view/login.html&#10;#&#9;application/view/main-page.html&#10;#&#9;application/view/register.html">
+      <change afterPath="$PROJECT_DIR$/application/view/index_light.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/view/moviegridfw_light.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controller/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/Movie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/Layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/Layouts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/moviesingle_light.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/moviesingle_light.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+    </list>
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -259,9 +270,16 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="607" y="338" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1590859693961" />
+<<<<<<< HEAD
     <state x="56" y="190" key="run.anything.popup" timestamp="1595512363693">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="56" y="190" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1595512363693" />
+=======
+    <state x="56" y="190" key="run.anything.popup" timestamp="1593372739118">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="56" y="190" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1593372739118" />
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
   </component>
 </project>

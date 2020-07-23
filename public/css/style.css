@@ -52,11 +52,24 @@ body {
     font-family: "yekan";
     min-height: 100vh;
     text-align: right;
+<<<<<<< HEAD
     direction: rtl;
+=======
+<<<<<<< HEAD
+    
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 }
 .bodydirection {
     direction: rtl;
 }
+<<<<<<< HEAD
+=======
+=======
+    direction: rtl;
+}
+
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 @media print {
     *,
     *:before,
@@ -4378,9 +4391,18 @@ td {
     padding: 0;
     vertical-align: baseline;
 }
+<<<<<<< HEAD
 .textdirection{
     direction: ltr;
 }
+=======
+<<<<<<< HEAD
+.textdirection{
+    direction: ltr;
+}
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 
 html {
     -webkit-text-size-adjust: 100%;
@@ -4460,7 +4482,14 @@ a:active {
 
 a img {
     border: 0;
+<<<<<<< HEAD
     margin-left: 10px;
+=======
+<<<<<<< HEAD
+    margin-left: 10px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 }
 
 
@@ -4564,7 +4593,14 @@ a {
     color: rgb(241, 241, 241);
     border-bottom: 1px solid dotted;
     font-size: medium;
+<<<<<<< HEAD
     margin-right: 10px;
+=======
+<<<<<<< HEAD
+    margin-right: 10px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 }
 
 a:hover {
@@ -5041,7 +5077,14 @@ ul {
     bottom: 0;
     left: 0;
     position: absolute;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 }
 
 @media (max-width: 767px) {
@@ -5478,7 +5521,14 @@ ul {
     flex-direction: column;
 }
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 .movie-items .slick-multiItem .slick-list,
 .movie-items .slick-multiItem2 .slick-list {
     order: 2;
@@ -5487,8 +5537,18 @@ ul {
 .movie-items .slick-multiItem .slick-dots,
 .movie-items .slick-multiItem2 .slick-dots {
     position: absolute;
+<<<<<<< HEAD
     margin-left: 5%;
     text-align: left;
+=======
+<<<<<<< HEAD
+    margin-left: 5%;
+    text-align: left;
+=======
+    margin-left: 50%;
+    text-align: right;
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
     right: 15px;
     width: 50%;
     position: inherit;
@@ -5560,6 +5620,13 @@ ul {
     -webkit-appearance: none;
     -moz-appearance: none;
     /* Firefox */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    background: url('../../public/image/uploads/drop-icon.png') no-repeat right 20px center;
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
     border-left: 1px solid #405266;
     border-right: 1px solid #405266;
     border-top: none;
@@ -6138,16 +6205,32 @@ ul {
 
 .sidebar {
     margin-left: 60px;
+<<<<<<< HEAD
     margin-top: 20px;
+=======
+<<<<<<< HEAD
+    margin-top: 20px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 }
 
 .sidebar .sb-it {
     margin-bottom: 60px;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 .sidebar .sb-it-question {
     margin-bottom: 20px;
     font-size: 30px;
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 
 .sidebar .sb-title {
     font-family: "yekan", sans-serif;
@@ -6166,12 +6249,24 @@ ul {
     flex-direction: row;
     align-items: center;
 }
+<<<<<<< HEAD
 .sidebar .celebrities .checkbox-item {
 
+=======
+<<<<<<< HEAD
+.sidebar .celebrities .checkbox-item {
+   
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 .sidebar .celebrities .celeb-item img {
     margin-right: 20px;
     -webkit-border-radius: 3px;
@@ -6339,7 +6434,14 @@ ul {
     color: #abb7c4;
     font-weight: 300;
     text-transform: none;
+<<<<<<< HEAD
     margin-right: 10px;
+=======
+<<<<<<< HEAD
+    margin-right: 10px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 }
 
 .blog-item-style-1 {
@@ -6908,10 +7010,19 @@ ul {
     height: 385px;
     background: url('../../public/image/uploads/user-hero-bg.jpg') no-repeat;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 .common-hero-grid {
     height: 285px;
     background: url('../../public/image/uploads/user-hero-bg.jpg') no-repeat;
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 
 .common-hero:before {
     background-color: rgba(0, 0, 0, 0.4);
@@ -8515,7 +8626,15 @@ p.ceb-single {
 }
 
 .slider {
+<<<<<<< HEAD
     background: url('../image/uploads/slider-bg.jpg') no-repeat;
+=======
+<<<<<<< HEAD
+    background: url('../image/uploads/slider-bg.jpg') no-repeat;
+=======
+    background: url('../images/uploads/slider-bg.jpg') no-repeat;
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
     background-position: center;
     text-align: center;
     background-size: cover;
@@ -9074,7 +9193,14 @@ p.ceb-single {
 
 .buster-light .blog-item-style-1 .blog-it-infor p {
     color: #9ca9b7;
+<<<<<<< HEAD
     margin-right: 10px;
+=======
+<<<<<<< HEAD
+    margin-right: 10px;
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 }
 
 .buster-light .blog-item-style-1 .blog-it-infor h3 a:hover {
@@ -10070,12 +10196,17 @@ label.star:before {
     margin-bottom: 15px;
     width: 200px;
     height: 300px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 }
 
 
 
 * {
     font-family: "Roboto", sans-serif;
+<<<<<<< HEAD
 }
 
 @keyframes click-wave {
@@ -10095,6 +10226,27 @@ label.star:before {
 }
 
 .option-input {
+=======
+  }
+  
+  @keyframes click-wave {
+    0% {
+      height: 40px;
+      width: 40px;
+      opacity: 0.35;
+      position: relative;
+    }
+    100% {
+      height: 200px;
+      width: 200px;
+      margin-left: -80px;
+      margin-top: -80px;
+      opacity: 0;
+    }
+  }
+  
+  .option-input {
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -10118,6 +10270,7 @@ label.star:before {
     outline: none;
     position: relative;
     z-index: 1000;
+<<<<<<< HEAD
 }
 .option-input:hover {
     background: #9faab7;
@@ -10126,6 +10279,16 @@ label.star:before {
     background: #dd003f;
 }
 .option-input:checked::before {
+=======
+  }
+  .option-input:hover {
+    background: #9faab7;
+  }
+  .option-input:checked {
+    background: #dd003f;
+  }
+  .option-input:checked::before {
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
     height: 40px;
     width: 40px;
     position: absolute;
@@ -10134,8 +10297,13 @@ label.star:before {
     font-size: 26.66667px;
     text-align: right;
     line-height: 40px;
+<<<<<<< HEAD
 }
 .option-input:checked::after {
+=======
+  }
+  .option-input:checked::after {
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
     -webkit-animation: click-wave 0.65s;
     -moz-animation: click-wave 0.65s;
     animation: click-wave 0.65s;
@@ -10144,6 +10312,7 @@ label.star:before {
     display: block;
     position: relative;
     z-index: 100;
+<<<<<<< HEAD
 }
 .option-input.radio {
     border-radius: 50%;
@@ -10155,6 +10324,19 @@ label.star:before {
 }
 
 .bodycheckbox {
+=======
+  }
+  .option-input.radio {
+    border-radius: 50%;
+    margin-bottom: 7px;
+    margin-left: 10px;
+  }
+  .option-input.radio::after {
+    border-radius: 50%;
+  }
+  
+  .bodycheckbox {
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -10162,6 +10344,7 @@ label.star:before {
     color: #9faab7;
     font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     text-align: center;
+<<<<<<< HEAD
 }
 .bodycheckbox div {
     padding: 5rem;
@@ -10170,3 +10353,17 @@ label.star:before {
     display: block;
     line-height: 40px;
 }
+=======
+  }
+  .bodycheckbox div {
+    padding: 5rem;
+  }
+  .bodycheckbox label {
+    display: block;
+    line-height: 40px;
+  }
+  
+=======
+}
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d

@@ -22,10 +22,20 @@
     <link rel="profile" href="#">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone-no">
+<<<<<<< HEAD
     <!-- Mobile specific meta -->
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone-no">
 
+=======
+<<<<<<< HEAD
+    <!-- Mobile specific meta -->
+	<meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone-no">
+    
+=======
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
     <link rel="stylesheet" href="<?php $this->asset('css/style.css') ?>">
     <link rel="stylesheet" href="<?php $this->asset('css/plugins.css') ?>">
     <link rel="stylesheet" href="<?php $this->asset('css/header.css') ?>">
@@ -63,9 +73,25 @@
                     </a>
                     <div class="jss8">
                         <div>
+<<<<<<< HEAD
                             <!-- <a class="jss11">دسته بندی ها </a> -->
                             <a class="jss11">فیلم</a>
                             <!-- <a class="jss11">سریال</a> -->
+=======
+<<<<<<< HEAD
+                            <a href="" class="jss11">دسته بندی ها </a>
+=======
+<<<<<<< HEAD
+                            <!-- <a class="jss11">دسته بندی ها </a> -->
+                            <a class="jss11">فیلم</a>
+                            <!-- <a class="jss11">سریال</a> -->
+=======
+                            <a class="jss11">دسته بندی ها </a>
+>>>>>>> a35ec8f7695d4ecad9e1d9d1166aacede6aae1e8
+                            <a class="jss11">فیلم</a>
+                            <a class="jss11">سریال</a>
+>>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
                             <a class="jss11">بازیگران</a>
                             <a class="jss11">درباره ما </a>
                         </div>

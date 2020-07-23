@@ -1,6 +1,8 @@
 <?php
 
 namespace application\controller;
+
+require 'application/model/Model.php';
 require 'application/model/UserModel.php';
 
 use application\model\UserModel;
@@ -72,24 +74,33 @@ class User extends Controller
 
                 $token = md5(rand(10, 100));
                 $user->storeUser($_POST, $token);
+                if ($checkUser)
+                    $this->redirectBack();
+                else {
+                    $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-                $message = '<!DOCTYPE html>
+                    $token = md5(rand(10, 100));
+//                $user->storeUser($_POST, $token);
+
+                    $message = '<!DOCTYPE html>
                 <body><a href="http://localhost/IMDB/Home/home?token=' . $token . '">"برای تایید حساب کاربری خود اینجا کلیک کنید!</a></body>';
-                $b = $this->sendEmail($_POST, $message);
-                if ($b)
-                    $this->redirect('Home/home');
+                    $b = $this->sendEmail($_POST, $message);
+                    if ($b)
+                        $this->redirect('Home/home');
+
+                }
             }
         }
     }
 
-    public
-    function forgetPassword()
+
+    public function forgetPassword()
     {
         return $this->view('forgot-password');
     }
 
-    public
-    function forgetUserPassword()
+
+    public function forgetUserPassword()
     {
         if (empty($_POST['email']))
             $this->redirectBack();
@@ -115,14 +126,13 @@ class User extends Controller
         }
     }
 
-    public
-    function changePassword()
+
+    public function changePassword()
     {
         return $this->view('change-password');
     }
 
-    public
-    function changeUserPassword()
+    public function changeUserPassword()
     {
         if (empty($_POST['currentPassword']) || empty($_POST['newPassword']) || empty($_POST['repeatNewPassword']))
             $this->redirectBack();
@@ -144,8 +154,7 @@ class User extends Controller
         }
     }
 
-    public
-    function logout($request)
+    public function logout($request)
     {
         if (isset($_SESSION['userId'])) {
             unset($_SESSION['userId']);
@@ -155,8 +164,7 @@ class User extends Controller
         setcookie($_SESSION['userName'], '', time() - 3600);
     }
 
-    public
-    function checkAdmin()
+    public function checkAdmin()
     {
         if (isset($_SESSION['userId'])) {
             $checkUser = new UserModel();
@@ -172,8 +180,8 @@ class User extends Controller
     }
 
     // send email for user to authentication
-    public
-    function sendEmail($request, $message)
+
+    public function sendEmail($request, $message)
     {
         var_dump($request);
         $mail = new PHPMailer(true);

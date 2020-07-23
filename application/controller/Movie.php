@@ -10,5 +10,9 @@ class Movie extends Controller
     {
 //        $this->view('moviegridfw_light');
         $this->view('moviesingle_light');
+        // $this->view('moviesingle_light');
+        // $this->view('moviegridfw_light');
+        $this->view('index_light');
+        $this->view('moviesingle_light');
     }
 }

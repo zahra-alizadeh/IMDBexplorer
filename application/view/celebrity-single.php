@@ -102,9 +102,12 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
             </div>
         </div>
 
+=======
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
 
                 <div class="col-md-4 col-sm-12 col-xs-12">
                     <div class="mv-ceb">
@@ -114,7 +117,10 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
     <!-- celebrity single section-->
 
     <!-- celebritysingle_light16:31-->
