@@ -218,12 +218,12 @@ class User extends Controller
             $mail->isSMTP();
             $mail->Host = "smtp.gmail.com";
             $mail->SMTPAuth = true;
-            $mail->Username = "imdbteam2@gmail.com";
-            $mail->Password = "1234imdb";
+            $mail->Username = "";
+            $mail->Password = "";
             $mail->SMTPSecure = "tls";
             $mail->Port = 587;
 
-            $mail->setFrom("imdbteam2@gmail.com", "IMDB");
+            $mail->setFrom("", "IMDB");
             $mail->addAddress($request['email']);
             $mail->isHTML(true);
             $mail->Subject = "فعال سازی حساب کاربری";
