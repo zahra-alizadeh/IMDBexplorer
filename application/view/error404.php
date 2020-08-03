@@ -9,5 +9,6 @@
 </head>
 <body>
 <b>Error 404!</b>
+<b><?php realpath(dirname(__FILE__) . "/../../application/controller/"); ?></b>
 </body>
 </html>

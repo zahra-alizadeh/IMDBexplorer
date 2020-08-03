@@ -151,39 +151,40 @@ class CreateDB extends Model
 
 //        "CREATE TABLE `blogs` (
 //          `id` int(11) NOT NULL AUTO_INCREMENT,
-//          `movie_id` int(11)  NOT NULL,
-//          `actor_id` int(11)  NOT NULL,
+//          `title` varchar(200) COLLATE utf8_persian_ci,
 //          `picture` varchar(200) COLLATE utf8_persian_ci,
 //          `text` text COLLATE utf8_persian_ci NOT NULL,
 //          `created_at` datetime NOT NULL,
 //          `updated_at` datetime DEFAULT NULL,
-//          PRIMARY KEY (`id`),
-//          FOREIGN KEY (`movie_id`) REFERENCES `movies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-//          FOREIGN KEY (`actor_id`) REFERENCES `actors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+//          PRIMARY KEY (`id`)
 //          ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
 
 //        "CREATE TABLE `votes` (
 //          `id` int(11) NOT NULL AUTO_INCREMENT,
 //          `title` varchar(200) COLLATE utf8_persian_ci  NOT NULL,
-//          `candidate` varchar(200) COLLATE utf8_persian_ci NOT NULL,
 //          `created_at` datetime NOT NULL,
 //          `updated_at` datetime DEFAULT NULL,
-//          PRIMARY KEY (`id`,`title`,`candidate`),
-//          FOREIGN KEY (`movie_id`) REFERENCES `movies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-//          FOREIGN KEY (`person_id`) REFERENCES `persons` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
-//           ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
+//          PRIMARY KEY (`id`,`title`)
+//          )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
 //
-//        "CREATE TABLE `votes` (
+//        "CREATE TABLE `vote_candidates` (
 //          `vote_id` int(11) NOT NULL AUTO_INCREMENT,
-//          `user_id` int(11) NOT NULL,
-//          `title`  varchar(200) COLLATE utf8_persian_ci  NOT NULL,
-//          `candidates` varchar(200) COLLATE utf8_persian_ci NOT NULL,
+//          `candidate_id` int(11) NOT NULL,
 //          `created_at` datetime NOT NULL,
 //          `updated_at` datetime DEFAULT NULL,
-//          PRIMARY KEY (`id`),
-//          FOREIGN KEY (`movie_id`) REFERENCES `movies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-//          FOREIGN KEY (`person_id`) REFERENCES `persons` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
-//           ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
+//          PRIMARY KEY (`vote_id`,`candidate_id`),
+//          FOREIGN KEY (`vote_id`) REFERENCES `votes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+//          )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
+////////
+//        "CREATE TABLE `users_votes` (
+//          `vote_id` int(11) NOT NULL AUTO_INCREMENT,
+//          `candidate_id` int(11) NOT NULL,
+//          `user_id` int(11) NOT NULL,
+//          `created_at` datetime NOT NULL,
+//          `updated_at` datetime DEFAULT NULL,
+//          PRIMARY KEY (`vote_id`,`candidate_id`,`user_id`),
+//          FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+//          )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
 
     );
 
@@ -198,9 +199,9 @@ class CreateDB extends Model
 //            'فرزاد فرزین (زادهٔ ۳ تیر ۱۳۶۰ در تهران) خوانندهٔ موسیقی پاپ ایرانی است. او به جز خوانندگی در آلبوم‌هایش، ترانه‌سرایی، آهنگسازی و تنظیم هم کرده‌است. وی از موفق‌ترین خوانندگان پاپ ایران است و در سطح بین‌المللی بسیار موفق بوده‌است. او کار موسیقی را به صورت رسمی از سال ۱۳۷۸ آغاز کرد و هفت آلبوم رسمی دارد. همچنین سابقهٔ بازی در فیلم‌های سینمایی از جمله پسران آجری، کنسرت روی آب و سگ‌های پوشالی و مجموعه‌های نمایش خانگی عاشقانه و مانکن را داشته‌است. آخرین آلبوم فرزین شانزلیزه نام دارد که در ۲۲ اسفند ماه ۱۳۹۶ روانه بازار شد. از جمله همکاران هنری وی می‌توان به مهدی ابراهیمی نژاد، حسین پور معصومی، پدرام شهرابی، امیر میلاد نیکزاد، یاشار خسروی، مهران خلیلی، مهرداد معافی و احمد امین پور اشاره کرد.','http://parsino.com/wp-content/uploads/2019/07/%D9%86%D8%A7%D8%B2%D9%86%DB%8C%D9%86-%D8%A8%DB%8C%D8%A7%D8%AA%DB%8C-4.jpg']],
 
 //        ['table' => 'movies', 'fields' => ['movie_name', 'director', 'author', 'release_date', 'picture', 'duration', 'rewards'],
-//            'values' => ['مهمان مامان', 'داریوش مهرجویی', 'داریوش مهرجویی', '۱۳۸۲',
-//                'https://upload.wikimedia.org/wikipedia/fa/thumb/1/1e/Mehmane_Maman.jpg/220px-Mehmane_Maman.jpg',
-//               '۱۰۳', '']],
+//            'values' => ['بدون تاریخ، بدون امضا', 'وحید جلیلوند', 'علی زرنگار و وحید جلیلوند', '۱۳۹۵',
+//                'https://upload.wikimedia.org/wikipedia/fa/thumb/5/58/Bedon_tarikh_bedon_emza_poster.jpg/220px-Bedon_tarikh_bedon_emza_poster.jpg',
+//               '۱۰۰', '']],
 //        ['table' => 'actors', 'fields' => ['first_name', 'last_name', 'birth_date', 'birth_place', 'picture', 'bio'],
 //            'values' => ['مریلا', 'زارعی', '۲۵ فروردین ۱۳۵۳', ' تهران', 'https://namakstan.net/wp-content/uploads/2018/11/%D8%B9%DA%A9%D8%B3-%D9%85%D8%B1%DB%8C%D9%84%D8%A7-%D8%B2%D8%A7%D8%B1%D8%B9%DB%8C.jpg',
 //                'مریلا زارعی در نطنز به دنیا آمد. وی فارغ‌التحصیل صنایع غذایی از دانشگاه آزاد است. وی خواهر بزرگتر ملیکا زارعی است. زارعی برای اولین بار در فیلم سلام سینما ساخته محسن مخملباف (۱۳۷۳) از جمله کسانی بود که در تست بازیگری حضور یافته و چهرهٔ او بر روی پرده سینما نقش بست. بازی در فیلم دو زن یکی از شانس‌های بزرگ او بود. وی تا به حال با کارگردانانی همچون ابراهیم حاتمی‌کیا، اصغر فرهادی و مسعود کیمیایی و احمد مرادپور همکاری داشته‌است.پس از آن بازی در واکنش پنجم، از دیگر نقش‌های وی می‌توان به بازی در فیلم سربازهای جمعه ساخته مسعود کیمیایی و شیار ۱۴۳ ساخته نرگس آبیار اشاره نمود که برای بازی در این دو فیلم موفق به دریافت سیمرغ بهترین بازیگر شده است.']]
@@ -221,7 +222,7 @@ class CreateDB extends Model
 
 
 
-        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['8', 'https://zarinbano.com/wp-content/uploads/%D9%85%D8%B1%DB%8C%D9%84%D8%A7-%D8%B2%D8%A7%D8%B1%D8%B9%DB%8C-%D8%A8%D8%A7%D8%B2%DB%8C%DA%AF%D8%B1-%D8%B3%DB%8C%D9%86%D9%85%D8%A7.jpg']]
+//        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['8', 'https://zarinbano.com/wp-content/uploads/%D9%85%D8%B1%DB%8C%D9%84%D8%A7-%D8%B2%D8%A7%D8%B1%D8%B9%DB%8C-%D8%A8%D8%A7%D8%B2%DB%8C%DA%AF%D8%B1-%D8%B3%DB%8C%D9%86%D9%85%D8%A7.jpg']]
 
 //        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['8', 'https://seraj24.ir/images/news/176499/thumbs/176499.jpg']],
 //        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['8', 'https://static2.afkarnews.com/thumbnail/DM9ziLb0KNDM/rDxJk2yoXn9KV7c7C6kDweJVxtu4cY7G2hzV_1efiJea1I30PYCuRnaM5x4kKLNQXTYXaWKO8q0wfYWGdiJBEedZbU5YLDeVlqAKEfw-R6wwWxWQxIu3Fg,,/%D9%85%D8%B1%DB%8C%D9%84%D8%A7+%D8%B2%D8%A7%D8%B1%D8%B9%DB%8C.jpg']],
@@ -231,17 +232,15 @@ class CreateDB extends Model
 //        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['7', 'https://static1.eghtesadonline.com/servev2/zlqJk5aDtRpT/b54EPYiYwLU,/%D9%81%D8%B1%D8%B2%D8%A7%D8%AF+%D9%81%D8%B1%D8%B2%DB%8C%D9%86.jpg']],
 //        ['table' => 'actor_pictures', 'fields' => ['actor_id', 'picture'], 'values' => ['7', 'https://media.mehrnews.com/d/2016/08/31/3/2193051.jpg?ts=1486462047399']]
 
+
+//        ['table' => 'blogs', 'fields' => ['title', 'picture'], 'values' =>
+//            ['سارا خوئینی ها با کلاه کاسکت', 'http://i2.tnews.ir/2020/07/26/168702856_239017728bfbac.jpg']],
+
+
     );
 
     public function run()
     {
-//        foreach ($this->createTableQueries as $createTableQuery) {
-//            $this->createTable($createTableQuery);
-//        }
-        foreach ($this->tableInitializes as $tableInitialize) {
-            $this->insert($tableInitialize['table'], $tableInitialize['fields'], $tableInitialize['values']);
-            echo "helllo";
-        }
         foreach ($this->createTableQueries as $createTableQuery) {
             $this->createTable($createTableQuery);
         }

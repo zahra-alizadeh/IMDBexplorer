@@ -8,7 +8,7 @@
     <div class="container">
         <div class="card login-page-card">
             <div class="row no-gutters">
-                <div class="col-md-5">
+                <div class="col-md-5-login">
                     <img src="<?php $this->asset('image/login/people-watching-video-on-smartphon-gettyimages-youtube.jpg') ?>"
                          alt="login-page" class="login-page-card-img">
                 </div>

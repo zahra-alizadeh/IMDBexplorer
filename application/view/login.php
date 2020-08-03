@@ -8,7 +8,7 @@
     <div class="container">
         <div class="card login-page-card">
             <div class="row no-gutters">
-                <div class="col-md-5">
+                <div class="col-md-5-login">
                     <img src="<?php $this->asset('image/login/people-watching-video-on-smartphon-gettyimages-youtube.jpg') ?>"
                          alt="login-page" class="login-page-card-img">
                 </div>
@@ -20,7 +20,7 @@
                         </div>
                         <p class="login-page-card-description">ورود به سایت</p>
 
-                        <form action="<?php $this->url('user/userLogin'); ?>" method="post">
+                        <form action="<?php $this->url('User/userLogin'); ?>" method="post">
 
                             <div class="form-group">
                                 <label for="username" class="sr-only">Username</label>

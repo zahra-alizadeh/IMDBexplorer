@@ -24,6 +24,7 @@ body {
 
 .brand-wrapper .logo {
     height: 35px;
+    width: 60px;
 }
 
 .login-page-card {
@@ -65,7 +66,7 @@ body {
 
 .login-page-card .form-control {
     border: 1px solid #d5dae2;
-    padding: 15px 35px;
+    padding: 15px 45px;
     margin-bottom: 20px;
     min-height: 45px;
     font-size: 13px;
@@ -155,11 +156,11 @@ body {
 }
 
 .left-addon .fa {
-    left: 0px;
+    left: 10px;
 }
 
 .right-addon .fa {
-    right: 0px;
+    right: 10px;
 }
 
 .left-addon input {

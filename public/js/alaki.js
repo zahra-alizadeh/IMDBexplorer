@@ -44,3 +44,8 @@ function password_str() {
     document.getElementById("t2").value = res;
 
 }
+
+function myFunction() {
+    var element = document.getElementById("myDIV");
+    element.classList.toggle("alert");
+}

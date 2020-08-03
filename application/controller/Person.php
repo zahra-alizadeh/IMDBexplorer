@@ -2,8 +2,10 @@
 
 
 namespace application\controller;
-require 'application/model/PersonModel.php';
+require_once 'application/model/Model.php';
+require_once 'application/model/PersonModel.php';
 
+use application\model\Model;
 use application\model\PersonModel;
 
 class Person extends Controller
@@ -11,10 +13,24 @@ class Person extends Controller
     // get all actors
     public function actors()
     {
-        $personModel = new PersonModel();
-        $actors = $personModel->all('actors');
+        $numberOfRows = new Model();
+        $count = $numberOfRows->numberOfRows('actors');
+        $count = $count[0]['COUNT(`id`)'] % 10;
 
-        return $this->view('celebrity-grid', compact('actors'));
+        $count == 0 ? $pageNum = $count[0]['COUNT(`id`)'] / 10 : $pageNum = ($count[0]['COUNT(`id`)'] / 10) + 1;
+        $pageNum++;
+
+
+        $arr = explode('/', CURRENT_ROUTE);
+
+        $personModel = new PersonModel();
+        if (sizeof($arr) > 2)
+            $actors = $personModel->all('actors', 10 * ($arr[2] - 1) + 1, 10);
+
+        else
+            $actors = $personModel->all('actors');
+
+        return $this->view('celebrity-grid', compact('actors', 'pageNum'));
     }
 
     // get actor information such as name, picture and ...
@@ -34,39 +50,18 @@ class Person extends Controller
     }
 
     // get director information such as name, picture and ...
-    public function director()
+    public function director($director_id)
     {
         $personModel = new PersonModel();
-        $director = $personModel->getDirector('1');
+        $director = $personModel->getDirector($director_id[0]);
         $director = $director[0];
 
         $personModel = new PersonModel();
-        $directorPictures = $personModel->getDirectorPicture('1');
+        $directorPictures = $personModel->getDirectorPicture($director_id[0]);
 
-//        $movieModel = new PersonModel();
-//        $directorMovies = $movieModel->getActorMovies('1');
+        $movieModel = new PersonModel();
+        $directorMovies = $movieModel->getDirectorMovies($director_id[0]);
 
-        return $this->view('director-single', compact('director', 'directorPictures'));
-    }
-
-    public function pagination($pageNumber)
-    {
-        $personModel = new PersonModel();
-        $actors = $personModel->all('actors');
-
-        $actorsCount = sizeof($actors);
-        $numberOfPages = $actorsCount / 25;
-        $endPage = $actorsCount % 25;
-        $ac = array();
-
-        if ($pageNumber != $numberOfPages) {
-            for ($i = ($pageNumber - 1) * 25; $i < $pageNumber * 25; $i++)
-                $ac[$i] = $actors[$i];
-        } else {
-            for ($i = ($pageNumber - 1) * 25 + 1; $i < sizeof($actors) - (($pageNumber - 1) * 25) * 25; $i++)
-                $ac[$i] = $actors[$i];
-        }
-
-        return $this->view('celebrity-grid', compact('actors'));
+        return $this->view('director-single', compact('director', 'directorPictures', 'directorMovies'));
     }
 }

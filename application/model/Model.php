@@ -134,6 +134,13 @@ class Model
         }
 
     }
+    public function numberOfRows($tableName)
+    {
+        $query = "SELECT COUNT(`id`) FROM " . $tableName . "; ";
+        $result = $this->query($query)->fetchAll();
+        $this->closeConnection();
+        return $result;
+    }
 
     public function __destruct()
     {

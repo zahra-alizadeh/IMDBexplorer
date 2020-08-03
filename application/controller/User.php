@@ -2,8 +2,7 @@
 
 namespace application\controller;
 
-require 'application/model/Model.php';
-require 'application/model/UserModel.php';
+require_once 'application/model/UserModel.php';
 
 use application\model\UserModel;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -28,17 +27,17 @@ class User extends Controller
     {
         if (empty($_POST['username']) || empty($_POST['password']))
             $this->redirectBack();
-
         else {
             $userModel = new UserModel();
             $user = $userModel->checkUserExists('username', $_POST['username']);
-            if ($user) {
-                $this->redirect('Home/home');
+            if ($user != null) {
                 if (password_verify($_POST['password'], $user['password'])) {
+                    $_SESSION['loggedIn'] = true;
                     $_SESSION['userId'] = $user['id'];
-                    $_SESSION['userName'] = $user['userName'];
+                    $_SESSION['userName'] = $user['username'];
                     $_SESSION['email'] = $user['email'];
                     $_SESSION['message'] = "you are logged in!";
+                    $_SESSION['logIn_time'] = time();
                     setcookie($_SESSION['userName'], 'imdb', time() + 3600);
                     $this->redirect('Home/home');
                 } else
@@ -46,6 +45,25 @@ class User extends Controller
             } else
                 $this->redirectBack();
         }
+    }
+
+    public function isLoginSessionExpired()
+    {
+        $login_session_duration = 20;
+        $current_time = time();
+        if (isset($_SESSION['logIn_time']) and isset($_SESSION["userId"])) {
+            if (((time() - $_SESSION['logIn_time']) > $login_session_duration)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public function header()
+    {
+        $userModel = new UserModel();
+        $user = $userModel->checkUserExists('username', $_POST['username']);
+        return $this->view('header', compact('user'));
     }
 
     public function registration()
@@ -57,7 +75,7 @@ class User extends Controller
     {
         if (empty($_POST['username']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['repeatPassword']))
             $this->redirectBack();
-        else if (strlen($_POST['password'] <= 4))
+        else if (strlen($_POST['password'] <= 8))
             $this->redirectBack();
         else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
             $this->redirectBack();
@@ -67,7 +85,7 @@ class User extends Controller
             $user = new UserModel();
             $checkUser = $user->checkUserExists('email', $_POST['email']);
 
-            if ($checkUser)
+            if ($checkUser != null)
                 $this->redirectBack();
             else {
                 $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -80,7 +98,7 @@ class User extends Controller
                     $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
                     $token = md5(rand(10, 100));
-//                $user->storeUser($_POST, $token);
+                    $user->storeUser($_POST, $token);
 
                     $message = '<!DOCTYPE html>
                 <body><a href="http://localhost/IMDB/Home/home?token=' . $token . '">"برای تایید حساب کاربری خود اینجا کلیک کنید!</a></body>';
@@ -93,12 +111,10 @@ class User extends Controller
         }
     }
 
-
     public function forgetPassword()
     {
         return $this->view('forgot-password');
     }
-
 
     public function forgetUserPassword()
     {
@@ -126,7 +142,6 @@ class User extends Controller
         }
     }
 
-
     public function changePassword()
     {
         return $this->view('change-password');
@@ -136,32 +151,38 @@ class User extends Controller
     {
         if (empty($_POST['currentPassword']) || empty($_POST['newPassword']) || empty($_POST['repeatNewPassword']))
             $this->redirectBack();
-        else if (strlen($_POST['password'] <= 4))
+        else if (strlen($_POST['newPassword'] <= 8))
             $this->redirectBack();
         else if ($_POST['newPassword'] != $_POST['repeatNewPassword'])
             $this->redirectBack();
         else {
             $user = new UserModel();
-            $checkUser = $user->checkUserExists('id', $_POST['id']);
+            $checkUser = $user->checkUserExists('id', $_SESSION['userId']);
 
-            if ($checkUser)
+            if ($checkUser == null)
                 $this->redirectBack();
             else {
                 $_POST['newPassword'] = password_hash($_POST['newPassword'], PASSWORD_DEFAULT);
-                $user->updatePassword($_POST);
-                $this->redirect('Home/home');
+                $user->updatePassword($_SESSION['userId'], $_POST['newPassword']);
+                $this->redirectBack();
             }
         }
     }
 
-    public function logout($request)
+    public function logout()
     {
         if (isset($_SESSION['userId'])) {
+            setcookie($_SESSION['userName'], '', time() - 3600);
             unset($_SESSION['userId']);
+            unset($_SESSION['email']);
+            unset($_SESSION['userName']);
+            unset($_SESSION['loggedIn']);
+            unset($_SESSION['message']);
+
             session_destroy();
         }
-        $this->redirectBack();
-        setcookie($_SESSION['userName'], '', time() - 3600);
+
+        $this->redirect('Home/home');
     }
 
     public function checkAdmin()
@@ -183,7 +204,6 @@ class User extends Controller
 
     public function sendEmail($request, $message)
     {
-        var_dump($request);
         $mail = new PHPMailer(true);
         try {
             $mail->SMTPOptions = array(

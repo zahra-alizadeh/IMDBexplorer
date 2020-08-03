@@ -22,20 +22,14 @@
     <link rel="profile" href="#">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone-no">
-<<<<<<< HEAD
     <!-- Mobile specific meta -->
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone-no">
 
-=======
-<<<<<<< HEAD
     <!-- Mobile specific meta -->
-	<meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone-no">
-    
-=======
->>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
->>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
+
     <link rel="stylesheet" href="<?php $this->asset('css/style.css') ?>">
     <link rel="stylesheet" href="<?php $this->asset('css/plugins.css') ?>">
     <link rel="stylesheet" href="<?php $this->asset('css/header.css') ?>">
@@ -47,7 +41,17 @@
 </head>
 <!--preloading-->
 <div id="preloader">
-    <img class="logo" src="<?php $this->asset('image/logo.png') ?>" alt="" width="119" height="58">
+    <a class="jss17">
+        <button
+                class="MuiButtonBase-root MuiIconButton-root jss14 MuiIconButton-colorInherit MuiIconButton-edgeStart"
+                tabindex="0" type="button" aria-label="open drawer">
+							<span class="MuiIconButton-label-logo logo-img">
+								<img src="<?php $this->asset('image/logo.png') ?>" style="width: 300px;">
+							</span>
+            <span class="MuiTouchRipple-root"></span>
+        </button>
+
+    </a>
     <div id="status">
         <span></span>
         <span></span>
@@ -65,39 +69,22 @@
                         <button
                                 class="MuiButtonBase-root MuiIconButton-root jss14 MuiIconButton-colorInherit MuiIconButton-edgeStart"
                                 tabindex="0" type="button" aria-label="open drawer">
-							<span class="MuiIconButton-label">
-								<img src="<?php $this->asset('image/imdb_logo.png') ?>">
+							<span class="MuiIconButton-label-logo">
+								<img src="<?php $this->asset('image/logo.png') ?>">
 							</span>
                             <span class="MuiTouchRipple-root"></span>
                         </button>
                     </a>
                     <div class="jss8">
                         <div>
-<<<<<<< HEAD
-                            <!-- <a class="jss11">دسته بندی ها </a> -->
-                            <a class="jss11">فیلم</a>
-                            <!-- <a class="jss11">سریال</a> -->
-=======
-<<<<<<< HEAD
-                            <a href="" class="jss11">دسته بندی ها </a>
-=======
-<<<<<<< HEAD
-                            <!-- <a class="jss11">دسته بندی ها </a> -->
-                            <a class="jss11">فیلم</a>
-                            <!-- <a class="jss11">سریال</a> -->
-=======
-                            <a class="jss11">دسته بندی ها </a>
->>>>>>> a35ec8f7695d4ecad9e1d9d1166aacede6aae1e8
-                            <a class="jss11">فیلم</a>
-                            <a class="jss11">سریال</a>
->>>>>>> ac9c8891c47ab08d26734d39589c0f0126000a5d
->>>>>>> 093e96d07e2f636c2704827e64760d67205a7d6d
-                            <a class="jss11">بازیگران</a>
-                            <a class="jss11">درباره ما </a>
+                            <a class="jss11" href="<?php $this->url('Movie/movies'); ?>"> فیلم ها</a>
+                            <a class="jss11" href="<?php $this->url('Person/actors'); ?>">بازیگران</a>
+                            <a class="jss11" href="<?php $this->url('Blog/blogs'); ?>">اخبار</a>
+                            <a class="jss11" href="<?php $this->url('Home/aboutUs'); ?>">درباره ما </a>
                         </div>
                     </div>
                     <!-- top search form -->
-                    <div class="top-search" style="margin-top: 10px; margin-right: 50px;" >
+                    <div class="top-search" style="margin-top: 10px; margin-right: 50px;">
                         <a class="jss17" style="margin-right: 15px;">
                             <button
                                     class="MuiButtonBase-root MuiIconButton-root jss14 MuiIconButton-colorInherit MuiIconButton-edgeStart"
@@ -108,20 +95,40 @@
                                 <span class="MuiTouchRipple-root"></span>
                             </button>
                         </a>
-                        <input type="text" placeholder="دنبال چی میگردی؟" style="width: 600px;height:35px ;" >
+                        <input type="text" placeholder="دنبال چی میگردی؟" style="width: 600px;height:35px ;">
                     </div>
                     <!-- top search form -->
                     <div class="jss4" style="direction: ltr;">
                         <div class="jss74" style="direction: ltr;">
-                            <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75"tabindex="0" type="button">
-                                <a class="MuiButton-label"style="color: white;" href="<?php $this->url('User/login') ?>">ورود</a>
-                                <span class="MuiTouchRipple-root"></span>
-                            </button>
-                            <a class="MuiButton-label"style="color: white;">/</a>
-                            <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75"tabindex="0" type="button">
-                                <a class="MuiButton-label"style="color: white; font-siz" href="<?php $this->url('User/registration') ?>">ثبت‌نام</a>
-                                <span class="MuiTouchRipple-root"></span>
-                            </button>
+                            <?php if (isset($_SESSION['userId']) and $_SESSION['loggedIn'] == true) { ?>
+                                <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75" tabindex="0"
+                                        type="button">
+                                    <a class="MuiButton-label" style="color: white;"
+                                       href="<?php $this->url('User/logout') ?>">خروج</a>
+                                    <span class="MuiTouchRipple-root"></span>
+                                </button>
+                                <a class="MuiButton-label" style="color: white;">|</a>
+                                <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75" tabindex="0"
+                                        type="button">
+                                    <a class="MuiButton-label" style="color: white;"
+                                       href="<?php $this->url('UserProfile/profile'); ?>"><?php echo $_SESSION['userName']; ?></a>
+                                    <span class="MuiTouchRipple-root"></span>
+                                </button>
+                            <?php } else if (!isset($_SESSION['userId'])) { ?>
+                                <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75" tabindex="0"
+                                        type="button">
+                                    <a class="MuiButton-label" style="color: white;"
+                                       href="<?php $this->url('User/login') ?>">ورود</a>
+                                    <span class="MuiTouchRipple-root"></span>
+                                </button>
+                                <a class="MuiButton-label" style="color: white;">|</a>
+                                <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75" tabindex="0"
+                                        type="button">
+                                    <a class="MuiButton-label" style="color: white; font-siz"
+                                       href="<?php $this->url('User/registration') ?>">ثبت‌نام</a>
+                                    <span class="MuiTouchRipple-root"></span>
+                                </button>
+                            <?php } ?>
                         </div>
                         <a class="jss15"></a>
                     </div>
