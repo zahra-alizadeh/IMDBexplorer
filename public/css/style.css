@@ -2483,7 +2483,7 @@ tbody.collapse.in {
 .nav > li > a:hover,
 .nav > li > a:focus {
     text-decoration: none;
-    background-color: #eeeeee;
+    background-color: transparent;
 }
 
 .nav > li.disabled > a {
@@ -2501,7 +2501,7 @@ tbody.collapse.in {
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-    background-color: #eeeeee;
+    background-color: transparent;
 }
 
 .nav .nav-divider {
@@ -2851,7 +2851,7 @@ tbody.collapse.in {
     float: right;
     margin-right: 15px;
     padding: 9px 10px;
-    margin-top: 8px;
+    margin-top: 2px;
     margin-bottom: 8px;
     background-color: transparent;
     background-image: none;
@@ -4564,7 +4564,6 @@ a {
     color: rgb(241, 241, 241);
     border-bottom: 1px solid dotted;
     font-size: medium;
-    margin-right: 10px;
 }
 
 a:hover {
@@ -5139,7 +5138,7 @@ ul {
 }
 
 .movie-items .movie-item:hover h6 a {
-    color: #dcf836;
+    color: #dd003f;
 }
 
 .cate {
@@ -5987,7 +5986,7 @@ ul {
 }
 
 .trailers .videos .thumb-ft .slick-prev {
-    top: 10px;
+    top: 20px;
     left: 45%;
 }
 
@@ -6001,13 +6000,13 @@ ul {
 }
 
 .trailers .videos .thumb-ft .slick-prev::before {
-    content: '\f126';
+    content: '\2303';
     font-family: "yekan";
     font-size: 24px;
 }
 
 .trailers .videos .thumb-ft .slick-next::before {
-    content: '\f123';
+    content: '\2304';
     font-family: "yekan";
     font-size: 24px;
 }
@@ -9404,8 +9403,8 @@ header {
 
 header .navbar-default {
     margin-bottom: 0;
-    padding: 30px 0;
-    background-color: transparent;
+    padding: 15px 0;
+    background-color: #000;
     border: none;
     position: relative;
     -webkit-transition: all 0.5s ease-out;
@@ -9454,10 +9453,11 @@ header .navbar-default .navbar-nav {
 header .navbar-default .navbar-nav li a {
     font-family: "yekan", sans-serif;
     font-size: 14px;
-    color: #abb7c4;
+    color: #fff;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
+    padding : 5px;
 }
 
 header .navbar-default .navbar-nav li a:hover {
@@ -9670,7 +9670,7 @@ header#headerv3-light {
 }
 
 .sticky {
-    background-color: #0f2133;
+    background-color: #000;
     position: fixed;
     width: 100%;
     z-index: 9999;
@@ -9714,6 +9714,7 @@ header#headerv3-light {
 
     header .navbar-header {
         width: 100%;
+        min-width:350px;
     }
 
     header .navbar-toggle {
@@ -9796,7 +9797,7 @@ header#headerv3-light {
     }
 
     header .navbar-default img.logo {
-        width: 30%;
+        width: 15%;
         margin-top: 5px;
     }
 }
@@ -10356,6 +10357,7 @@ img {
 }
 .color-text{
     color:black;
+    padding-right: 10px;
 }
 .h6-margin {
     margin-top: 15px;
@@ -10589,4 +10591,35 @@ width: 450px;
 
 .alert {
     display: block;
+}
+@media (min-width: 1200px) {
+.container-header {
+width: 1470px;
+}
+}
+.logo-padding-header{
+padding-bottom: inherit;
+}
+@media (min-width: 992px) {
+header .navbar-default-header {
+display: -webkit-flex;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+justify-content: flex-start;
+}
+}
+.padding-header-right{
+padding-right: 387px;
+}
+.navbar-nav-right{
+float: right;
+margin: 0;
+}
+.a-width{
+width: 70px;
+}
+.logo{
+width: 50px;
+height: 30px;
 }

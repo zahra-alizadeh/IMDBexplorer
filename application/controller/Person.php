@@ -37,14 +37,14 @@ class Person extends Controller
     public function actor($id)
     {
         $personModel = new PersonModel();
-        $actor = $personModel->getActor($id[0]);
-        $actor = $actor[0];
+        $actor = $personModel->getActor($id[1]);
+        $actor=$actor[0];
 
         $personModel = new PersonModel();
-        $actorPictures = $personModel->getActorPicture($id[0]);
+        $actorPictures = $personModel->getActorPicture($id[1]);
 
         $movieModel = new PersonModel();
-        $actorMovies = $movieModel->getActorMovies($id[0]);
+        $actorMovies = $movieModel->getActorMovies($id[1]);
 
         return $this->view('celebrity-single', compact('actor', 'actorPictures', 'actorMovies'));
     }
@@ -53,14 +53,14 @@ class Person extends Controller
     public function director($director_id)
     {
         $personModel = new PersonModel();
-        $director = $personModel->getDirector($director_id[0]);
+        $director = $personModel->getDirector($director_id[1]);
         $director = $director[0];
 
         $personModel = new PersonModel();
-        $directorPictures = $personModel->getDirectorPicture($director_id[0]);
+        $directorPictures = $personModel->getDirectorPicture($director_id[1]);
 
         $movieModel = new PersonModel();
-        $directorMovies = $movieModel->getDirectorMovies($director_id[0]);
+        $directorMovies = $movieModel->getDirectorMovies($director_id[1]);
 
         return $this->view('director-single', compact('director', 'directorPictures', 'directorMovies'));
     }

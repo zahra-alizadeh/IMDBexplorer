@@ -2,22 +2,39 @@
 <!-- index_light16:30-->
 
 <div class="slider movie-items">
-    <div class="container bodydirection">
-        <div class="row">
-            <div class="slick-multiItemSlider">
-                <?php foreach ($rewardedMovies
-                               as $rewardedMovie) { ?>
-                    <div class="movie-item bodydirection">
-                        <div class="mv-img mv-slider-size">
-                            <a href="<?php $this->url('Movie/movie/' . $rewardedMovie['id']); ?>"><img
-                                        src="<?php echo $rewardedMovie['picture']; ?>" alt="" width="285" height="437"></a>
-                        </div>
-                    </div>
-                <?php } ?>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+	    	<div  class="slick-multiItemSlider">
+	    	     <?php foreach ($rewardedMovies as $rewardedMovie) { ?>
+	    		<div class="movie-item bodydirection">
+	    			<div class="mv-img mv-slider-size">
+	    				<a href="<?php $this->url('Movie/movie/' . $rewardedMovie['id']); ?>"><img loading="lazy" src="<?php echo $rewardedMovie['picture']; ?>" alt="" width="285" height="437"></a>
+	    			</div>
+	    		</div>
+	    		   <?php } ?>
+	    	</div>
+	    </div>
+	</div>
 </div>
+<!-- popup -->             
+<div id="myModal" class="modal" style="display: none;">
+           
+           <div class="alert-wrapper">
+               <div class="alert-frame">
+                 <div class="alert-header error-bg">
+                     <img loading="lazy" class="img-alert" src="<?php $this->asset("image/uploads/alert.png") ?>">
+                 </div>
+                 <div class="alert-body">
+                     <span class="alert-message">!برای ثبت نظر ابتدا باید وارد حساب کاربری خود شوید</span>
+                   
+                     <button class="alert-button error-bg error-btn">باشه</button>
+             
+                 </div>
+               </div> 
+             
+           </div>
+   </div>
+<!-- popup -->
 <div class="buster-light">
     <div class="movie-items">
         <div class="container ">
@@ -30,7 +47,7 @@
 
                                            as $actor) { ?>
                                 <div class="celeb-item">
-                                    <a href="#"><img class="mv-actor-size-samll" src="<?php echo $actor['picture']; ?>"
+                                    <a href="#"><img loading="lazy" class="mv-actor-size-samll" src="<?php echo $actor['picture']; ?>"
                                                      alt="" width="70"
                                                      height="70"></a>
                                     <div class="celeb-author">
@@ -43,10 +60,10 @@
                             <?php } ?>
                         </div>
                     </div>
-                    <form method="post" action="<?php $this->url('Home/vote'); ?>">
-                        <div class="sidebar">
+                                <h4 class="sb-title" style="padding-right:100px"><?php echo $votes[0]['title']; ?></h4>
+                                 <?php if (!isset($_SESSION['userId'])) { ?>
+                                  <div class="sidebar">
                             <div class="celebrities bodydirection">
-                                <h4 class="sb-title"><?php echo $votes[0]['title']; ?></h4>
                                 <div class="checkbox-item">
                                     <div class="bodycheckbox">
                                         <label>
@@ -85,13 +102,74 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php if (isset($_SESSION['userId']) and $_SESSION['loggedIn'] == true) { ?>
-                            <input type="submit" id="myBtn" class="submit" value="ثبت"></div>
-                        <?php }else ?>
-                        <input type="submit" id="myBtn" class="submit" value="ثبت" disabled>
-                </div>
-                <?php ?>
-                </form>
+                                <input type="submit"id="myBtn" class="submit" value="ثبت" onclick="popup()">
+                            <?php } else if (isset($_SESSION['userId'])) { ?>
+                            <form method="POST" action="<?php $this ->url("Home/vote"); ?>">
+                        <div class="sidebar">
+                            <div class="celebrities bodydirection">
+                                <div class="checkbox-item">
+                                    <div class="bodycheckbox">
+                                        <label>
+                                            <input type="radio"
+                                                   class="option-input radio" name="item1" id="item1"
+                                                   value="<?php echo $votes[0]['candidate_id']; ?>"/>
+                                            <?php echo $votes[0]['first_name'] . " " . $votes[0]['last_name']; ?>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkbox-item">
+                                    <div class="bodycheckbox">
+                                        <label>
+                                            <input type="radio" class="option-input radio" name="item2" id="item2"
+                                                   value="<?php echo $votes[1]['candidate_id']; ?>"/>
+                                            <?php echo $votes[1]['first_name'] . " " . $votes[1]['last_name']; ?>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class=" checkbox-item">
+                                    <div class="bodycheckbox">
+                                        <label>
+                                            <input type="radio" class="option-input radio" name="example3"
+                                                   value="<?php echo $votes[2]['candidate_id']; ?>"/>
+                                            <?php echo $votes[2]['first_name'] . " " . $votes[2]['last_name']; ?>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkbox-item">
+                                    <div class="bodycheckbox">
+                                        <label>
+                                            <input type="radio" class="option-input radio" name="example"
+                                                   value="<?php echo $votes[3]['candidate_id']; ?>"/>
+                                            <?php echo $votes[3]['first_name'] . " " . $votes[3]['last_name']; ?>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <input type="submit" id="myBtn" class="submit" value="ثبت" >
+                            </form>
+                           <?php } ?>
+                        </div>
+       
+        <script>
+       function popup()
+        {
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("error-btn")[0];
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        }
+        </script>
 
             </div>
             <div class="col-md-8">
@@ -109,7 +187,7 @@
                                         <div class="slide-it">
                                             <div class="movie-item movie-slider-box ">
                                                 <div class="mv-img mv-slider-size-samll">
-                                                    <img src="<?php echo $recentlyReleasedMovie['picture']; ?>"
+                                                    <img loading="lazy" src="<?php echo $recentlyReleasedMovie['picture']; ?>"
                                                          alt=""
                                                          width="185" height="284">
                                                 </div>
@@ -149,7 +227,7 @@
                                         <div class="slide-it">
                                             <div class="movie-item movie-slider-box ">
                                                 <div class="mv-img mv-slider-size-samll">
-                                                    <img src="<?php echo $mostRatedMovie['picture']; ?>"
+                                                    <img loading="lazy" src="<?php echo $mostRatedMovie['picture']; ?>"
                                                          alt=""
                                                          width="185" height="284">
                                                 </div>
@@ -195,7 +273,7 @@
                             $m = $newestMovie; ?>
                             <div class="item bodydirection">
                                 <div class="trailer-img">
-                                    <img src="<?php echo $newestMovie['picture']; ?>"
+                                    <img loading="lazy" src="<?php echo $newestMovie['picture']; ?>"
                                          alt="photo by Barn Images" width="4096" height="2737">
                                 </div>
                                 <div class="trailer-infor margin-right">
@@ -209,11 +287,11 @@
                         </button>
                     </div>
                     <div class="slider-for-2 video-ft">
-                        <!--                            --><?php //foreach ($newestMovies as $newestMovie) { ?>
-                        <video width="320" height="270" id="myVideo" controls="false" autoplay="false">
-                            <source src="<?php echo $m['trailer']; ?>" type="video/mp4">
+                                                    <?php foreach ($newestMovies as $newestMovie) { ?>
+                        <video loading="lazy" width="320" height="270" id="myVideo" controls="false" autoplay="false">
+                            <source src="<?php echo $newestMovie['trailer']; ?>" type="video/mp4">
                         </video>
-                        <!--                            --><?php //} ?>
+                                                    <?php } ?>
                     </div>
                 </div>
             </div>
@@ -233,7 +311,7 @@
                         <div class="row">
                             <div class="blog-item-style-1">
                                 <?php foreach ($blog as $singleBlog) { ?>
-                                    <img class=" mv-blog-size"
+                                    <img loading="lazy" class=" mv-blog-size"
                                          src="<?php echo $singleBlog['picture']; ?>" alt=""
                                          width="170"
                                          height="250">
@@ -262,49 +340,5 @@
     </div>
 </div>
 </div>
-
-<div id="myModal" class="modal" style="display: none;">
-    <div class="alert-wrapper">
-        <div class="alert-frame">
-            <div class="alert-header error-bg">
-                <img class="img-alert" src="<?php $this->asset('image/uploads/alert.png'); ?>">
-            </div>
-            <div class="alert-body">
-                <span class="alert-message">!شما قبلا رای خود را ثبت کرده اید</span>
-
-                <button class="alert-button error-bg error-btn">باشه</button>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-
-    var modal = document.getElementById("myModal");
-
-
-    var btn = document.getElementById("myBtn");
-
-
-    var span = document.getElementsByClassName("error-btn")[0];
-
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-
-
 <?php include('Layouts/footer.php'); ?>
 </html>

@@ -16,7 +16,7 @@
                 <div class="row ipad-width">
                     <div class="col-md-4 col-md-4-c col-sm-12 col-xs-12">
                         <div class="mv-ceb mv-ceb-cel">
-                            <img src="<?php echo $director['director_picture']; ?>" alt="">
+                            <img loading="lazy" src="<?php echo $director['director_picture']; ?>" alt="">
                         </div>
                     </div>
                     <div class="col-md-8 col-md-8-c col-sm-12 col-xs-12">
@@ -55,7 +55,8 @@
                                                         <?php foreach ($directorPictures as $directorPicture) { ?>
                                                             <a class="img-lightbox"
                                                                data-fancybox-group="gallery"
-                                                               href="<?php echo $directorPicture['picture']; ?>"><img
+                                                               href="<?php echo $directorPicture['picture']; ?>">
+                                                                <img loading="lazy"
                                                                         class="img-actor-size"
                                                                         src="<?php echo $directorPicture['picture']; ?>"
                                                                         alt=""></a>
@@ -72,7 +73,7 @@
                                                             <div class="cast-it">
                                                                 <div class="cast-left cebleb-film">
 
-                                                                    <img class="img-movie-size"
+                                                                    <img loading="lazy" class="img-movie-size"
                                                                          src="<?php echo $directorMovie['picture']; ?>"
                                                                          alt="">
                                                                     <div>

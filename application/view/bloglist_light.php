@@ -24,7 +24,7 @@
 
             <?php foreach ($blogs as $blog) { ?>
                 <div class="blog-item-style-1 blog-item-style-3 mv-blog-size">
-                    <img class="mv-blog-image-size" src="<?php echo $blog['picture']; ?>" alt="">
+                    <img loading="lazy" class="mv-blog-image-size" src="<?php echo $blog['picture']; ?>" alt="">
                     <div class="blog-it-infor">
                         <h3><a href="#"><?php echo $blog['title']; ?></a></h3>
                         <span class="time"><?php echo $blog['time']; ?></span>

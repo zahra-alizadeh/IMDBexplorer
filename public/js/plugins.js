@@ -304,7 +304,7 @@ if(n.refresh(),e.fn.api!==i)if(t=C.api("get request"),o=C.api("was cancelled"))n
 / __| | |/ __| |/ /  | / __|
 \__ \ | | (__|   < _ | \__ \
 |___/_|_|\___|_|\_(_)/ |___/
-                   |__/
+                  |__/
 
  Version: 1.6.0
   Author: Ken Wheeler
@@ -1620,15 +1620,15 @@ if(n.refresh(),e.fn.api!==i)if(t=C.api("get request"),o=C.api("was cancelled"))n
 
         if (_.options.arrows === true && _.slideCount > _.options.slidesToShow) {
             _.$prevArrow
-               .off('click.slick')
-               .on('click.slick', {
+              .off('click.slick')
+              .on('click.slick', {
                     message: 'previous'
-               }, _.changeSlide);
+              }, _.changeSlide);
             _.$nextArrow
-               .off('click.slick')
-               .on('click.slick', {
+              .off('click.slick')
+              .on('click.slick', {
                     message: 'next'
-               }, _.changeSlide);
+              }, _.changeSlide);
         }
 
     };

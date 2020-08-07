@@ -35,7 +35,8 @@
                     <div class="celebrity-items">
                         <?php foreach ($actors as $actor) { ?>
                             <div class="ceb-item">
-                                <a href="<?php $this->url('Person/actor/' . $actor['id']); ?>"><img
+                                <a href="<?php $this->url('Person/actor/' . $actor['id']); ?>">
+                                    <img loading="lazy"
                                             src="<?php echo $actor['picture']; ?>" alt=""></a>
                                 <div class="ceb-infor">
                                     <h2>

@@ -65,5 +65,9 @@
     </div>
 </footer>
 <!-- end of footer section-->
+<script src="<?php $this->asset('js/jquery.js') ?>"></script>
+<script src="<?php $this->asset('js/plugins.js') ?>"></script>
+<script src="<?php $this->asset('js/plugins2.js') ?>"></script>
+<script src="<?php $this->asset('js/custom.js') ?>"></script>
 
 

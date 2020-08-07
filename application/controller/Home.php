@@ -79,18 +79,15 @@ class Home extends Controller
             $candidateId = 18;
 
         $user = new UserModel();
-        $checkUser = $user->userExists($_SESSION['userId']);
+        $checkUser = $user->userExists('users_votes', 'user_id', $_SESSION['userId']);
         if ($checkUser == true) {
-            header("location:index-light.php?wrong=500");
-            $this->redirectBack();
-        }
-
-        else {
+     $this->redirectBack();
+        } else {
             $voteModel = new VoteModel();
             $voteModel->storeVote(1, $candidateId, $_SESSION['userId']);
             $voteModel = new VoteModel();
             $voteModel->numberOfVotes($candidateId);
-            $this->redirect("Home/home");
+             $this->redirectBack();
         }
 
     }
@@ -100,3 +97,4 @@ class Home extends Controller
         return $this->view('aboutUs');
     }
 }
+?>

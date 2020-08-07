@@ -27,13 +27,13 @@
                     <div class="flex-wrap-movielist mv-grid-fw">
                         <?php foreach ($movies as $movie) { ?>
                             <div class="movie-item-style-2 movie-item-style-1 movie-item-style-1-favrite">
-                                <img src="<?php echo $movie['picture'] ?>" alt="">
+                                <img loading="lazy" src="<?php echo $movie['picture'] ?>" alt="">
                                 <div class="hvr-inner mv-padding">
-                                    <a href="<?php $this->url('movie/movie/' . $movie['id']); ?>"> بیشتر <i></i> </a>
+                                    <a href="<?php $this->url('Movie/movie/' . $movie['id']); ?>"> بیشتر <i></i> </a>
                                 </div>
                                 <div class="mv-item-infor">
                                     <h6>
-                                        <a href="<?php $this->url('movie/movie/' . $movie['id']); ?>"> <?php echo $movie['movie_name'] ?> </a>
+                                        <a href="<?php $this->url('Movie/movie/' . $movie['id']); ?>"> <?php echo $movie['movie_name'] ?> </a>
                                     </h6>
                                     <p class="rate"><i
                                                 class="ion-android-star"></i><span><?php echo $movie['score'] ?> </span>

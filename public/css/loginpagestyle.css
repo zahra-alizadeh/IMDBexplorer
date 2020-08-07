@@ -24,7 +24,6 @@ body {
 
 .brand-wrapper .logo {
     height: 35px;
-    width: 60px;
 }
 
 .login-page-card {
@@ -173,3 +172,94 @@ body {
 
 
 /* <---------------------------------------------------------------forget-password------------------------------------------------------> */
+
+.align-item-center-authentication {
+    /* -ms-flex-align: center !important; */
+    align-items: center;
+}
+
+.container-authentication {
+    max-width: 600px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    align-items: center;
+}
+
+.login-page-card-authentication {
+    border: 0;
+    border-radius: 30px;
+    box-shadow: 0 5px 25px 0 rgba(94, 89, 89, 0.6);
+    overflow: hidden;
+}
+
+.login-page-card-authentication .card-body {
+    padding: 50px;
+}
+
+@media (max-width: 422px) {
+    .login-page-card-authentication .card-body {
+        padding: 35px 24px;
+    }
+}
+
+.login-page-card-authentication form {
+    max-width: 450px;
+}
+
+.login-page-card-authentication .form-control {
+    border: 1px solid #d5dae2;
+    padding: 15px 45px;
+    margin-bottom: 20px;
+    min-height: 45px;
+    font-size: 13px;
+    line-height: 15;
+    font-weight: normal;
+    border-radius: 10px;
+    position: right;
+}
+
+.login-page-card-authentication .form-control::-webkit-input-placeholder {
+    color: #767d83;
+}
+
+.login-page-card-authentication .form-control::-moz-placeholder {
+    color: #767d83;
+}
+
+.login-page-card-authentication .form-control:-ms-input-placeholder {
+    color: #767d83;
+}
+
+.login-page-card-authentication .form-control::-ms-input-placeholder {
+    color: #767d83;
+}
+
+.login-page-card-authentication .form-control::placeholder {
+    color: #767d83;
+}
+
+.login-page-card-authentication .login-page-btn {
+    padding: 13px 20px 12px;
+    background-color: #000;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.login-page-card-authentication .login-page-btn:hover {
+    border: 1px solid #000;
+    background-color: transparent;
+    color: #000;
+}
+
+.login-page-card-authentication .forgot-password-link {
+    font-size: 14px;
+    color: #919aa3;
+    margin-bottom: 12px;
+}

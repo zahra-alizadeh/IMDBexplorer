@@ -17,7 +17,7 @@ class PersonModel extends Model
     // get biography of person
     public function getActor($actorId)
     {
-        $query = "SELECT * FROM `actors` WHERE id = ? ";
+        $query = "SELECT * FROM `actors` WHERE id = ? ; ";
         $result = $this->query($query, array($actorId))->fetchAll();
         $this->closeConnection();
         return $result;

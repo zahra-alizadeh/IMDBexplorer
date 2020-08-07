@@ -111,8 +111,7 @@ class Model
             $stmt = $this->connection->prepare($sql);
             $affectedRows = $stmt->execute(array_merge(array_filter(array_values($values)), [$id]));
             if (isset($affectedRows))
-                echo "Records are updated!";
-            return true;
+                return true;
         } catch (ConnectionException $exception) {
             echo "<div style='color:red;'> There is some problem in connection : </div>" . $exception->getMessage();
             return false;
@@ -134,6 +133,7 @@ class Model
         }
 
     }
+
     public function numberOfRows($tableName)
     {
         $query = "SELECT COUNT(`id`) FROM " . $tableName . "; ";

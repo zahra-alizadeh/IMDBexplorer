@@ -9,14 +9,14 @@
         <div class="card login-page-card">
             <div class="row no-gutters">
                 <div class="col-md-5-login">
-                    <img src="<?php $this->asset('image/login/people-watching-video-on-smartphon-gettyimages-youtube.jpg') ?>"
+                    <img loading="lazy" src="<?php $this->asset('image/login/people-watching-video-on-smartphon-gettyimages-youtube.jpg') ?>"
                          alt="login-page" class="login-page-card-img">
                 </div>
 
                 <div class="col-md-7">
                     <div class="card-body">
                         <div class="brand-wrapper">
-                            <img src="<?php $this->asset('image/login/logo.png') ?>" alt="logo" class="logo">
+                            <img loading="lazy" src="<?php $this->asset('image/login/logo.png') ?>" alt="logo" class="logo">
                         </div>
                         <p class="login-page-card-description">بازیابی رمز عبور</p>
                         <p class="login-page-card-header-text">پس از وارد کردن ایمیل خود لینک تغییر رمز عبور به ایمیل

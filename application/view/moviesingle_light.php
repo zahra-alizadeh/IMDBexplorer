@@ -1,6 +1,6 @@
 <?php include('Layouts/header.php'); ?>
 
-<script src="<?php $this->asset('js/alaki.js') ?>"></script>
+
 
 <body class="white">
 <!-- Cooment popup -->
@@ -143,17 +143,19 @@
                                                     <?php foreach ($moviePics as $moviePic) { ?>
                                                         <a class="img-lightbox"
                                                            data-fancybox-group="gallery"
-                                                           href="<?php echo $moviePic['picture']; ?>"><img
+                                                           href="<?php echo $moviePic['picture']; ?>">
+                                                            <img loading="lazy"
                                                                     class="img-actor-size"
                                                                     src="<?php echo $moviePic['picture']; ?>"
                                                                     alt=""></a>
                                                     <?php } ?>
                                                     <div class="vd-it">
-                                                        <img class="vd-img"
+                                                        <img loading="lazy" class="vd-img"
                                                              src="<?php $this->asset('image/uploads/image4.png') ?>"
                                                              alt="">
                                                         <a class="fancybox-media hvr-grow"
-                                                           href="https://www.youtube.com/embed/o-0hcF97wy0"><img
+                                                           href="https://www.youtube.com/embed/o-0hcF97wy0">
+                                                            <img loading="lazy"
                                                                     src="<?php $this->asset('image/uploads/play-vd.png') ?>"
                                                                     alt=""></a>
                                                     </div>
@@ -167,7 +169,7 @@
                                                     <?php foreach ($movieStars as $movieStar) { ?>
                                                         <div class="cast-it">
                                                             <div class="cast-left">
-                                                                <img class="mv-actor-size-samll"
+                                                                <img loading="lazy" class="mv-actor-size-samll"
                                                                      src="<?php echo $movieStar['picture']; ?>"
                                                                      alt="">
                                                                 <a href="<?php $this->url('Person/actor/' . $movieStar['id']); ?>"><?php echo $movieStar['first_name'] . " " . $movieStar['last_name']; ?></a>
@@ -202,7 +204,7 @@
                                                 <?php foreach ($movieComments as $movieComment) { ?>
                                                     <div class="user-infor ">
 
-                                                        <img src="<?php $this->asset('image/avatar.png') ?>" alt="">
+                                                        <img loading="lazy" src="<?php $this->asset('image/avatar.png') ?>" alt="">
                                                         <div style="margin-right: 20px;">
                                                             <h3> <?php echo $movieComment['subject']; ?></h3>
                                                             <p class="time">
@@ -224,7 +226,7 @@
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12">
                     <div class="movie-img sticky-sb">
-                        <img src="<?php echo $movie['picture']; ?>" alt="">
+                        <img loading="lazy"src="<?php echo $movie['picture']; ?>" alt="">
                         <div class="movie-btn">
                             <div class="btn-transform transform-vertical red">
                                 <div><a href="#" class="item item-1 redbtn"> <i class="ion-play"></i> تماشای تریلر </a>

@@ -33,108 +33,106 @@
     <link rel="stylesheet" href="<?php $this->asset('css/style.css') ?>">
     <link rel="stylesheet" href="<?php $this->asset('css/plugins.css') ?>">
     <link rel="stylesheet" href="<?php $this->asset('css/header.css') ?>">
-    <script src="<?php $this->asset('js/jquery.js') ?>"></script>
-    <script src="<?php $this->asset('js/plugins.js') ?>"></script>
-    <script src="<?php $this->asset('js/plugins2.js') ?>"></script>
-    <script src="<?php $this->asset('js/custom.js') ?>"></script>
-
 </head>
 <!--preloading-->
 <div id="preloader">
-    <a class="jss17">
-        <button
-                class="MuiButtonBase-root MuiIconButton-root jss14 MuiIconButton-colorInherit MuiIconButton-edgeStart"
-                tabindex="0" type="button" aria-label="open drawer">
-							<span class="MuiIconButton-label-logo logo-img">
+                     <a class="jss17">
+                        <button class="MuiButtonBase-root MuiIconButton-root jss14 MuiIconButton-colorInherit MuiIconButton-edgeStart"
+                                tabindex="0" type="button" aria-label="open drawer">
+							<span class="MuiIconButton-label-logo logo-img" >
 								<img src="<?php $this->asset('image/logo.png') ?>" style="width: 300px;">
 							</span>
-            <span class="MuiTouchRipple-root"></span>
-        </button>
-
-    </a>
-    <div id="status">
+                            <span class="MuiTouchRipple-root"></span>
+                        </button>
+                        
+                    </a>
+     <div id="status">
         <span></span>
         <span></span>
     </div>
 </div>
 <!--end of preloading-->
 <!-- BEGIN | Header -->
-<header class="ht-header">
-    <div class="container">
-        <nav class="navbar navbar-default navbar-custom">
-            <div style="direction: rtl;background-color: black;"
-                 class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary jss2 MuiPaper-elevation4">
-                <div class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters">
-                    <a class="jss17">
-                        <button
-                                class="MuiButtonBase-root MuiIconButton-root jss14 MuiIconButton-colorInherit MuiIconButton-edgeStart"
-                                tabindex="0" type="button" aria-label="open drawer">
-							<span class="MuiIconButton-label-logo">
-								<img src="<?php $this->asset('image/logo.png') ?>">
-							</span>
-                            <span class="MuiTouchRipple-root"></span>
-                        </button>
-                    </a>
-                    <div class="jss8">
-                        <div>
-                            <a class="jss11" href="<?php $this->url('Movie/movies'); ?>"> فیلم ها</a>
-                            <a class="jss11" href="<?php $this->url('Person/actors'); ?>">بازیگران</a>
-                            <a class="jss11" href="<?php $this->url('Blog/blogs'); ?>">اخبار</a>
-                            <a class="jss11" href="<?php $this->url('Home/aboutUs'); ?>">درباره ما </a>
-                        </div>
-                    </div>
-                    <!-- top search form -->
-                    <div class="top-search" style="margin-top: 10px; margin-right: 50px;">
-                        <a class="jss17" style="margin-right: 15px;">
-                            <button
-                                    class="MuiButtonBase-root MuiIconButton-root jss14 MuiIconButton-colorInherit MuiIconButton-edgeStart"
+<header class="ht-header  bodydirection">
+	<div class="container-header">
+		<nav class="navbar navbar-default navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header logo">
+				    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <div id="nav-icon1">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+				    </div>
+				    <a class="a-width" href="index_light.html"><img class="logo" src="<?php $this->asset('image/logo.png') ?>"></a>
+			    </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav flex-child-menu menu-left">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						 <li class="dropdown first">
+                            <a class="jss11" href="<?php $this->url('Movie/movies'); ?>">فیلم ها</a>
+						</li>
+						<li class="dropdown first">
+                        <a class="jss11" href="<?php $this->url('Person/actors'); ?>">بازیگران</a>
+						</li>
+						<li class="dropdown first">
+                        <a class="jss11" href="<?php $this->url('Blog/blogs'); ?>">اخبار</a>
+                        </li> 
+					</ul>
+				    <!-- top search form -->  
+                    <ul class="nav navbar-nav flex-child-menu menu-left">
+                       <div class="top-search" style="margin-top: 10px; margin-right: 50px;">
+                         <a class="jss17" style="margin-right: 15px;">
+                                <button
+                                     class="MuiButtonBase-root MuiIconButton-root jss14 MuiIconButton-colorInherit MuiIconButton-edgeStart"
                                     tabindex="0" type="button" aria-label="open drawer">
 								<span class="MuiIconButton-label">
 									<img src="<?php $this->asset('image/search.png') ?>">
 								</span>
-                                <span class="MuiTouchRipple-root"></span>
-                            </button>
-                        </a>
-                        <input type="text" placeholder="دنبال چی میگردی؟" style="width: 600px;height:35px ;">
-                    </div>
+                                 <span class="MuiTouchRipple-root"></span>
+                               </button>
+                           </a>
+                         <input type="text" placeholder="دنبال چی میگردی؟" style="width: 600px;height:35px ;">
+                        </div>
+                    </ul> 
                     <!-- top search form -->
-                    <div class="jss4" style="direction: ltr;">
+                    </ul>
+                    <ul class="nav navbar-nav flex-child-menu menu-right">
+						<li class="dropdown first">
                         <div class="jss74" style="direction: ltr;">
-                            <?php if (isset($_SESSION['userId']) and $_SESSION['loggedIn'] == true) { ?>
-                                <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75" tabindex="0"
-                                        type="button">
-                                    <a class="MuiButton-label" style="color: white;"
-                                       href="<?php $this->url('User/logout') ?>">خروج</a>
-                                    <span class="MuiTouchRipple-root"></span>
-                                </button>
-                                <a class="MuiButton-label" style="color: white;">|</a>
-                                <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75" tabindex="0"
-                                        type="button">
-                                    <a class="MuiButton-label" style="color: white;"
+                        <?php if (isset($_SESSION['userId']) and $_SESSION['loggedIn'] == true) { ?>
+                            <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75"tabindex="0" type="button">
+                                <a class="btn btn-default  lv1"
+                                       href="<?php $this->url('User/logout'); ?>">خروج</a>
+                                    
+                            </button>
+                            <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75"tabindex="0" type="button">
+                                
+                            <a>|</a>
+                            <a class="btn btn-default  lv1"
                                        href="<?php $this->url('UserProfile/profile'); ?>"><?php echo $_SESSION['userName']; ?></a>
-                                    <span class="MuiTouchRipple-root"></span>
-                                </button>
+                                    
+                            </button>
                             <?php } else if (!isset($_SESSION['userId'])) { ?>
-                                <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75" tabindex="0"
-                                        type="button">
-                                    <a class="MuiButton-label" style="color: white;"
+                                <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75"tabindex="0" type="button">
+                                    <a class="btn btn-default  lv1"
                                        href="<?php $this->url('User/login') ?>">ورود</a>
-                                    <span class="MuiTouchRipple-root"></span>
                                 </button>
-                                <a class="MuiButton-label" style="color: white;">|</a>
-                                <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75" tabindex="0"
-                                        type="button">
-                                    <a class="MuiButton-label" style="color: white; font-siz"
-                                       href="<?php $this->url('User/registration') ?>">ثبت‌نام</a>
-                                    <span class="MuiTouchRipple-root"></span>
+                                <button class="MuiButtonBase-root MuiButton-root MuiButton-text jss75"tabindex="0" type="button">
+                                <a >|</a>
+                                    <a class="btn btn-default  lv1"
+                                       href="<?php $this->url('User/registration') ?>">ثبت ‌نام</a>
                                 </button>
                             <?php } ?>
                         </div>
-                        <a class="jss15"></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
+						</li>                
+					</ul>
+				</div>
+			<!-- /.navbar-collapse -->
+	    </nav>
+	</div>
 </header>
-<!-- END | Header -->

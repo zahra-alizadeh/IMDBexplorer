@@ -25,7 +25,7 @@
                 <div class="col-md-3 col-md-3-c col-sm-12 col-xs-12 ">
                     <div class="user-information">
                         <div class="user-img">
-                            <a href="#"><img class="profile-height"
+                            <a href="#"><img loading="lazy" class="profile-height"
                                              src=<?php $this->asset('image/uploads/user-img.png'); ?>><br></a>
                             <a class="redbtn"><?php echo $_SESSION['userName']; ?></a>
                         </div>
@@ -50,11 +50,11 @@
                             <div class="row">
                                 <div class="col-md-6 col-md-6-c form-it input-icons inner-addon right-addon">
                                     <i class="fa fa-user"></i>
-                                    <input type="text" name="first_name" placeholder="<?php echo $userProfile['first_name']; ?>">
+                                    <input type="text" name="first_name" placeholder="<?php  if ($userProfile['first_name'] == null) echo "نام"; else echo $userProfile['first_name']; ?>">
                                 </div>
                                 <div class="col-md-6 col-md-6-c form-it input-icons inner-addon right-addon">
                                     <i class="fa fa-user"></i>
-                                    <input type="text" name="last_name" placeholder="<?php echo $userProfile['last_name']; ?>">
+                                    <input type="text" name="last_name" placeholder="<?php if ($userProfile['last_name'] == null) echo "نام خانوادگی"; else echo $userProfile['last_name']; ?>">
                                 </div>
                             </div>
 
@@ -82,4 +82,5 @@
         </div>
     </div>
 </div>
+<script src="<?php $this->asset('js/alaki.js') ?>"></script>
 <?php include('Layouts/footer.php'); ?><?php

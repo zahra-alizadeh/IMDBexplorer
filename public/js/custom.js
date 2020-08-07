@@ -1,11 +1,11 @@
 //preloading for page
-$(window).on('load', function () { // makes sure the whole site is loaded
+$(window).on('load', function() { // makes sure the whole site is loaded 
     var status = $('#status');
     var preloader = $('#preloader');
     var body = $('body');
-    status.fadeOut(); // will first fade out the loading animation
-    preloader.delay(0).fadeOut('fast'); // will fade out the white DIV that covers the website.
-    body.delay(0).css({'overflow': 'visible'});
+    status.fadeOut(); // will first fade out the loading animation 
+    preloader.delay(0).fadeOut('fast'); // will fade out the white DIV that covers the website. 
+    body.delay(0).css({ 'overflow': 'visible' });
     var vidDefer = document.getElementsByTagName('iframe');
     for (var i = 0; i < vidDefer.length; i++) {
         if (vidDefer[i].getAttribute('data-src')) {
@@ -13,56 +13,45 @@ $(window).on('load', function () { // makes sure the whole site is loaded
         }
     }
 })
-
-function toggleBg(element, color) {
-    if (!color) {
-        color = element.dataset.normalColor;
-    } else {
-        element.dataset.normalColor = element.style.color;
-    }
-
-    element.style.color = color;
-}
-
-$(function () {
+$(function() {
     'use strict';
     // js for dropdown menu
     var windowWidth = $(window).width();
     if (windowWidth > 1024) {
         var dropdown = $('.dropdown');
         dropdown.hover(
-            function () {
+            function() {
                 $(this).children('.dropdown-menu').fadeIn(300);
             },
-            function () {
+            function() {
                 $(this).children('.dropdown-menu').fadeOut(300);
             }
         );
     } else {
         var dropdownClick = $('.navbar a.dropdown-toggle');
-        dropdownClick.on('click', function (e) {
+        dropdownClick.on('click', function(e) {
             var $el = $(this);
             var $parent = $(this).offsetParent(".dropdown-menu");
             var $open = $('.nav li.open');
             $(this).parent("li").toggleClass('open');
 
             if (!$parent.parent().hasClass('nav')) {
-                $el.next().css({"top": $el[0].offsetTop, "left": $parent.outerWidth() - 4});
+                $el.next().css({ "top": $el[0].offsetTop, "left": $parent.outerWidth() - 4 });
             }
             $open.not($(this).parents("li")).removeClass("open");
             return false;
         });
     }
-    //js for nav icon
+    //js for nav icon 
     var clickMenubtn = $('#nav-icon1');
-    clickMenubtn.on('click', function () {
+    clickMenubtn.on('click', function() {
         $(this).toggleClass('open');
     });
     //js for tabs
     var tabsClick = $('.tabs .tab-links a, .tab-links-2 a, .tab-links-3 a');
     var multiItem = $('.slick-multiItem');
     var multiItem2 = $('.slick-multiItem2');
-    tabsClick.on('click', function (e) {
+    tabsClick.on('click', function(e) {
         var currentAttrValue = $(this).attr('href');
         var tabsCurrent = $('.tabs ' + currentAttrValue);
         // Show/Hide Tabs
@@ -74,7 +63,6 @@ $(function () {
         multiItem.slick('setPosition');
         multiItem2.slick('setPosition');
     });
-
     // js for time count down
     function getTimeRemaining(endtime) {
         var t = Date.parse(endtime) - Date.parse(new Date());
@@ -98,7 +86,7 @@ $(function () {
             var hoursSpan = clock.querySelector('.hours');
             var minutesSpan = clock.querySelector('.minutes');
             var secondsSpan = clock.querySelector('.seconds');
-            var updateClock = function () {
+            var updateClock = function() {
                 var t = getTimeRemaining(endtime);
 
                 daysSpan.innerHTML = t.days;
@@ -114,59 +102,9 @@ $(function () {
             var timeinterval = setInterval(updateClock, 1000);
         }
     }
-
     var deadline = new Date(Date.parse(new Date()) + 25 * 24 * 60 * 60 * 1000);
     initializeClock('clockdiv', deadline);
 
-    //js for twitter
-    var tweets = jQuery(".tweet");
-    jQuery(tweets).each(function (t, tweet) {
-        var id = jQuery(this).attr('id');
-        twttr.widgets.createTweet(
-            id, tweet,
-            {
-                conversation: 'none',    // or all
-                cards: 'hidden',  // or visible
-                linkColor: 'default', // default is blue
-                theme: 'light'    // or dark
-            });
-    });
-
-    //slider for movie and tv show home 2
-    multiItem2.slick({
-        infinite: true,
-        slidesToShow: 6,
-        slidesToScroll: 6,
-        arrows: false,
-        // autoplay: true ,
-        // autoplaySpeed: 2000,
-        dots: true,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
     //slider movie and tv show home 1, 3
     multiItem.slick({
         infinite: true,
@@ -177,8 +115,7 @@ $(function () {
         // autoplay: true,
         // autoplaySpeed: 2000,
         dots: true,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
@@ -214,8 +151,7 @@ $(function () {
         autoplay: true,
         autoplaySpeed: 2000,
         dots: true,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
@@ -240,45 +176,6 @@ $(function () {
             }
         ]
     });
-    //slider for home v3 and home v2, twitter slider home 1, 2
-    var singleItem = $('.slider-single-item');
-    singleItem.slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
-        dots: true,
-        draggable: true,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true,
-                    arrows: true
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                }
-            }
-        ]
-    });
     //slider for tweeter
     var slickTw = $('.slick-tw');
     slickTw.slick({
@@ -290,8 +187,7 @@ $(function () {
         dots: true,
         draggable: true,
         arrows: false,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 1,
@@ -315,51 +211,6 @@ $(function () {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: false,
-                }
-            }
-        ]
-    });
-    //for home v3
-    var slidefor = $('.slider-for');
-    var slidenav = $('.slider-nav');
-    slidefor.slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav',
-    });
-    slidenav.slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: true,
-        // centerMode: true,
-        focusOnSelect: true,
-
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    arrows: true
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: true
                 }
             }
         ]
@@ -431,7 +282,7 @@ $(function () {
     //== js for visibile next/prev fancybox
     imglightbox.fancybox({
         // loop: false, // gallery may not be cyclic 
-        afterShow: function () {
+        afterShow: function() {
             // initialize some variables
             var gallerySize = this.group.length,
                 next, prev;
@@ -455,7 +306,8 @@ $(function () {
             lightboxprev.attr("title", prev);
         }
     });
-    //==js for login and sign up
+
+   //==js for login and sign up
     var loginLink = $(".loginLink");
     var signupLink = $(".signupLink");
     var commentLink = $(".commentLink");
@@ -467,38 +319,8 @@ $(function () {
     loginWrap.each(function () {
         $(this).wrap('<div class="overlay"></div>')
     });
-    //pop up for login form
-    loginLink.on('click', function (event) {
-        event.preventDefault();
-        loginct.parents(overlay).addClass("openform");
-        $(document).on('click', function (e) {
-            var target = $(e.target);
-            if ($(target).hasClass("overlay")) {
-                $(target).find(loginct).each(function () {
-                    $(this).removeClass("openform");
-                });
-                setTimeout(function () {
-                    $(target).removeClass("openform");
-                }, 350);
-            }
-        });
-    });
-    //pop up for signup form
-    signupLink.on('click', function (event) {
-        event.preventDefault();
-        signupct.parents(overlay).addClass("openform");
-        $(document).on('click', function (e) {
-            var target = $(e.target);
-            if ($(target).hasClass("overlay")) {
-                $(target).find(signupct).each(function () {
-                    $(this).removeClass("openform");
-                });
-                setTimeout(function () {
-                    $(target).removeClass("openform");
-                }, 350);
-            }
-        });
-    });
+   
+    //pop up for comment form
     commentLink.on('click', function (event) {
         event.preventDefault();
         commentct.parents(overlay).addClass("openform");
@@ -521,14 +343,15 @@ $(function () {
         var overlay = $(".overlay");
         overlay.removeClass("openform");
     });
+
     //js for multi selected
     var multiselect = $(".ui.fluid.dropdown");
     multiselect.dropdown({
         allowLabels: true
     })
-    multiselect.dropdown({'set selected': 'Role1,Role2'});
+    multiselect.dropdown({ 'set selected': 'Role1,Role2' });
     //== scroll function for single page
-    $(window).scroll(function (event) {
+    $(window).scroll(function(event) {
         /* Act on the event */
         var scrollPos = $(window).scrollTop(),
             header = $('header');
@@ -539,18 +362,9 @@ $(function () {
             header.removeClass('sticky');
         }
     });
-    //back to top js
-    var backtotop = $('#back-to-top');
-    backtotop.on('click', function (e) {
-        e.preventDefault();
-        $('html,body').animate({
-            scrollTop: 0
-        }, 700);
-    });
-
     // scroll down landing page
     var scrolldownlanding = $('#discover-now');
-    scrolldownlanding.on('click', function (e) {
+    scrolldownlanding.on('click', function(e) {
         e.preventDefault();
         $('html,body').animate({
             scrollTop: $(document).height() - $(window).height()
@@ -566,7 +380,7 @@ $(function () {
                 sidebarTop = stickySidebar.offset().top;
         }
         // on scroll move the sidebar
-        $(window).scroll(function () {
+        $(window).scroll(function() {
             if (stickySidebar.length > 0) {
                 var scrollTop = $(window).scrollTop();
 
@@ -585,21 +399,14 @@ $(function () {
                 }
             }
         });
-        $(window).resize(function () {
+        $(window).resize(function() {
             if (stickySidebar.length > 0) {
                 stickyHeight = stickySidebar.height();
             }
         });
     }
-    // $(window).on('load',function() {
-
-    // });
-
 });
-
-/* autoplay vedio dont delete! */
-
-var vid = document.getElementById("myVideo");
-vid.autoplay = false;
-vid.load();
-
+function myFunction() {
+    var element = document.getElementById("myDIV");
+    element.classList.toggle("alert");
+}

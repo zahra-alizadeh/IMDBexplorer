@@ -25,39 +25,40 @@ class UserModel extends Model
     {
         $db = new Model();
         $user = $db->select("SELECT * FROM `users` WHERE `id`=? ;", [$_SESSION['userId']])->fetch();
-        if ($user != null) {
+        if ($user != null)
             return true;
-        } else
-            return true;
-    }
-
-    public function updatePassword($userId,$password)
-    {
-        $db = new Model();
-        $changed = $db->update('users', $userId, ['password'], [$password]);
-        if ($changed != null)
-            return $changed;
         else
             return false;
     }
 
-    public function updateUserProfile($id,$user)
+    public function updateUser($id, $fields, $values)
+    {
+        $db = new Model();
+        $changed = $db->update('users', $id, $fields, $values);
+        if ($changed == true)
+            return true;
+        else
+            return false;
+    }
+
+    public function updateUserProfile($id, $user)
     {
         $db = new Model();
         $changed = $db->update('users', $id, ['first_name', 'last_name'], [$user['first_name'], $user['last_name']]);
         if ($changed != null)
-            return $changed;
+            return true;
         else
             return false;
     }
 
-    public function userExists($id)
+    public function userExists($tableName, $field, $id)
     {
         $db = new Model();
-        $user = $db->select("SELECT * FROM `users_votes` WHERE `user_id`=? ;", [$id])->fetch();
-        if ($user != null) {
+        $user = $db->select("SELECT * FROM " . $tableName . " WHERE " . $field . "=? ;", [$id])->fetch();
+//        $user = $db->select("SELECT * FROM `users_votes` WHERE `user_id`=? ;", [$id])->fetch();
+        if ($user != null)
             return true;
-        } else
-            return true;
+        else
+            return false;
     }
 }

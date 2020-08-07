@@ -14,3 +14,18 @@ include('system/bootstrap/boot.php');
 //$db = new CreateDB();
 //$db->run();
 
+
+// $tmp = preg_split ("/\?,//", $_SERVER['REQUEST_URI']);
+// var_dump($tmp);
+// echo "hello"."</br>";
+// $tmp1 = explode('/',$tmp[0]);
+// var_dump($tmp1);
+// echo "hello1"."</br>";
+// $CURRENT_ROUTE=$tmp1[0];
+// var_dump(CURRENT_ROUTE);
+
+
+// $tmp = explode('?', $_SERVER['REQUEST_URI']);
+// $tmp1 = explode('/', $tmp[0]);
+// define(CU,$tmp1);
+// var_dump(CU);

@@ -32,13 +32,7 @@ class User extends Controller
             $user = $userModel->checkUserExists('username', $_POST['username']);
             if ($user != null) {
                 if (password_verify($_POST['password'], $user['password'])) {
-                    $_SESSION['loggedIn'] = true;
-                    $_SESSION['userId'] = $user['id'];
-                    $_SESSION['userName'] = $user['username'];
-                    $_SESSION['email'] = $user['email'];
-                    $_SESSION['message'] = "you are logged in!";
-                    $_SESSION['logIn_time'] = time();
-                    setcookie($_SESSION['userName'], 'imdb', time() + 3600);
+                    $this->setSession($user);
                     $this->redirect('Home/home');
                 } else
                     $this->redirectBack();
@@ -47,23 +41,15 @@ class User extends Controller
         }
     }
 
-    public function isLoginSessionExpired()
+    public function setSession($user)
     {
-        $login_session_duration = 20;
-        $current_time = time();
-        if (isset($_SESSION['logIn_time']) and isset($_SESSION["userId"])) {
-            if (((time() - $_SESSION['logIn_time']) > $login_session_duration)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public function header()
-    {
-        $userModel = new UserModel();
-        $user = $userModel->checkUserExists('username', $_POST['username']);
-        return $this->view('header', compact('user'));
+        $_SESSION['loggedIn'] = true;
+        $_SESSION['userId'] = $user['id'];
+        $_SESSION['userName'] = $user['username'];
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['message'] = "you are logged in!";
+        $_SESSION['logIn_time'] = time();
+        setcookie($_SESSION['userName'], 'imdb', time() + 3600);
     }
 
     public function registration()
@@ -90,25 +76,41 @@ class User extends Controller
             else {
                 $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-                $token = md5(rand(10, 100));
+                $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
+                $token = substr(str_shuffle($data), 0, 8);
+
                 $user->storeUser($_POST, $token);
-                if ($checkUser)
-                    $this->redirectBack();
-                else {
-                    $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                $_SESSION['email'] = $_POST['email'];
 
-                    $token = md5(rand(10, 100));
-                    $user->storeUser($_POST, $token);
+                $message = '<h3 style="direction: rtl">سلام</h3></br>
+                             <h4 style="direction: rtl">!خوش آمدید</h4></br>
+                             <h4 style="direction: rtl">   :کد امنیتی </h4>' . $token;
 
-                    $message = '<!DOCTYPE html>
-                <body><a href="http://localhost/IMDB/Home/home?token=' . $token . '">"برای تایید حساب کاربری خود اینجا کلیک کنید!</a></body>';
-                    $b = $this->sendEmail($_POST, $message);
-                    if ($b)
-                        $this->redirect('Home/home');
+                $this->redirect('User/authentication');
 
-                }
+                $response = $this->sendEmail($_POST, $message);
             }
         }
+    }
+
+    public function authentication()
+    {
+        return $this->view('authentication');
+    }
+
+     public function enterPassword()
+    {
+        $userModel = new UserModel();
+        $user = $userModel->checkUserExists('email', $_SESSION['email']);
+        if ($_POST['authentication'] == $user['token']) {
+            $userModel = new UserModel();
+            $userModel->updateUser($user['id'], ['status'], ['verified']);
+            $this->setSession($user);
+            $protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === true ? 'https://' : 'http://';
+            header("Location: " . $protocol . $_SERVER['HTTP_HOST'] . BASE_DIR . 'Home/home');
+        } else
+            $this->redirectBack();
+
     }
 
     public function forgetPassword()
@@ -126,18 +128,16 @@ class User extends Controller
             $user = new UserModel();
             $checkUser = $user->checkUserExists('email', $_POST['email']);
 
-            if ($checkUser)
+            if ($checkUser != null)
                 $this->redirectBack();
             else {
-                $token = md5(rand(10, 100));
+                $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
+                $password = substr(str_shuffle($data), 0, 8);
 
-                $message = '<!DOCTYPE html>
-                <body>
-                <a href="http://localhost/IMDB/Home/home?token=' . $token . '">برای تغییر کلمه عبور خود اینجا کلیک کنید!</a>
-                </body>';
-                $b = $this->sendEmail($_POST, $message);
-                if ($b)
-                    $this->redirect('Home/home');
+                $message = '<h3 style="direction: rtl">سلام</h3></br>
+                             <h4 style="direction: rtl">رمز شما تغییر یافت :</h4></br>' . $password;
+
+                $this->sendEmail($_POST, $message);
             }
         }
     }
@@ -163,7 +163,8 @@ class User extends Controller
                 $this->redirectBack();
             else {
                 $_POST['newPassword'] = password_hash($_POST['newPassword'], PASSWORD_DEFAULT);
-                $user->updatePassword($_SESSION['userId'], $_POST['newPassword']);
+                $user->updateUser($_SESSION['userId'], ['password'], [$_POST['newPassword']]);
+//                $user->updatePassword($_SESSION['userId'], $_POST['newPassword']);
                 $this->redirectBack();
             }
         }
@@ -181,7 +182,6 @@ class User extends Controller
 
             session_destroy();
         }
-
         $this->redirect('Home/home');
     }
 
@@ -216,17 +216,17 @@ class User extends Controller
 
             $mail->SMTPDebug = 2;
             $mail->isSMTP();
-            $mail->Host = "smtp.gmail.com";
+            $mail->Host = "imdbexplorer.ir";
             $mail->SMTPAuth = true;
-            $mail->Username = "";
-            $mail->Password = "";
+            $mail->Username = "imdbteam99@imdbexplorer.ir";
+            $mail->Password = "123rty789op?";
             $mail->SMTPSecure = "tls";
             $mail->Port = 587;
 
-            $mail->setFrom("", "IMDB");
+            $mail->setFrom("imdbteam99@imdbexplorer.ir", "IMDB");
             $mail->addAddress($request['email']);
             $mail->isHTML(true);
-            $mail->Subject = "فعال سازی حساب کاربری";
+            $mail->Subject = "IMDBexplorer";
             $mail->Body = $message;
 
             $mail->send();

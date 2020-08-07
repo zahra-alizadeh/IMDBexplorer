@@ -11,7 +11,7 @@ class MovieModel extends Model
     // select recently released top movies == top movies have rewards
     public function topMovies($request = "")
     {
-        $query = "SELECT * FROM `movies` WHERE `release_date` > '۱۳۹۴' AND `rewards` IS NOT NULL" . $request . " ; ";
+        $query = "SELECT * FROM `movies` WHERE `release_date` >= '۱۳۸۹' AND `rewards` IS NOT NULL" . $request . " ; ";
         $result = $this->query($query)->fetchAll();
         $this->closeConnection();
         return $result;
@@ -20,7 +20,7 @@ class MovieModel extends Model
     // select recently released movies
     public function recentlyReleasedMovies($request = "")
     {
-        $query = "SELECT * FROM `movies` WHERE `release_date` > '۱۳۹۶'" . $request . " ; ";
+        $query = "SELECT * FROM `movies` WHERE `release_date` >= '۱۳۸۹'" . $request . " ; ";
         $result = $this->query($query)->fetchAll();
         $this->closeConnection();
         return $result;

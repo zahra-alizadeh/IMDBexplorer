@@ -25,7 +25,7 @@
                 <div class="col-md-3 col-md-3-c col-sm-12 col-xs-12 ">
                     <div class="user-information">
                         <div class="user-img">
-                            <a href="#"><img class="profile-height" src=<?php $this->asset('image/uploads/user-img.png') ?> alt=""><br></a>
+                            <a href="#"><img loading="lazy" class="profile-height" src=<?php $this->asset('image/uploads/user-img.png') ?> alt=""><br></a>
                             <a href="#" class="redbtn">تغییر پروفایل</a>
                         </div>
                         <div class="user-fav">
@@ -50,7 +50,7 @@
 
                                        as $movie) { ?>
                             <div class="movie-item-style-2 movie-item-style-1 style-3 movie-item-style-1-favrite">
-                                <img src="<?php echo $movie['picture']; ?>" alt="">
+                                <img loading="lazy" src="<?php echo $movie['picture']; ?>" alt="">
                                 <div class="hvr-inner">
                                     <a href="<?php $this->url('Movie/movie/' . $movie['id']); ?>">بیشتر</a>
                                 </div>

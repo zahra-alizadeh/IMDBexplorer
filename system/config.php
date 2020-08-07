@@ -1,15 +1,17 @@
 <?php
 
 define('APP_NAME','IMDB');
-define("BASE_URL","http://localhost/IMDB/");
-define("BASE_DIR","/IMDB/");
+define("BASE_URL","http://imdbexplorer.ir/");
+define("BASE_DIR","/");
 
-$tmp = explode('?', strtoupper($_SERVER['REQUEST_URI']));
-define('CURRENT_ROUTE', str_replace(BASE_DIR,'',$tmp[0]));
+// $tmp = explode('/', $_SERVER['REQUEST_URI']);
+// define('CURRENT_ROUTE', $tmp);
 
-define('DB_HOST','localhost');
-define('DB_NAME','imdb');
-define('DB_USERNAME','root');
-define('DB_PASSWORD','');
+$tmp = explode('?', $_SERVER['REQUEST_URI']);
+$tmp1 = explode('/', $tmp[0]);
+define(CURRENT_ROUTE,$tmp1);
 
-
+define('DB_HOST','localhost:3306');
+define('DB_NAME','imdbexpl_imdb');
+define('DB_USERNAME','imdbexpl_admin');
+define('DB_PASSWORD','123rty789op?');
