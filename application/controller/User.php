@@ -218,12 +218,12 @@ class User extends Controller
             $mail->isSMTP();
             $mail->Host = "imdbexplorer.ir";
             $mail->SMTPAuth = true;
-            $mail->Username = "imdbteam99@imdbexplorer.ir";
-            $mail->Password = "123rty789op?";
+            $mail->Username = "";
+            $mail->Password = "";
             $mail->SMTPSecure = "tls";
             $mail->Port = 587;
 
-            $mail->setFrom("imdbteam99@imdbexplorer.ir", "IMDB");
+            $mail->setFrom("", "IMDB");
             $mail->addAddress($request['email']);
             $mail->isHTML(true);
             $mail->Subject = "IMDBexplorer";
